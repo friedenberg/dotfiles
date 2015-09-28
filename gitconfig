@@ -1,6 +1,6 @@
 [user]
 	name = Sasha Friedenberg
-  email = sashafriedenberg@gmail.com
+	email = sashafriedenberg@gmail.com
 [core]
 	editor = vim
 	whitespace = nowarn
