@@ -1,0 +1,23 @@
+[user]
+	name = Sasha Friedenberg
+	email = sasha@etsy.com
+[core]
+	editor = vim
+	whitespace = nowarn
+[github]
+	gist-oauth-token = 995c9cc6b3013f72e912780793f00ea95b6c8fa0
+	user = sfriedenberg
+	password = 2dde68edbe58eb61dec386e3ac637b6c4c87e24d
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	rpull = pull --rebase --stat
+	pullr = pull --rebase
+	diffs = diff --staged
+	hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(blue)[%an] %Cgreen(%ad) %C(bold blue)%Creset' --abbrev-commit
+[push]
+	default = current
+[pull]
+	rebase = true
