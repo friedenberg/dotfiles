@@ -1,0 +1,2 @@
+EXCLUDES="fish_history"
+SYMLINK_DIRS="fish"
