@@ -1,8 +1,5 @@
 set shell=/bin/bash
 
-" causes Deployinator to display changes
-autocmd BufWritePost /usr/etsy/deployinator/* :silent !touch /usr/etsy/deployinator/tmp/restart.txt
-
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
