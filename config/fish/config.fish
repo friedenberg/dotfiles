@@ -1,1 +1,1 @@
-tmux attach
+. (rbenv init -|psub)
