@@ -8,3 +8,9 @@ set -l local_config ~/.config/fish/config.fish.local
 if test -e local_config
   source local_config
 end
+
+cmp -s ~/.hushlogin /etc/motd
+if test $status -ne 0
+  tee ~/.hushlogin < /etc/motd
+  echo -n "Press Enter to continue: "; and read -p ""
+end
