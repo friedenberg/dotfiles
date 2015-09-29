@@ -12,5 +12,4 @@ end
 cmp -s ~/.hushlogin /etc/motd
 if test $status -ne 0
   tee ~/.hushlogin < /etc/motd
-  echo -n "Press Enter to continue: "; and read -p ""
 end
