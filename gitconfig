@@ -5,12 +5,12 @@
 	editor = vim
 	whitespace = nowarn
 [alias]
-	co = checkout
 	br = branch
 	ci = commit
-	st = status -sb
+	co = checkout
 	diffs = diff --staged
 	hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(blue)[%an] %Cgreen(%ad) %C(bold blue)%Creset' --abbrev-commit
+	st = status -sb
 [push]
 	default = current
 [pull]
