@@ -11,6 +11,7 @@
 	diffs = diff --staged
 	hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(blue)[%an] %Cgreen(%ad) %C(bold blue)%Creset' --abbrev-commit
 	st = status -sb
+  su = submodule update --recursive --init
 [push]
 	default = current
 [pull]
