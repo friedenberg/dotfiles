@@ -1,20 +1,20 @@
 [user]
-	name = Sasha Friedenberg
-	email = sashafriedenberg@gmail.com
+  name = Sasha Friedenberg
+  email = sashafriedenberg@gmail.com
 [core]
-	editor = vim
-	whitespace = nowarn
+  editor = vim
+  whitespace = nowarn
 [alias]
-	br = branch
-	ci = commit
-	co = checkout
-	diffs = diff --staged
-	hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(blue)[%an] %Cgreen(%ad) %C(bold blue)%Creset' --abbrev-commit
-	st = status -sb
+  br = branch
+  ci = commit
+  co = checkout
+  diffs = diff --staged
+  hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(blue)[%an] %Cgreen(%ad) %C(bold blue)%Creset' --abbrev-commit
+  st = status -sb
   su = submodule update --recursive --init
 [push]
-	default = current
+  default = current
 [pull]
-	rebase = true
+  rebase = true
 [rebase]
-	autosquash = true
+  autosquash = true
