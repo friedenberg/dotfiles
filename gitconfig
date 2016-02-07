@@ -4,6 +4,7 @@
 [core]
   editor = vim
   whitespace = nowarn
+	excludesfile = /home/sfriedenberg/.gitignore_global
 [alias]
   br = branch
   ci = commit
