@@ -1,5 +1,5 @@
 function fish_title
-  if test -n "$ssh_config_current_alias"; and test -n "$TMUX"
+  if test -n "$TMUX" -a -n "$ssh_config_current_alias"
     echo $ssh_config_current_alias
   else
     echo $_
