@@ -10,9 +10,14 @@
   ci = commit
   co = checkout
   diffs = diff --staged
-  hist = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(blue)[%aN] %Cgreen(%ad) %C(bold blue)%Creset' --abbrev-commit
+  hi = log --pretty=nice
+  hig = log --pretty=nice --graph
+  hist = log --graph --pretty=hist --abbrev-commit
   st = status -sb
   su = submodule update --recursive --init
+[pretty]
+  nice = format:%C(auto)%h %<(12)%Cred%cr %<(16)%C(blue)%aN%Creset - %w(80,0,40)%s%C(auto)%w(80,0,0)%+d
+  hist = format:%C(auto)%h%Creset - %s %C(blue)[%aN] %Cgreen(%ad) %C(bold blue)%Creset%C(auto)%+d%Creset
 [push]
   default = current
 [pull]
