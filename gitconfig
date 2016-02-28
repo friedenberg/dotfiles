@@ -22,4 +22,4 @@
 [include]
   path = ~/.gitconfig.local
 [log]
-	mailmap = true
+  mailmap = true
