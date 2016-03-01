@@ -20,6 +20,9 @@ set tags=tags;
 " Leader
 let mapleader = " "
 
+" project-specific vimrc files
+set exrc
+
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
 set nowritebackup
@@ -187,3 +190,6 @@ set wildmode=list:longest
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+
+" make project-specific vimrc files not scary
+set secure
