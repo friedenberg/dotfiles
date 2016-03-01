@@ -16,7 +16,7 @@
   st = status -sb
   su = submodule update --recursive --init
 [pretty]
-  nice = format:%C(auto)%h %<(14)%Cred%cr %<(17)%C(blue)%aN%Creset - %w(80,0,43)%s%C(auto)%w(90,0,0)%+d
+  nice = format:%w(120,0,43)%C(auto)%h %<(14)%Cred%cr %<(17)%C(blue)%aN%Creset - %s%C(auto)%w(120,0,0)%+d
   hist = format:%C(auto)%h%Creset - %s %C(blue)[%aN] %Cgreen(%ad) %C(bold blue)%Creset%C(auto)%+d%Creset
 [push]
   default = current
