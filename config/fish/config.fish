@@ -16,9 +16,10 @@ if command -s thefuck > /dev/null
 end
 
 # hushing motd unless it has changed
-cmp -s ~/.hushlogin /etc/motd
-if test $status -ne 0
-  tee ~/.hushlogin < /etc/motd
+if test -f /etc/motd
+  if not cmp -s ~/.hushlogin /etc/motd
+    tee ~/.hushlogin < /etc/motd
+  end
 end
 
 # loading local fish config, if it exists
