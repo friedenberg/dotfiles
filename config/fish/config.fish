@@ -3,6 +3,11 @@ if command -s rbenv > /dev/null
   source (rbenv init -|psub)
 end
 
+# starting up virtualfish
+if command -s virtualfish > /dev/null
+  eval (python -m virtualfish)
+end
+
 set fish_greeting
 
 # aliasing `thefuck` to `fuck`
