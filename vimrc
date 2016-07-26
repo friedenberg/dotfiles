@@ -51,6 +51,9 @@ endif
 
 filetype plugin indent on
 
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 augroup vimrcEx
   autocmd!
 
