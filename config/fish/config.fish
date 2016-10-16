@@ -1,18 +1,12 @@
-# starting up rbenv
-if command -s rbenv > /dev/null
-  source (rbenv init -|psub)
-end
-
-# starting up virtualfish
-if command -s virtualfish > /dev/null
-  eval (python -m virtualfish)
-end
-
 set fish_greeting
 
 # aliasing `thefuck` to `fuck`
 if command -s thefuck > /dev/null
   eval (thefuck --alias | tr '\n' ';')
+end
+
+if test -e ~/.asdf/asdf.fish > /dev/null
+  source ~/.asdf/asdf.fish
 end
 
 # hushing motd unless it has changed
