@@ -13,7 +13,8 @@ function t
     case '1'
       if test -z $TMUX
         if not tmux attach -t $argv
-          tmux new-session -s $argv
+          cd $argv
+          tmux new-session -s (basename $argv)
         end
       else
         tmux switch -t $argv
