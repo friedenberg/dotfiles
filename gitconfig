@@ -10,6 +10,7 @@
   ci = commit
   co = checkout
   diffs = diff --staged
+  him = log --pretty=nice origin/master..HEAD
   hi = log --pretty=nice
   hig = log --pretty=nice --graph
   hist = log --graph --pretty=hist --abbrev-commit
