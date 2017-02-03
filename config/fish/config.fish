@@ -7,6 +7,13 @@ if test -e ~/.asdf/asdf.fish > /dev/null
   source ~/.asdf/asdf.fish
 end
 
+# starting virtualfish
+set -l VIRTUAL_FISH_INSTALLED (python -c "__import__('virtualfish')" 2> /dev/null)
+
+if test 0 -eq "$VIRTUAL_FISH_INSTALLED"
+  eval (python -m virtualfish)
+end
+
 # hushing motd unless it has changed
 if test -f /etc/motd
   if not cmp -s ~/.hushlogin /etc/motd
