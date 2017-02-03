@@ -3,8 +3,8 @@ function t
     case '0'
       set -l SESSION_NAME (basename (pwd))
       if test -z $TMUX
-        if not tmux attach -t $SESSION_NAME
-          tmux new-session -s $SESSION_NAME
+        if not tmux attach -t $SESSION_NAME > /dev/null
+          tmux new-session -s $SESSION_NAME > /dev/null
         end
       else
         tmux detach
@@ -12,12 +12,12 @@ function t
 
     case '1'
       if test -z $TMUX
-        if not tmux attach -t $argv
+        if not tmux attach -t $argv >/dev/null
           cd $argv
-          tmux new-session -s (basename $argv)
+          tmux new-session -s (basename $argv) > /dev/null
         end
       else
-        tmux switch -t $argv
+        tmux switch -t $argv > /dev/null
       end
 
     case '*'
