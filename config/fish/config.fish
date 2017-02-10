@@ -8,7 +8,11 @@ if test -e ~/.asdf/asdf.fish > /dev/null
 end
 
 # starting virtualfish
-set -l VIRTUAL_FISH_INSTALLED (python -c "__import__('virtualfish')" 2> /dev/null)
+if command -s python > /dev/null
+  python -c "__import__('virtualfish')" ^ /dev/null > /dev/null
+end
+
+set -l VIRTUAL_FISH_INSTALLED $status
 
 if test 0 -eq "$VIRTUAL_FISH_INSTALLED"
   eval (python -m virtualfish)
