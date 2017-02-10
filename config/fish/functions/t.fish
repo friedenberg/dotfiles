@@ -3,7 +3,7 @@ function t
     case '0'
       set -l SESSION_NAME (basename (pwd))
       if test -z $TMUX
-        if not tmux attach -t $SESSION_NAME > /dev/null
+        if not tmux attach -t $SESSION_NAME > /dev/null ^ /dev/null
           tmux new-session -s $SESSION_NAME > /dev/null
         end
       else
