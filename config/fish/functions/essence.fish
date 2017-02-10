@@ -1,18 +1,18 @@
 function essence --description "generate a diff gist from the current git repo"
-    switch (count $argv)
-    case '0'
-        __essence_gist_head
+  switch (count $argv)
+  case '0'
+    __essence_gist_head
 
-    case '1'
-        set repo_name (basename (git rev-parse --show-toplevel))
-        set range (git rev-parse $argv)..(git rev-parse HEAD)
-        set gist_description "$repo_name: $range"
-        git show $argv..HEAD | gist -t diff -d "$gist_description"
+  case '1'
+    set repo_name (basename (git rev-parse --show-toplevel))
+    set range (git rev-parse $argv)..(git rev-parse HEAD)
+    set gist_description "$repo_name: $range"
+    git show $argv..HEAD | gist -t diff -d "$gist_description"
 
-    case '*'
-        echo 'Unsupported argument count'
-        return 1
-    end
+  case '*'
+    echo 'Unsupported argument count'
+    return 1
+  end
 end
 
 function __essence_gist_head
