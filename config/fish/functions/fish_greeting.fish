@@ -6,7 +6,7 @@ function fish_greeting --description 'Write out the greeting'
   else
     set FISH_ASCII_PATH ~/.config/fish/fish.txt
 
-    if test -f "$FISH_ASCII_PATH" -a 0 -eq 1
+    if test -f "$FISH_ASCII_PATH"
       cat "$FISH_ASCII_PATH"
     end
   end
