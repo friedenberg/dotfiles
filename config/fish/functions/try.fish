@@ -1,8 +1,8 @@
 function try
   if test -e ./bin/jenkins/try > /dev/null
-    ./bin/jenkins/try
+    ./bin/jenkins/try $argv
   else
-    command try
+    command try $argv
   end
 end
 
