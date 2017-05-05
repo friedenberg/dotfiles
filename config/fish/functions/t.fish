@@ -1,23 +1,25 @@
 function t
   switch (count $argv)
     case '0'
-      set -l SESSION_NAME (basename (pwd))
       if test -z $TMUX
-        if not tmux attach -t $SESSION_NAME > /dev/null ^ /dev/null
-          tmux new-session -s $SESSION_NAME > /dev/null
-        end
+        set -l SESSION_NAME (__t_get_session_name_from_path)
+        tmux new-session -s "$SESSION_NAME" > /dev/null
       else
         tmux detach
       end
 
     case '1'
+      set -l SESSION_NAME (__t_get_session_name_from_path $argv)
+
       if test -z $TMUX
-        if not tmux attach -t $argv >/dev/null
+        if tmux has-session -t "$SESSION_NAME" > /dev/null
+          tmux attach -t $argv > /dev/null
+        else
           cd $argv
-          tmux new-session -s (basename $argv) > /dev/null
+          tmux new-session -s "$SESSION_NAME" > /dev/null
         end
       else
-        tmux switch -t $argv > /dev/null
+        tmux switch -t "$SESSION_NAME" > /dev/null
       end
 
     case '*'
@@ -26,3 +28,10 @@ function t
   end
 end
 
+function __t_get_session_name_from_path
+  if test (count $argv) -eq 0
+    echo (basename (pwd) | tr "[:upper:]" "[:lower:]")
+  else
+    echo (basename $argv | tr "[:upper:]" "[:lower:]")
+  end
+end
