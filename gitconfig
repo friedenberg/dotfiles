@@ -29,3 +29,9 @@
   path = ~/.gitconfig.local
 [log]
   mailmap = true
+[mergetool]
+	prompt = false
+	keepBackup = false
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
