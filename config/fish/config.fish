@@ -1,3 +1,7 @@
+
+#gpg
+set -x GPG_TTY (tty)
+
 # aliasing `thefuck` to `fuck`
 if command -s thefuck > /dev/null
   eval (thefuck --alias | tr '\n' ';')
