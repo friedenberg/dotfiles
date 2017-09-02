@@ -29,10 +29,13 @@ if test -f /etc/motd
   end
 end
 
+if test -f ~/.gpg-agent-info
+  posix-source ~/.gpg-agent-info
+end
+
 # loading local fish config, if it exists
 set -l local_config ~/.config/fish/config.fish.local
 
 if test -e local_config
   source local_config
 end
-
