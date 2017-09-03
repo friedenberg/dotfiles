@@ -1,4 +1,6 @@
 
+fish_vi_key_bindings
+
 #gpg
 set -x GPG_TTY (tty)
 
