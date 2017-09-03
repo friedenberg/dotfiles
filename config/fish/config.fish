@@ -35,6 +35,12 @@ if test -f ~/.gpg-agent-info
   posix-source ~/.gpg-agent-info
 end
 
+function clear_screen --on-event fish_postexec
+  if test (string sub --length 3 $argv) = 'ssh'
+    clear
+  end
+end
+
 # loading local fish config, if it exists
 set -l local_config ~/.config/fish/config.fish.local
 
