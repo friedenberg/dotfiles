@@ -1,6 +1,7 @@
 [user]
   name = Sasha Friedenberg
   email = sashafriedenberg@gmail.com
+	signingkey = 1538B6E2521C7FD5!
 [core]
   editor = vim
   whitespace = nowarn
@@ -35,3 +36,5 @@
 [merge]
 	conflictstyle = diff3
 	tool = vimdiff
+[gpg]
+	program = gpg2
