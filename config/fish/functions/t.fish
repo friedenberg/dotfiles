@@ -34,8 +34,10 @@ end
 
 function __t_get_session_name_from_path
   if test (count $argv) -eq 0
-    echo (basename (pwd) | tr "[:upper:]" "[:lower:]")
+    set DIR (pwd)
   else
-    echo (basename $argv | tr "[:upper:]" "[:lower:]")
+    set DIR "$argv"
   end
+
+  echo (basename $DIR | tr ".[:upper:]" "_[:lower:]")
 end
