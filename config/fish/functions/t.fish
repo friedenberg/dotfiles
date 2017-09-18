@@ -28,7 +28,7 @@ function t --description "create and attach to tmux sessions easily"
 
     case '*'
       echo 'Incorrect number of arguments passed to t. Expected 0 or 1'
-      exit 1
+      return 1
   end
 end
 
