@@ -15,6 +15,10 @@ function t --description "create and attach to tmux sessions easily"
         if tmux has-session -t "$SESSION_NAME" > /dev/null ^ /dev/null
           tmux attach -t $argv > /dev/null
         else
+          if test ! -d "$argv"
+            mkdir -p $argv
+          end
+
           cd $argv
           tmux new-session -s "$SESSION_NAME" > /dev/null
         end
