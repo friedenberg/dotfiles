@@ -1,4 +1,4 @@
-function t
+function t --description "create and attach to tmux sessions easily"
   switch (count $argv)
     case '0'
       if test -z $TMUX
