@@ -12,7 +12,7 @@ function t --description "create and attach to tmux sessions easily"
       set -l SESSION_NAME (__t_get_session_name_from_path $argv)
 
       if test -z $TMUX
-        if tmux has-session -t "$SESSION_NAME" > /dev/null
+        if tmux has-session -t "$SESSION_NAME" > /dev/null ^ /dev/null
           tmux attach -t $argv > /dev/null
         else
           cd $argv
