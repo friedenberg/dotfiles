@@ -49,6 +49,6 @@ end
 # loading local fish config, if it exists
 set -l local_config ~/.config/fish/config.fish.local
 
-if test -e local_config
-  source local_config
+if test -e $local_config
+  source $local_config
 end
