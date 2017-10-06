@@ -39,6 +39,13 @@ function clear_screen --on-event fish_postexec
   end
 end
 
+# loading remote fish config, if it exists
+set -l remote_config ~/.config/fish/remote_config.fish
+
+if test -e $remote_config -a -n "$SSH_CLIENT"
+  source $remote_config
+end
+
 # loading local fish config, if it exists
 set -l local_config ~/.config/fish/config.fish.local
 
