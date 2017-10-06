@@ -1,7 +1,7 @@
 [user]
   name = Sasha Friedenberg
   email = sashafriedenberg@gmail.com
-	signingkey = 1538B6E2521C7FD5!
+  signingkey = 1538B6E2521C7FD5!
 [core]
   editor = vim
   whitespace = nowarn
@@ -31,10 +31,10 @@
 [log]
   mailmap = true
 [mergetool]
-	prompt = false
-	keepBackup = false
+  prompt = false
+  keepBackup = false
 [merge]
-	conflictstyle = diff3
-	tool = vimdiff
+  conflictstyle = diff3
+  tool = vimdiff
 [gpg]
-	program = gpg2
+  program = gpg2
