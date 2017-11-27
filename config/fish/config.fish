@@ -2,13 +2,18 @@
 #gpg
 set -x GPG_TTY (tty)
 
+if command -s gpg-connect-agent > /dev/null
+  gpg-connect-agent /bye > /dev/null
+end
+
 # aliasing `thefuck` to `fuck`
 if command -s thefuck > /dev/null
   eval (thefuck --alias | tr '\n' ';')
 end
 
-if test -e ~/.asdf/asdf.fish > /dev/null
-  source ~/.asdf/asdf.fish
+set -l asdf /usr/local/opt/asdf/asdf.fish
+if test -e $asdf > /dev/null
+  source $asdf
 end
 
 # starting virtualfish
