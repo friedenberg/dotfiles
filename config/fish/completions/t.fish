@@ -1,6 +1,6 @@
 function __t_get_session_completions --description "Prints tmux session tab completion info"
   set -l FORMAT "#{session_name}|#{pane_current_path} #{?session_attached,(attached),}"
-  tmux list-sessions -F "$FORMAT" | tr '|' "\t"
+  tmux list-sessions -F "$FORMAT" | tr '|' "\t" ^ /dev/null
 end
 
 function __t_needs_sessions
