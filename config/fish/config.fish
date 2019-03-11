@@ -35,12 +35,12 @@ end
 # starting virtualfish
 if command -s python > /dev/null
   python -c "__import__('virtualfish')" ^ /dev/null > /dev/null
-end
 
-set -l VIRTUAL_FISH_INSTALLED $status
+  set -l VIRTUAL_FISH_INSTALLED $status
 
-if test 0 -eq "$VIRTUAL_FISH_INSTALLED"
-  eval (python -m virtualfish)
+  if test 0 -eq "$VIRTUAL_FISH_INSTALLED"
+    eval (python -m virtualfish)
+  end
 end
 
 # hushing motd unless it has changed
