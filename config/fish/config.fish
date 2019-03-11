@@ -1,4 +1,20 @@
 
+set term_emu (string split . $XPC_SERVICE_NAME)[2]
+
+if test "$term_emu" = "alacritty"
+  if test -z $TMUX
+    if tmux has-session -t "$SESSION_NAME" > /dev/null ^ /dev/null
+      exec tmux -f ~/.tmux_main.conf attach -t "main" > /dev/null
+    else
+      exec tmux -f ~/.tmux_main.conf new -t "main" > /dev/null
+    end
+  end
+end
+
+if test (tmux display-message -p "#S") = "main-0"
+  #set -x TMUX ''
+end
+
 #gpg
 set -x GPG_TTY (tty)
 
