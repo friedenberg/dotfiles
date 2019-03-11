@@ -3,7 +3,7 @@
 set -x GPG_TTY (tty)
 
 if command -s gpg-connect-agent > /dev/null
-  gpg-connect-agent /bye > /dev/null
+  gpg-connect-agent /bye > /dev/null ^ /dev/null
 end
 
 # aliasing `thefuck` to `fuck`
@@ -35,13 +35,7 @@ if test -f /etc/motd
 end
 
 if test -f ~/.gpg-agent-info
-  posix-source ~/.gpg-agent-info
-end
-
-function clear_screen --on-event fish_postexec
-  if test (string sub --length 3 $argv) = 'ssh'
-    clear
-  end
+  posix_source ~/.gpg-agent-info
 end
 
 # loading remote fish config, if it exists
