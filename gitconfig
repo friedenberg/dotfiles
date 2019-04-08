@@ -17,6 +17,17 @@
   hist = log --graph --pretty=hist --abbrev-commit
   st = status -sb
   su = submodule update --recursive --init
+  unstage = reset HEAD --
+  last = show HEAD
+  cob = !git checkout -b $1 && git branch --set-upstream-to=origin/master
+  rebasem = rebase origin/master --interactive
+  com = checkout master
+  brc = rev-parse --abbrev-ref HEAD
+  mergem = !git rebase master && git checkout master && git merge --ff-only @{-1}
+  rebaseomi = rebase origin/master --interactive
+  show-stash = !git stash show -p `git rev-parse stash@{$1}` --color=always
+  show-rev = !git show -p stash@\\{\\$1\\}
+	show-untracked = ls-files --others --exclude-standard
 [pretty]
   nice = format:%w(120,0,44)%C(auto)%h %<(14)%Cred%cr %<(18)%C(blue)%aN%Creset - %s%C(auto)%w(120,0,0)%+d
   hist = format:%C(auto)%h%Creset - %s %C(blue)[%aN] %Cgreen(%ad) %C(bold blue)%Creset%C(auto)%+d%Creset
