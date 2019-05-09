@@ -1,18 +1,16 @@
 
-set term_emu (string split . $XPC_SERVICE_NAME)[2]
+if test "$IS_ALACRITTY" = "true"
+  set termtabs ~/.tmux/termtabs.conf
+  set termtabs (realpath $termtabs)
+  set session_name termtabs
 
-if test "$term_emu" = "alacritty"
   if test -z $TMUX
-    if tmux has-session -t "$SESSION_NAME" > /dev/null ^ /dev/null
-      exec tmux -f ~/.tmux_main.conf attach -t "main" > /dev/null
+    if tmux -L termtabs has-session -t "$termtabs" > /dev/null ^ /dev/null
+      exec tmux -L termtabs -f "$termtabs" attach -t "$session_name" > /dev/null
     else
-      exec tmux -f ~/.tmux_main.conf new -t "main" > /dev/null
+      exec tmux -L termtabs -f "$termtabs" new -t "$session_name" > /dev/null
     end
   end
-end
-
-if test (tmux display-message -p "#S") = "main-0"
-  #set -x TMUX ''
 end
 
 #gpg
