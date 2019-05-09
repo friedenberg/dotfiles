@@ -38,12 +38,12 @@ brew "tmux"
 brew "vim"
 # management suite for dotfiles
 brew "thoughtbot/formulae/rcm"
+cask "alacritty"
 cask "vagrant"
 cask "virtualbox"
 mas "com.acqualia.soulver", id: 413965349
 mas "com.agilebits.onepassword-osx", id: 443987910
 mas "com.agilebits.onepassword7", id: 1333542190
-mas "com.apple.iMovieApp", id: 408981434
 mas "com.apple.iWork.Keynote", id: 409183694
 mas "com.apple.iWork.Numbers", id: 409203825
 mas "com.apple.iWork.Pages", id: 409201541
