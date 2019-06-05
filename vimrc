@@ -20,6 +20,7 @@ set tags=tags;
 
 " Leader
 let mapleader = " "
+let maplocalleader = " "
 
 " project-specific vimrc files
 set exrc
