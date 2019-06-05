@@ -11,6 +11,7 @@
   ci = commit
   co = checkout
   diffs = diff --staged
+  hid = log --pretty=nice origin/dev..HEAD
   him = log --pretty=nice origin/master..HEAD
   hi = log --pretty=nice
   hig = log --pretty=nice --graph
@@ -19,7 +20,8 @@
   su = submodule update --recursive --init
   unstage = reset HEAD --
   last = show HEAD
-  cob = !git checkout -b $1 && git branch --set-upstream-to=origin/master
+  cob = !git checkout -b $1 && git branch --set-upstream-to=origin/{$2}
+  last-branch = rev-parse --abbrev-ref @{-1}
   rebasem = rebase origin/master --interactive
   com = checkout master
   brc = rev-parse --abbrev-ref HEAD
@@ -33,8 +35,6 @@
   hist = format:%C(auto)%h%Creset - %s %C(blue)[%aN] %Cgreen(%ad) %C(bold blue)%Creset%C(auto)%+d%Creset
 [push]
   default = current
-[pull]
-  rebase = true
 [rebase]
   autosquash = true
 [include]
@@ -49,3 +49,9 @@
   tool = vimdiff
 [gpg]
   program = gpg2
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[merge "ours"]
+	driver = true
+[url "https://a01ef2d37b339160fe35b8ef6643f077c6c3db61@github.com/the-infatuation"]
+	insteadOf = https://github.com/the-infatuation
