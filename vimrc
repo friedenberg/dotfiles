@@ -239,6 +239,14 @@ endfunction
 
 set tabline=%!MyTabLine()
 
+nnoremap <leader>ev :tabe $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+augroup filetype_go
+  autocmd!
+  autocmd FileType go nnoremap <buffer> <localleader>t :GoTest<cr>
+augroup END
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
