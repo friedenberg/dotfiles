@@ -7,29 +7,29 @@
   whitespace = nowarn
   excludesfile = ~/.gitignore_global
 [alias]
+	show-untracked = ls-files --others --exclude-standard
   br = branch
+  brc = rev-parse --abbrev-ref HEAD
   ci = commit
   co = checkout
+  cob = !git checkout -b $1 && git branch --set-upstream-to=origin/master
+  com = checkout master
   diffs = diff --staged
-  hid = log --pretty=nice origin/dev..HEAD
-  him = log --pretty=nice origin/master..HEAD
   hi = log --pretty=nice
+  hid = log --pretty=nice origin/dev..HEAD
   hig = log --pretty=nice --graph
+  him = log --pretty=nice origin/master..HEAD
   hist = log --graph --pretty=hist --abbrev-commit
+  last = show HEAD
+  last-branch = rev-parse --abbrev-ref @{-1}
+  mergem = !git rebase master && git checkout master && git merge --ff-only @{-1}
+  rebasem = rebase origin/master --interactive
+  rebaseomi = rebase origin/master --interactive
+  show-rev = !git show -p stash@\\{\\$1\\}
+  show-stash = !git stash show -p `git rev-parse stash@{$1}` --color=always
   st = status -sb
   su = submodule update --recursive --init
   unstage = reset HEAD --
-  last = show HEAD
-  cob = !git checkout -b $1 && git branch --set-upstream-to=origin/{$2}
-  last-branch = rev-parse --abbrev-ref @{-1}
-  rebasem = rebase origin/master --interactive
-  com = checkout master
-  brc = rev-parse --abbrev-ref HEAD
-  mergem = !git rebase master && git checkout master && git merge --ff-only @{-1}
-  rebaseomi = rebase origin/master --interactive
-  show-stash = !git stash show -p `git rev-parse stash@{$1}` --color=always
-  show-rev = !git show -p stash@\\{\\$1\\}
-	show-untracked = ls-files --others --exclude-standard
 [pretty]
   nice = format:%w(120,0,44)%C(auto)%h %<(14)%Cred%cr %<(18)%C(blue)%aN%Creset - %s%C(auto)%w(120,0,0)%+d
   hist = format:%C(auto)%h%Creset - %s %C(blue)[%aN] %Cgreen(%ad) %C(bold blue)%Creset%C(auto)%+d%Creset
