@@ -18,6 +18,7 @@ set -x GPG_TTY (tty)
 
 if command -s gpg-connect-agent > /dev/null
   gpg-connect-agent /bye > /dev/null ^ /dev/null
+  set SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 end
 
 # aliasing `thefuck` to `fuck`
