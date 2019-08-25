@@ -7,7 +7,6 @@
   whitespace = nowarn
   excludesfile = ~/.gitignore_global
 [alias]
-	show-untracked = ls-files --others --exclude-standard
   br = branch
   brc = rev-parse --abbrev-ref HEAD
   ci = commit
@@ -27,6 +26,7 @@
   rebaseomi = rebase origin/master --interactive
   show-rev = !git show -p stash@\\{\\$1\\}
   show-stash = !git stash show -p `git rev-parse stash@{$1}` --color=always
+  show-untracked = ls-files --others --exclude-standard
   st = status -sb
   su = submodule update --recursive --init
   unstage = reset HEAD --
