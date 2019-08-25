@@ -11,9 +11,9 @@ end
 #gpg
 set -x GPG_TTY (tty)
 
-if command -s gpg-connect-agent > /dev/null
+if command -s gpg-connect-agent > /dev/null ^ /dev/null
   gpg-connect-agent /bye > /dev/null ^ /dev/null
-  set SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
+  set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 end
 
 # aliasing `thefuck` to `fuck`
@@ -42,10 +42,6 @@ if test -f /etc/motd
   if not cmp -s ~/.hushlogin /etc/motd
     tee ~/.hushlogin < /etc/motd
   end
-end
-
-if test -f ~/.gpg-agent-info
-  posix_source ~/.gpg-agent-info
 end
 
 # loading remote fish config, if it exists
