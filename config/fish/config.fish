@@ -1,3 +1,4 @@
+# vim: set syntax=fish:
 
 if test "$TERM_PROGRAM" = "Apple_Terminal" -a -z "$TMUX"
   if tt has-session -t termtab > /dev/null ^ /dev/null
