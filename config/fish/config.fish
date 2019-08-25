@@ -1,15 +1,9 @@
 
-if test "$IS_ALACRITTY" = "true"
-  set termtabs ~/.tmux/termtabs.conf
-  set termtabs (realpath $termtabs)
-  set session_name termtabs
-
-  if test -z $TMUX
-    if tmux -L termtabs has-session -t "$termtabs" > /dev/null ^ /dev/null
-      exec tmux -L termtabs -f "$termtabs" attach -t "$session_name" > /dev/null
-    else
-      exec tmux -L termtabs -f "$termtabs" new -t "$session_name" > /dev/null
-    end
+if test "$TERM_PROGRAM" = "Apple_Terminal" -a -z "$TMUX"
+  if tt has-session -t termtab > /dev/null ^ /dev/null
+    tt attach -t termtabs
+  else
+    tt new-session -s termtabs
   end
 end
 
