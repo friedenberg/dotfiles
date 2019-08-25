@@ -12,6 +12,11 @@
   ci = commit
   co = checkout
   cob = !git checkout -b $1 && git branch --set-upstream-to=origin/master
+  cobd = "!f() { \
+      branch_name=$(date -u +"%Y-%m-%d")-$1; \
+      git checkout -b \"$branch_name\"; \
+      git branch --set-upstream-to=origin/master; \
+    }; f"
   com = checkout master
   diffs = diff --staged
   hi = log --pretty=nice
