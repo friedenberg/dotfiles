@@ -1,3 +1,73 @@
+
+set __git_complete_aliases_commit commit
+set __git_complete_aliases_checkout co checkout
+set __git_complete_aliases_branch br branch
+
+complete --command git \
+  --no-files \
+  --condition "__git_complete_needs_branch" \
+  --arguments "(__git_complete_branches)"
+
+complete --command git \
+  --no-files \
+  --condition "__git_complete_needs_fixup" \
+  --arguments "(__git_complete_commits_since_master)"
+
+# COMPLETIONS
+
+function __git_complete_commits_since_master
+  set merge_base (git merge-base --fork-point master HEAD)
+  git log --format="%h|%s" "$merge_base..HEAD" | tr '|' "\t"
+end
+
+function __git_complete_branches
+  git branch --format "%(refname:short)|%(creatordate:relative)" | tr '|' "\t"
+end
+
+# CONDITIONS
+
+function __git_complete_needs_branch
+  __git_complete_is_branch_checkout; or __git_complete_is_branch_deletion
+end
+
+function __git_complete_is_branch_checkout
+  set current_command_line (commandline | string trim | string split " ")
+
+  if not contains $current_command_line[2] $__git_complete_aliases_checkout
+    return 1
+  end
+
+  return 0
+end
+
+function __git_complete_is_branch_deletion
+  set current_command_line (commandline | string trim | string split " ")
+
+  if not contains $current_command_line[2] $__git_complete_aliases_branch
+    return 1
+  end
+
+  return 0
+end
+
+function __git_complete_needs_fixup
+  set current_command_line (commandline | string trim | string split " ")
+
+  if test (count $current_command_line) -ne 3
+    return 1
+  end
+
+  if not contains $current_command_line[2] $__git_complete_aliases_commit
+    return 1
+  end
+
+  if test $current_command_line[3] != "--fixup"
+    return 1
+  end
+
+  return 0
+end
+
 #source /usr/local/Cellar/fish/2.3.1/share/fish/completions/git.fish
 #
 #function __fish_git_get_commits_matching_query --description "Prints commit SHA's and messages matching a given query"
