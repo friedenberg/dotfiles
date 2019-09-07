@@ -1,7 +1,7 @@
 [user]
   name = Sasha Friedenberg
   email = sashafriedenberg@gmail.com
-  signingkey = 1538B6E2521C7FD5!
+	signingkey = sashafriedenberg@gmail.com
 [core]
   editor = vim
   whitespace = nowarn
@@ -62,3 +62,5 @@
 	insteadOf = https://github.com/the-infatuation
 [pull]
 	rebase = true
+[commit]
+	gpgsign = true
