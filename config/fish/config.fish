@@ -52,6 +52,11 @@ if test -f /etc/motd
   end
 end
 
+if set -gq fish_user_paths
+  set -l old_fish_user_paths $fish_user_paths
+  set -eg fish_user_paths
+end
+
 # loading remote fish config, if it exists
 set -l remote_config ~/.config/fish/remote_config.fish
 
