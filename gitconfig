@@ -26,11 +26,20 @@
   hist = log --graph --pretty=hist --abbrev-commit
   last = show HEAD
   last-branch = rev-parse --abbrev-ref @{-1}
-  mergem = !git rebase master && git checkout master && git merge --ff-only @{-1}
+  mergem = "!f() { \
+      BRANCH_NAME=$(git branch --show-current) && \
+      git rebase master && \
+      git push -f && \
+      git checkout master && \
+      git merge --ff-only \"$BRANCH_NAME\" && \
+      git branch -D \"$BRANCH_NAME\"; \
+    }; f"
   rebasem = rebase origin/master --interactive
-  rebaseomi = rebase origin/master --interactive
+  rebasemi = rebase origin/master --interactive
   show-rev = !git show -p stash@\\{\\$1\\}
-  show-stash = !git stash show -p `git rev-parse stash@{$1}` --color=always
+  stash-show = "!f() { \
+      git stash show 'stash@{$1}' -p; \
+    }; f"
   show-untracked = ls-files --others --exclude-standard
   st = status -sb
   su = submodule update --recursive --init

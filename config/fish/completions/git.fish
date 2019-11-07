@@ -2,14 +2,17 @@
 set __git_complete_aliases_commit commit
 set __git_complete_aliases_checkout co checkout
 set __git_complete_aliases_branch br branch
+set __git_complete_aliases_show show
 
 complete --command git \
   --no-files \
+  --keep-order \
   --condition "__git_complete_needs_branch" \
   --arguments "(__git_complete_branches)"
 
 complete --command git \
   --no-files \
+  --keep-order \
   --condition "__git_complete_needs_fixup" \
   --arguments "(__git_complete_commits_since_master)"
 
@@ -17,17 +20,22 @@ complete --command git \
 
 function __git_complete_commits_since_master
   set merge_base (git merge-base --fork-point master HEAD)
-  git log --format="%h|%s" "$merge_base..HEAD" | tr '|' "\t"
+  git log --format="%h%x09%s" "$merge_base..HEAD"
 end
 
 function __git_complete_branches
-  git branch --format "%(refname:short)|%(creatordate:relative)" | tr '|' "\t"
+  git branch \
+  --sort=-committerdate \
+  --format "%(refname:short)%09%(creatordate:relative)"
 end
 
 # CONDITIONS
 
 function __git_complete_needs_branch
-  __git_complete_is_branch_checkout; or __git_complete_is_branch_deletion
+  __git_complete_is_branch_checkout; \
+  or __git_complete_is_branch_deletion; or \
+  or __git_complete_is_merge; or \
+  or __git_complete_is_show
 end
 
 function __git_complete_is_branch_checkout
@@ -44,6 +52,26 @@ function __git_complete_is_branch_deletion
   set current_command_line (commandline | string trim | string split " ")
 
   if not contains $current_command_line[2] $__git_complete_aliases_branch
+    return 1
+  end
+
+  return 0
+end
+
+function __git_complete_is_merge
+  set current_command_line (commandline | string trim | string split " ")
+
+  if not contains $current_command_line[2] "merge"
+    return 1
+  end
+
+  return 0
+end
+
+function __git_complete_is_branch_deletion
+  set current_command_line (commandline | string trim | string split " ")
+
+  if not contains $current_command_line[2] $__git_complete_aliases_show
     return 1
   end
 
