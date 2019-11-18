@@ -7,20 +7,16 @@
   whitespace = nowarn
   excludesfile = ~/.gitignore_global
 [alias]
+  aa = add --all --intent-to-add
+  ap = add --patch
   br = branch
   brc = rev-parse --abbrev-ref HEAD
   ci = commit
   co = checkout
   cob = !git checkout -b $1 && git branch --set-upstream-to=origin/master
-  cobd = "!f() { \
-      branch_name=$(date -u +"%Y-%m-%d")-$1; \
-      git checkout -b \"$branch_name\"; \
-      git branch --set-upstream-to=origin/master; \
-    }; f"
   com = checkout master
   diffs = diff --staged
   hi = log --pretty=nice
-  hid = log --pretty=nice origin/dev..HEAD
   hig = log --pretty=nice --graph
   him = log --pretty=nice origin/master..HEAD
   hist = log --graph --pretty=hist --abbrev-commit
@@ -28,6 +24,9 @@
   last-branch = rev-parse --abbrev-ref @{-1}
   mergem = "!f() { \
       BRANCH_NAME=$(git branch --show-current) && \
+      git checkout master && \
+      git pull origin master && \
+      git checkout \"$BRANCH_NAME\" && \
       git rebase master && \
       git push -f && \
       git checkout master && \
@@ -39,6 +38,9 @@
   show-rev = !git show -p stash@\\{\\$1\\}
   stash-show = "!f() { \
       git stash show 'stash@{$1}' -p; \
+    }; f"
+  stash-drop = "!f() { \
+      git stash drop 'stash@{$1}'; \
     }; f"
   show-untracked = ls-files --others --exclude-standard
   st = status -sb
