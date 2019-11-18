@@ -53,6 +53,9 @@ endif
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
+" Display extra whitespace
+set list listchars=tab:▸\ ,trail:·,nbsp:·
+
 augroup vimrcEx
   autocmd!
 
@@ -68,6 +71,9 @@ augroup vimrcEx
     \ if &ft == 'gitcommit' |
     \   exe "normal gg" |
     \ endif
+
+  " Invisible tabs for Go
+  autocmd FileType go setlocal list listchars=tab:\ \ ,trail:·,nbsp:·
 
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile Appraisals set filetype=ruby
@@ -92,9 +98,6 @@ set tabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
-
-" Display extra whitespace
-set list listchars=tab:»·,trail:·,nbsp:·
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
