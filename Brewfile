@@ -1,6 +1,6 @@
 tap "caskroom/cask"
 tap "homebrew/bundle"
-tap "homebrew/cask"
+tap "homebrew/cask-cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
@@ -10,22 +10,12 @@ cask "adoptopenjdk8"
 brew "coreutils"
 # Extendable version manager with support for Ruby, Node.js, Erlang & more
 brew "asdf"
-# Text processing scripting language
-brew "awk"
-# Command-line interface for SQLite
-brew "sqlite"
-# Official Amazon AWS command-line interface
-brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Suite of command-line tools for converting to and working with CSV
 brew "csvkit"
-# Tool for exploring each layer in a docker image
-brew "dive"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
-# Distributed search & analytics engine
-brew "elasticsearch"
 # Collection of GNU find, xargs, and locate
 brew "findutils"
 # User-friendly command-line shell for UNIX-like operating systems
@@ -52,10 +42,6 @@ brew "gnu-tar"
 brew "libevent"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
-# Like cURL, but for gRPC
-brew "grpcurl"
-# Smarter Dockerfile linter to validate best practices
-brew "hadolint"
 # Idempotent command-line utility for managing your /etc/hosts file
 brew "hostess"
 # User-friendly cURL replacement (command-line HTTP client)
@@ -64,14 +50,8 @@ brew "httpie"
 brew "hub"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Kubernetes command-line interface
-brew "kubernetes-cli"
-# Template-free customization of Kubernetes YAML manifests
-brew "kustomize"
 # Mac App Store command-line interface
 brew "mas"
-# Run a Kubernetes cluster locally
-brew "minikube"
 # Port scanning utility for large networks
 brew "nmap"
 # SSL/TLS cryptography library
@@ -82,10 +62,6 @@ brew "packer"
 brew "parallel"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
-# Protocol buffers (Google's data interchange format)
-brew "protobuf"
-# Your Swiss Army Knife for Protocol Buffers
-brew "prototool"
 # Reattach process (e.g., tmux) to background
 brew "reattach-to-user-namespace"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -112,8 +88,6 @@ brew "zlib"
 brew "thoughtbot/formulae/rcm"
 cask "alacritty"
 cask "basictex"
-cask "google-cloud-sdk"
-cask "minikube"
 cask "vagrant"
 cask "virtualbox"
 mas "1Password 7", id: 1333542190
