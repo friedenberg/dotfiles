@@ -75,3 +75,5 @@
 	rebase = true
 [commit]
 	gpgsign = true
+[advice]
+	detachedHead = false
