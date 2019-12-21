@@ -13,3 +13,6 @@
 [submodule "ssh"]
 	path = ssh
 	url = keybase://private/friedenberg/dotfiles-ssh
+[submodule "vim/pack/plugins/start/vim-fish"]
+	path = vim/pack/plugins/start/vim-fish
+	url = git@github.com:dag/vim-fish.git
