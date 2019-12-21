@@ -6,7 +6,11 @@ function ssh-get-pub-key
       exit 1
 
     case 1
-      ssh-keygen -lf (ssh-keyscan -t rsa $argv 2>&1 | psub) 2>&1
+      set -l pubkey (ssh-keyscan -t rsa $argv 2>&1)
+      set -l fingerprint (ssh-keygen -lf (echo $pubkey[2] | psub) 2>&1)
+      set -l lines (string split \n $pubkey)
+      set lines[1] (echo $lines[1] $fingerprint)
+      string join \n $lines
 
     case '*'
       for domain in $argv
