@@ -29,11 +29,6 @@ if command -s thefuck > /dev/null
   eval (thefuck --alias | tr '\n' ';')
 end
 
-set -l asdf /usr/local/opt/asdf/asdf.fish
-if test -e $asdf > /dev/null
-  source $asdf
-end
-
 set -x LESSOPEN "| "(realpath ~/.bin/src-hilite-lesspipe.sh)" %s"
 set -x LESS " -R "
 
