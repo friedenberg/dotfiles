@@ -34,6 +34,9 @@ if test -e $asdf > /dev/null
   source $asdf
 end
 
+set -x LESSOPEN "| "(realpath ~/.bin/src-hilite-lesspipe.sh)" %s"
+set -x LESS " -R "
+
 # starting virtualfish
 if command -s python > /dev/null
   python -c "__import__('virtualfish')" ^ /dev/null > /dev/null
