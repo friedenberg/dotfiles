@@ -32,10 +32,10 @@ end
 # CONDITIONS
 
 function __git_complete_needs_branch
-  __git_complete_is_branch_checkout; \
-  or __git_complete_is_branch_deletion; or \
-  or __git_complete_is_merge; or \
-  or __git_complete_is_show
+  __git_complete_is_branch_checkout; or \
+  __git_complete_is_branch_deletion; or \
+  __git_complete_is_merge; or \
+  __git_complete_is_show
 end
 
 function __git_complete_is_branch_checkout
@@ -72,6 +72,16 @@ function __git_complete_is_branch_deletion
   set current_command_line (commandline | string trim | string split " ")
 
   if not contains $current_command_line[2] $__git_complete_aliases_show
+    return 1
+  end
+
+  return 0
+end
+
+function __git_complete_is_show
+  set current_command_line (commandline | string trim | string split " ")
+
+  if not contains $current_command_line[2] show
     return 1
   end
 
