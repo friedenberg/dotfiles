@@ -53,8 +53,6 @@
   default = current
 [rebase]
   autosquash = true
-[include]
-  path = ~/.gitconfig.local
 [log]
   mailmap = true
 [mergetool]
@@ -75,3 +73,5 @@
 	gpgsign = true
 [advice]
 	detachedHead = false
+[include]
+  path = ~/.gitconfig.local
