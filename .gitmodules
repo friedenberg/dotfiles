@@ -1,6 +1,9 @@
 [submodule "gnupg"]
 	path = tag-gpg/gnupg
 	url = keybase://private/friedenberg/dotfiles-gnupg
+[submodule "ssh"]
+	path = ssh
+	url = keybase://private/friedenberg/dotfiles-ssh
 [submodule "vim/pack/plugins/start/vim-colors-solarized"]
 	path = vim/pack/plugins/start/vim-colors-solarized
 	url = git@github.com:altercation/vim-colors-solarized.git
@@ -10,9 +13,6 @@
 [submodule "vim/pack/plugins/start/vim-go"]
 	path = vim/pack/plugins/start/vim-go
 	url = git@github.com:fatih/vim-go.git
-[submodule "ssh"]
-	path = ssh
-	url = keybase://private/friedenberg/dotfiles-ssh
 [submodule "vim/pack/plugins/start/vim-fish"]
 	path = vim/pack/plugins/start/vim-fish
 	url = git@github.com:dag/vim-fish.git
