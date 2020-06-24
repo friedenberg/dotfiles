@@ -1,0 +1,3 @@
+
+source ~/.asdf/asdf.fish
+

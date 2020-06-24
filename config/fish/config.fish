@@ -39,6 +39,18 @@ if test -e $termtab_config
   source $termtab_config
 end
 
+set -l mac_config ~/.config/fish/config-mac.fish
+
+if test -e $mac_config -a test (uname -s) = 'Darwin'
+  source $mac_config
+end
+
+set -l linux_config ~/.config/fish/config-linux.fish
+
+if test -e $linux_config -a test (uname -s) = 'Linux'
+  source $linux_config
+end
+
 # loading local fish config, if it exists
 set -l local_config ~/.config/fish/config.fish.local
 
