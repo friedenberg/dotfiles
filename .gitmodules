@@ -6,13 +6,13 @@
 	url = keybase://private/friedenberg/dotfiles-ssh
 [submodule "vim/pack/plugins/start/vim-colors-solarized"]
 	path = vim/pack/plugins/start/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/pack/plugins/start/vim-projectionist"]
 	path = vim/pack/plugins/start/vim-projectionist
-	url = git@github.com:tpope/vim-projectionist.git
+	url = https://github.com/tpope/vim-projectionist.git
 [submodule "vim/pack/plugins/start/vim-go"]
 	path = vim/pack/plugins/start/vim-go
-	url = git@github.com:fatih/vim-go.git
+	url = https://github.com/fatih/vim-go.git
 [submodule "vim/pack/plugins/start/vim-fish"]
 	path = vim/pack/plugins/start/vim-fish
-	url = git@github.com:dag/vim-fish.git
+	url = https://github.com/dag/vim-fish.git
