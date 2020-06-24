@@ -39,7 +39,7 @@ if test -e $termtab_config
   source $termtab_config
 end
 
-set -l kernel (uname -s)
+set -l kernel (string lower (uname -s))
 set -l kernel_config ~/.config/fish/config-$kernel.fish
 
 if test -e $kernel_config
