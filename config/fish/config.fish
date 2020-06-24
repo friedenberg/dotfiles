@@ -44,6 +44,12 @@ if test -e $gpg_config
   source $gpg_config
 end
 
+set -l termtab_config ~/.termtabs-config.fish
+
+if test -e $termtab_config
+  source $termtab_config
+end
+
 # loading local fish config, if it exists
 set -l local_config ~/.config/fish/config.fish.local
 
