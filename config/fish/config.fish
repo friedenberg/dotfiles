@@ -1,13 +1,5 @@
 # vim: set syntax=fish:
 
-if command -s minikube > /dev/null ^ /dev/null
-  set docker_eval (minikube docker-env --shell fish ^ /dev/null)
-
-  if test 0 -eq $status
-    eval $docker_eval
-  end
-end
-
 # aliasing `thefuck` to `fuck`
 if command -s thefuck > /dev/null
   eval (thefuck --alias | tr '\n' ';')
