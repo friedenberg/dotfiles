@@ -1,21 +1,5 @@
 # vim: set syntax=fish:
 
-if test "$TERM_PROGRAM" = "Apple_Terminal" -a -z "$TMUX"
-  if tt has-session -t termtab > /dev/null ^ /dev/null
-    tt attach -t termtabs
-  else
-    tt new-session -s termtabs
-  end
-end
-
-#gpg
-set -x GPG_TTY (tty)
-
-if command -s gpg-connect-agent > /dev/null ^ /dev/null
-  gpg-connect-agent /bye > /dev/null ^ /dev/null
-  set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
-end
-
 if command -s minikube > /dev/null ^ /dev/null
   set docker_eval (minikube docker-env --shell fish ^ /dev/null)
 
