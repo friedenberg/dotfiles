@@ -1,7 +1,6 @@
 [user]
   name = Sasha Friedenberg
   email = sashafriedenberg@gmail.com
-	signingkey = sashafriedenberg@gmail.com
 [core]
   editor = vim
   whitespace = nowarn
@@ -61,17 +60,15 @@
 [merge]
   conflictstyle = diff3
   tool = vimdiff
-[gpg]
-  program = gpg2
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [merge "ours"]
 	driver = true
 [pull]
 	rebase = true
-[commit]
-	gpgsign = true
 [advice]
 	detachedHead = false
+[include]
+  path = ~/.gitconfig.gpg
 [include]
   path = ~/.gitconfig.local
