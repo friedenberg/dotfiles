@@ -69,8 +69,6 @@
 	insteadOf = https://github.com/
 [merge "ours"]
 	driver = true
-[url "https://a01ef2d37b339160fe35b8ef6643f077c6c3db61@github.com/the-infatuation"]
-	insteadOf = https://github.com/the-infatuation
 [pull]
 	rebase = true
 [commit]
