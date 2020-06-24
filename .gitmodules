@@ -1,5 +1,5 @@
 [submodule "gnupg"]
-	path = gnupg
+	path = tag-gpg/gnupg
 	url = keybase://private/friedenberg/dotfiles-gnupg
 [submodule "vim/pack/plugins/start/vim-colors-solarized"]
 	path = vim/pack/plugins/start/vim-colors-solarized
