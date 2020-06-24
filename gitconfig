@@ -22,24 +22,24 @@
   last = show HEAD
   last-branch = rev-parse --abbrev-ref @{-1}
   mergem = "!f() { \
-      BRANCH_NAME=$(git branch --show-current) && \
-      git checkout master && \
-      git pull origin master && \
-      git checkout \"$BRANCH_NAME\" && \
-      git rebase master && \
-      git push -f && \
-      git checkout master && \
-      git merge --ff-only \"$BRANCH_NAME\" && \
-      git branch -D \"$BRANCH_NAME\"; \
+    BRANCH_NAME=$(git branch --show-current) && \
+    git checkout master && \
+    git pull origin master && \
+    git checkout \"$BRANCH_NAME\" && \
+    git rebase master && \
+    git push -f && \
+    git checkout master && \
+    git merge --ff-only \"$BRANCH_NAME\" && \
+    git branch -D \"$BRANCH_NAME\"; \
     }; f"
   rebasem = rebase origin/master --interactive
   rebasemi = rebase origin/master --interactive
   show-rev = !git show -p stash@\\{\\$1\\}
   stash-show = "!f() { \
-      git stash show 'stash@{$1}' -p; \
+    git stash show 'stash@{$1}' -p; \
     }; f"
   stash-drop = "!f() { \
-      git stash drop 'stash@{$1}'; \
+    git stash drop 'stash@{$1}'; \
     }; f"
   show-untracked = ls-files --others --exclude-standard
   st = status -sb
@@ -63,11 +63,11 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [merge "ours"]
-	driver = true
+  driver = true
 [pull]
-	rebase = true
+  rebase = true
 [advice]
-	detachedHead = false
+  detachedHead = false
 [include]
   path = ~/.gitconfig.gpg
 [include]
