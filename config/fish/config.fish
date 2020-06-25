@@ -20,13 +20,6 @@ if set -gq fish_user_paths
   set -eg fish_user_paths
 end
 
-# loading remote fish config, if it exists
-set -l remote_config ~/.config/fish/remote_config.fish
-
-if test -e $remote_config -a -n "$SSH_CLIENT"
-  source $remote_config
-end
-
 set -l gpg_config ~/.gpg-config.fish
 
 if test -e $gpg_config
