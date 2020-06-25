@@ -1,5 +1,5 @@
 
-function t --description 'attach to or create an existing session for a given directory'
+function t --wraps tmux --description 'attach to or create an existing session for a given directory'
   if test (count "$argv") -ne 1
     __t_tmux_command $argv
     return $status
