@@ -17,7 +17,13 @@ function t --description 'attach to or create an existing session for a given di
 end
 
 function __t_tmux_command
-  tmux -L sessions $argv
+  set -l TMUX_COMMAND $TMUX_COMMAND
+
+  if test -z $TMUX_COMMAND
+    set TMUX_COMMAND tmux -L sessions
+  end
+
+  $TMUX_COMMAND $argv
   return $status
 end
 
