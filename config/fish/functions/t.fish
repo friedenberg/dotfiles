@@ -40,6 +40,11 @@ function __t_join_or_attach_directory
 end
 
 function __t_get_session_name_for_path
+  if test -f "$argv/TERMTABS_NAME"
+    string trim (cat "$argv/TERMTABS_NAME")
+    return $status
+  end
+
   echo (basename "$argv" | tr -d ".")
   return $status
 end
