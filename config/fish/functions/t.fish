@@ -19,7 +19,7 @@ end
 function __t_tmux_command
   set -l TMUX_COMMAND $TMUX_COMMAND
 
-  if test -z $TMUX_COMMAND
+  if test -z "$TMUX_COMMAND"
     set TMUX_COMMAND tmux -L sessions
   end
 
