@@ -1,8 +1,8 @@
 {
-  "title": "Shush: fn+ctrl = f12",
+  "title": "Shush: fn+ctrl = f20",
   "rules": [
     {
-      "description": "Shush: fn+ctrl = f12",
+      "description": "Shush: fn+ctrl = f20",
       "manipulators": [
         {
           "type": "basic",
@@ -18,7 +18,7 @@
           },
           "to": [
             {
-              "key_code": "f12"
+              "key_code": "f20"
             }
           ]
         }
