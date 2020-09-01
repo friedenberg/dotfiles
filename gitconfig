@@ -12,6 +12,7 @@
   brc = rev-parse --abbrev-ref HEAD
   ci = commit
   co = checkout
+  cop = checkout --patch
   cob = !git checkout -b $1 && git branch --set-upstream-to=origin/master
   com = checkout master
   diffs = diff --staged
