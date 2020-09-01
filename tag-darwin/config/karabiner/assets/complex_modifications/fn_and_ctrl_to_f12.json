@@ -1,0 +1,28 @@
+{
+  "title": "Shush: fn+ctrl = f12",
+  "rules": [
+    {
+      "description": "Shush: fn+ctrl = f12",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "fn"
+              },
+              {
+                "key_code": "left_control"
+              }
+            ]
+          },
+          "to": [
+            {
+              "key_code": "f12"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
