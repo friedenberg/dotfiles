@@ -28,13 +28,14 @@ function __t_tmux_command
 end
 
 function __t_join_or_attach_directory
-  set session_name (__t_get_session_name_for_path $argv)
+  set path (realpath $argv)
+  set session_name (__t_get_session_name_for_path $path)
 
   if __t_tmux_command has-session -t "$session_name" > /dev/null ^ /dev/null
-    __t_tmux_command attach -t "$session_name" -c "$argv"
+    __t_tmux_command attach -t "$session_name" -c "$path"
     return $status
   else
-    __t_tmux_command new-session -s "$session_name" -c "$argv"
+    __t_tmux_command new-session -s "$session_name" -c "$path"
     return $status
   end
 end
