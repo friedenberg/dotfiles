@@ -1,2 +1,3 @@
-EXCLUDES="fish_history"
-SYMLINK_DIRS="fish"
+COPY_ALWAYS="rcrc"
+EXCLUDES="rcrc fish_history"
+SYMLINK_DIRS="vim"
