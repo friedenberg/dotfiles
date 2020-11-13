@@ -1,10 +1,16 @@
 set shell=/bin/bash
 
 call plug#begin()
-Plug 'tpope/vim-sensible'
+Plug 'StanAngeloff/php.vim'
 Plug 'altercation/vim-colors-solarized'
-Plug 'tpope/vim-projectionist'
 Plug 'dag/vim-fish'
+Plug 'junegunn/vim-easy-align'
+Plug 'stephpy/vim-php-cs-fixer'
+Plug 'tobyS/pdv'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-sensible'
 call plug#end()
 
 set background=dark
