@@ -5,3 +5,4 @@ config/fish/fishd*
 *.local
 *.pyc
 config/thefuck/__pycache__/
+vim/plugged

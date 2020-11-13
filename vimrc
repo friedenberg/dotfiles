@@ -1,14 +1,16 @@
 set shell=/bin/bash
 
-syntax on
-filetype plugin indent on
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'altercation/vim-colors-solarized'
+Plug 'tpope/vim-projectionist'
+Plug 'dag/vim-fish'
+call plug#end()
 
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 set cursorline
-
-set nocompatible
 
 set undolevels=100
 set scrolloff=2
