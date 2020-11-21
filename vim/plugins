@@ -2,6 +2,7 @@ StanAngeloff/php.vim
 altercation/vim-colors-solarized
 dag/vim-fish
 junegunn/vim-easy-align
+osamuaoki/vim-spell-under
 stephpy/vim-php-cs-fixer
 tobyS/pdv
 tpope/vim-abolish
