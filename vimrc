@@ -1,16 +1,18 @@
 set shell=/bin/bash
 
+function! LoadPluginFile(f)
+  let l:fileName = expand(a:f)
+  if filereadable(l:fileName)
+    let s:lines = readfile(l:fileName)
+    for s:line in s:lines
+      call plug#(s:line)
+    endfor
+  endif
+endfunction
+
 call plug#begin()
-Plug 'StanAngeloff/php.vim'
-Plug 'altercation/vim-colors-solarized'
-Plug 'dag/vim-fish'
-Plug 'junegunn/vim-easy-align'
-Plug 'stephpy/vim-php-cs-fixer'
-Plug 'tobyS/pdv'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-sensible'
+call LoadPluginFile('~/.vim/plugins')
+call LoadPluginFile('~/.vim/plugins.local')
 call plug#end()
 
 set background=dark
