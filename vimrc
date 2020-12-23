@@ -254,6 +254,10 @@ augroup filetype_go
   autocmd FileType go nnoremap <buffer> <localleader>t :GoTest<cr>
 augroup END
 
+augroup pandoc_syntax
+  au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup END
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
