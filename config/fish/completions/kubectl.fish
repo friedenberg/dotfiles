@@ -16,29 +16,3 @@ __kubectl_c "(__complete_with delete deployment __kubectl_print_deployments)"
 __kubectl_c "(__complete_with edit deployment __kubectl_print_deployments)"
 __kubectl_c "(__complete_with apply -f __kubectl_print_yaml_configs)"
 
-function __kubectl_print_clusters
-  kubectl config get-clusters | strip-first-line
-end
-
-function __kubectl_print_contexts
-  kubectl config get-contexts -o name
-end
-
-function __kubectl_print_deployments
-  kubectl get deployments | strip-first-line | spaces-to-tabs | cut -f1
-end
-
-function __kubectl_print_pods
-  if test -n "$argv[1]"
-    kubectl get pods -n "$argv[1]" -o custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace | strip-first-line | spaces-to-tabs | cut -f1,2
-  else
-    kubectl get pods --all-namespaces -o custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace | strip-first-line | spaces-to-tabs | cut -f1,2
-  end
-end
-
-function __kubectl_print_yaml_configs
-  set cwd (pwd)
-  set pwd_count (math (string length "$cwd") + 2)
-  locate "$cwd*.yaml" | string sub --start $pwd_count
-end
-
