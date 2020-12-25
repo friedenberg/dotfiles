@@ -1,4 +1,4 @@
-function __complete_with --description "helper function to generate commandline completions"
+function __complete_with --description "use in `complete` to generated completions for specific command strings. Last should be a function that generates completions"
   set last_char (commandline | string sub --start -1)
 
   set current_command_line (commandline | string trim | string split " ")[2..-1]
