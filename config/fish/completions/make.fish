@@ -1,4 +1,7 @@
-complete -c make -f -a "(__make_complete_targets)"
+complete \
+ --command make \
+  --no-files \
+  --arguments "(__make_complete_targets)"
 
 function __make_complete_targets
   make -rpn \
