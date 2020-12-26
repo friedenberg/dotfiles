@@ -16,50 +16,12 @@ __fish_complete_empty \
 complete \
   --command git \
   --no-files \
-  --condition "__fish_contains_arg $__git_complete_aliases_checkout; and not __fish_contains_arg --" \
+  --condition "__fish_seen_subcommand_from $__git_complete_aliases_checkout; and not __fish_seen_subcommand_from --" \
   --arguments "(__git_complete_branches)"
 
-complete \
-  --command git \
-  --no-files \
-  --keep-order \
-  --condition "__git_complete_needs_fixup" \
-  --arguments "(__git_complete_commits_since_master)"
-
-complete \
-  --command git \
-  --condition "__fish_contains_arg diff" \
-  --long-option "word-diff" \
-  --description "Show a word diff"
-
-complete \
-  --command git \
-  --condition "__fish_contains_arg diff" \
-  --long-option "no-index" \
-  --description "Compare two paths on the filesystem regardless of working tree"
-
-complete \
-  --command git \
-  --condition "__fish_contains_arg commit" \
-  --long-option "fixup" \
-  --exclusive \
-  --description "Compare two paths on the filesystem regardless of working tree"
-
-complete \
-  --command git \
-  --condition "__fish_contains_arg rm" \
-  --condition "not __fish_contains_opt cached" \
-  --long-option "cached" \
-  --exclusive \
-  --description "unstage and remove paths only from the index. Working tree files, whether modified or not, will be left alone."
-
-complete \
-  --command git \
-  --condition "__fish_contains_arg rm" \
-  --condition "__fish_contains_opt cached" \
-  --short-option "r" \
-  --exclusive \
-  --description "recursive removal when a leading directory name is given."
+source $HOME/.config/fish/completions/git-commit.fish
+source $HOME/.config/fish/completions/git-diff.fish
+source $HOME/.config/fish/completions/git-rm.fish
 
 __fish_complete_tail_files git
 
@@ -79,7 +41,7 @@ end
 # CONDITIONS
 
 function __git_complete_needs_branch
-  return (__fish_contains_arg \
+  return (__fish_seen_subcommand_from \
     merge show \
     $__git_complete_aliases_checkout \
     $__git_complete_aliases_show \
