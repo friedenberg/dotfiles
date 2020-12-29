@@ -31,9 +31,6 @@ set tags=tags;
 let mapleader = " "
 let maplocalleader = " "
 
-" project-specific vimrc files
-set exrc
-
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
 set nowritebackup
@@ -265,3 +262,6 @@ endif
 
 " make project-specific vimrc files not scary
 set secure
+
+" project-specific vimrc files
+set exrc
