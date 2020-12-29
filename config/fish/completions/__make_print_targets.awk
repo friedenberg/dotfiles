@@ -1,12 +1,12 @@
-#! /usr/bin/env awk -F: -f
-#
+#! /usr/bin/env -S awk -F: -f
+
 /# Files/ {
   searching = 1
 }
 
 /^[^#.][^%]+:/ {
   if (searching && previous_line != "# Not a target")
-    print $1
+    printf "%s\ttarget\n", $1
 }
 
 /^#/ {
