@@ -17,30 +17,17 @@ if set -gq fish_user_paths
   set -eg fish_user_paths
 end
 
-set -l gpg_config ~/.gpg-config.fish
-
-if test -e $gpg_config
-  source $gpg_config
+function __source_if_exists
+  for some_path in $argv
+    if test -e $some_path
+      source $some_path
+    end
+  end
 end
 
-set -l termtab_config ~/.termtabs-config.fish
-
-if test -e $termtab_config
-  source $termtab_config
-end
-
-set -l kernel (string lower (uname -s))
-set -l kernel_config ~/.config/fish/config-$kernel.fish
-
-if test -e $kernel_config
-  source $kernel_config
-else
-  echo "No fish config file exists for $kernel."
-end
-
-# loading local fish config, if it exists
-set -l local_config ~/.config/fish/config.fish.local
-
-if test -e $local_config
-  source $local_config
-end
+__source_if_exists \
+  ~/.gpg-config.fish \
+  ~/.termtabs-config.fish \
+  $ASDF_DIR/asdf.fish \
+  ~/.config/fish/config/kernal.fish \
+  ~/.config/fish/config/local.fish
