@@ -16,7 +16,6 @@ call LoadPluginFile('~/.vim/plugins.local')
 call plug#end()
 
 set background=dark
-let g:solarized_termcolors=256
 colorscheme solarized
 set cursorline
 
