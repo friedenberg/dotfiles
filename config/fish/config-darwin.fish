@@ -1,3 +1,3 @@
 
-source (brew --prefix asdf)/asdf.fish
+source $ASDF_DIR/asdf.fish
 
