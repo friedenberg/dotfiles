@@ -1,4 +1,4 @@
 function wmake
-  make; and fswatch -o . | xargs -I {} make
+  make $argv; and fswatch -o . | xargs -I {} make $argv
   return $status
 end
