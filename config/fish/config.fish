@@ -5,9 +5,6 @@ if command -s thefuck > /dev/null
   eval (thefuck --alias | tr '\n' ';')
 end
 
-set -x LESSOPEN "| "(realpath ~/.bin/src-hilite-lesspipe.sh)" %s"
-set -x LESS " -R "
-
 # hushing motd unless it has changed
 if test -f /etc/motd
   if not cmp -s ~/.hushlogin /etc/motd
