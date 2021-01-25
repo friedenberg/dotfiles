@@ -4,11 +4,15 @@
   searching = 1
 }
 
-/^[^ \t%#\.]+:/ {
-  if (searching && previous_line != "# Not a target")
+/^[^\s\t#].+:/ {
+  if (searching && found_target)
     printf "%s\ttarget\n", $1
 }
 
-/^#/ {
-  previous_line = $1
+{
+  found_target = 1
+}
+
+/^# Not a target/ {
+  found_target = 0
 }

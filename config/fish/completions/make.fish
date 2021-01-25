@@ -31,6 +31,6 @@ complete \
   --description "Print the commands that would be executed, but do not execute them" \
 
 function __make_complete_targets
-  make -rpn ^ /dev/null \
+  make -pn ^ /dev/null \
   | $HOME/.config/fish/completions/__make_print_targets.awk
 end
