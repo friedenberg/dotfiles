@@ -24,7 +24,6 @@ function fish_prompt --description 'Write out the prompt'
     echo -n -s (set_color -b blue white) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
   end
 
-  #echo '⮐'
   echo ''
 
   if test "$TERMKIT_HOST_APP" = "Cathode"
