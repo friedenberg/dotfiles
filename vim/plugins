@@ -11,3 +11,4 @@ tpope/vim-projectionist
 tpope/vim-sensible
 vim-pandoc/vim-pandoc-syntax
 friedenberg/vim-fancy-comment
+friedenberg/vim-kitty-conf
