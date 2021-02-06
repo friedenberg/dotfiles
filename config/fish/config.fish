@@ -25,9 +25,8 @@ function __source_if_exists
   end
 end
 
-__source_if_exists \
-  ~/.gpg-config.fish \
-  ~/.termtabs-config.fish \
-  $ASDF_DIR/asdf.fish \
-  ~/.config/fish/config/kernal.fish \
-  ~/.config/fish/config/local.fish
+__source_if_exists $ASDF_DIR/asdf.fish
+
+for file in (find ~/.config/fish -iname '*-config.fish' -print0 | string split0)
+  __source_if_exists $file
+end
