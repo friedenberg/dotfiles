@@ -1,0 +1,101 @@
+tap "bramstein/webfonttools"
+tap "buo/cask-upgrade"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "thoughtbot/formulae"
+brew "coreutils"
+brew "openssl@1.1"
+brew "asdf"
+brew "bash"
+brew "bats"
+brew "blueutil"
+brew "fontconfig"
+brew "gettext"
+brew "sqlite"
+brew "glib"
+brew "csvkit"
+brew "pkg-config"
+brew "guile"
+brew "libevent"
+brew "gnutls"
+brew "icu4c"
+brew "ffmpeg"
+brew "figlet"
+brew "findutils"
+brew "fish"
+brew "fswatch"
+brew "gawk"
+brew "gist"
+brew "git"
+brew "git-secret"
+brew "gnu-getopt"
+brew "gnu-sed"
+brew "gnu-tar"
+brew "pango"
+brew "gnuplot"
+brew "gpgme"
+brew "hopenpgp-tools"
+brew "hostess"
+brew "httpie"
+brew "hub"
+brew "imagemagick"
+brew "jq"
+brew "mas"
+brew "moreutils"
+brew "ncurses"
+brew "ocrmypdf"
+brew "pandoc"
+brew "paperkey"
+brew "pdftk-java"
+brew "pinentry-mac"
+brew "qrencode"
+brew "reattach-to-user-namespace"
+brew "shellcheck"
+brew "shfmt"
+brew "switchaudio-osx"
+brew "the_silver_searcher"
+brew "thefuck"
+brew "tldr"
+brew "tmux"
+brew "tree"
+brew "wget"
+brew "ykman"
+brew "thoughtbot/formulae/rcm"
+cask "amethyst"
+cask "basictex"
+cask "calibre"
+cask "google-chrome"
+cask "gpg-suite"
+cask "keepassxc"
+cask "kitty"
+cask "macpass"
+cask "macvim"
+cask "plover"
+cask "vagrant"
+cask "virtualbox"
+mas "1Password 7", id: 1333542190
+mas "Apple Configurator 2", id: 1037126344
+mas "DaisyDisk", id: 411643860
+mas "Gemini 2", id: 1090488118
+mas "iA Writer", id: 775737590
+mas "Kindle", id: 405399194
+mas "LittleIpsum", id: 405772121
+mas "Magnet", id: 441258766
+mas "Meeter", id: 1510445899
+mas "MultiMarkdown Composer", id: 1275176220
+mas "Pixelmator", id: 407963104
+mas "Pixelmator Pro", id: 1289583905
+mas "Shush", id: 496437906
+mas "Simplenote", id: 692867256
+mas "Slack", id: 803453959
+mas "Soulver", id: 413965349
+mas "Strongbox", id: 1270075435
+mas "TableFlip", id: 1462643128
+mas "TaskPaper", id: 1090940630
+mas "The Unarchiver", id: 425424353
+mas "Things", id: 904280696
+mas "WireGuard", id: 1451685025
+mas "xScope", id: 889428659
