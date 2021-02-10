@@ -66,10 +66,13 @@ brew "ykman"
 brew "thoughtbot/formulae/rcm"
 cask "amethyst"
 cask "anki"
+cask "bartender"
 cask "basictex"
 cask "calibre"
+cask "dash"
 cask "google-chrome"
 cask "gpg-suite"
+cask "istat-menus"
 cask "keepassxc"
 cask "kitty"
 cask "macpass"
@@ -78,20 +81,15 @@ cask "plover"
 cask "vagrant"
 cask "virtualbox"
 mas "1Password 7", id: 1333542190
-mas "Apple Configurator 2", id: 1037126344
 mas "DaisyDisk", id: 411643860
 mas "Gemini 2", id: 1090488118
 mas "iA Writer", id: 775737590
 mas "Kindle", id: 405399194
 mas "LittleIpsum", id: 405772121
-mas "Magnet", id: 441258766
 mas "Meeter", id: 1510445899
-mas "MultiMarkdown Composer", id: 1275176220
 mas "Pixelmator", id: 407963104
 mas "Pixelmator Pro", id: 1289583905
 mas "Shush", id: 496437906
-mas "Simplenote", id: 692867256
-mas "Slack", id: 803453959
 mas "Soulver", id: 413965349
 mas "Strongbox", id: 1270075435
 mas "TableFlip", id: 1462643128
