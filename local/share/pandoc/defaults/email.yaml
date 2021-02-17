@@ -138,6 +138,8 @@ filters:
 css:
 - style.css
 
+shift-heading-level-by: 2
+
 # # none, all, or best
 # ipynb-output: best
 
