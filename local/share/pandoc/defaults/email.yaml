@@ -48,8 +48,7 @@ resource-path: ["."]
 # Filters are run in the order specified.
 # To include the built-in citeproc filter, use either `citeproc`
 # or `{type: citeproc}`.
-filters:
-- golinks.lua
+filters: []
 
 # file-scope: false
 
