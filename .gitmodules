@@ -1,6 +1,3 @@
-[submodule "gnupg"]
-	path = tag-gpg/gnupg
-	url = keybase://private/friedenberg/dotfiles-gnupg
 [submodule "ssh"]
 	path = ssh
 	url = keybase://private/friedenberg/dotfiles-ssh
