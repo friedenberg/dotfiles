@@ -1,7 +1,6 @@
 [user]
   name = Sasha Friedenberg
   email = sashafriedenberg@gmail.com
-  signingkey = EFBC28233D39BF28E26470D7FC97FFC960963978
 [core]
   editor = vim
   whitespace = nowarn
