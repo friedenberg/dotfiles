@@ -1,9 +1,15 @@
 # vim: set syntax=fish:
 
-if test -z "$TMUX"
-  if tt has-session -t termtab > /dev/null ^ /dev/null
-    tt attach -t termtabs
-  else
-    tt new-session -s termtabs
-  end
+if test (tt display -p '#{?session_attached,TRUE,FALSE}' 2>&1) = TRUE
+  exit 0
+end
+
+if test (t display -p '#{?session_attached,TRUE,FALSE}' 2>&1) = TRUE
+  exit 0
+end
+
+if tt has-session -t termtabs 2>&1 > /dev/null
+  tt attach
+else
+  tt new-session -s termtabs
 end
