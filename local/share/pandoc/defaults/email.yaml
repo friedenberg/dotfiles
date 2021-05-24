@@ -5,7 +5,7 @@ input-files:
 
   #template: letter
 standalone: true
-# self-contained: false
+self-contained: true
 
 # note that structured variables may be specified:
 # variables:
@@ -28,7 +28,7 @@ metadata:
 # Note that these take files, not their contents:
 include-before-body: []
 include-after-body: []
-include-in-header: []
+# include-in-header: ["${HOME}/.local/share/pandoc/nostyle.css"]
 resource-path: ["."]
 
 # turn on built-in citation processing.  Note that if you need
@@ -135,7 +135,7 @@ filters: []
 
 # html-q-tags: false
 css:
-- style.css
+- ${HOME}/.local/share/pandoc/nostyle.css
 
 shift-heading-level-by: 2
 
