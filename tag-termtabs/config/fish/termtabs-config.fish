@@ -1,10 +1,6 @@
 # vim: set syntax=fish:
 
-if test (tt display -p '#{?session_attached,TRUE,FALSE}' 2>&1) = TRUE
-  exit 0
-end
-
-if test (t display -p '#{?session_attached,TRUE,FALSE}' 2>&1) = TRUE
+if test -n "$TMUX"
   exit 0
 end
 
