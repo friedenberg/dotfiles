@@ -1,6 +1,10 @@
 StanAngeloff/php.vim
 altercation/vim-colors-solarized
+bfrg/vim-jq
+cespare/vim-toml
 dag/vim-fish
+friedenberg/vim-fancy-comment
+friedenberg/vim-kitty-conf
 junegunn/vim-easy-align
 osamuaoki/vim-spell-under
 stephpy/vim-php-cs-fixer
@@ -10,5 +14,3 @@ tpope/vim-commentary
 tpope/vim-projectionist
 tpope/vim-sensible
 vim-pandoc/vim-pandoc-syntax
-friedenberg/vim-fancy-comment
-friedenberg/vim-kitty-conf
