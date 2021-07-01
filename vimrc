@@ -254,13 +254,6 @@ augroup pandoc_syntax
   au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
 
-augroup zettelkasten
-  au! BufWritePre */Zettelkasten/*
-        \ let save_cursor = getpos(".") |
-        \ execute(":%!$HOME/Zettelkasten/1622158831.awk -v filename=\"%\"") |
-        \ call setpos('.', save_cursor)
-augroup END
-
 set number relativenumber
 
 augroup numbertoggle
