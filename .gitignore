@@ -6,3 +6,4 @@ config/fish/fishd*
 config/thefuck/__pycache__/
 vim/plugged
 *.netrwhist
+host-*/
