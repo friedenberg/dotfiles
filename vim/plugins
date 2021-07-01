@@ -3,6 +3,7 @@ altercation/vim-colors-solarized
 bfrg/vim-jq
 cespare/vim-toml
 dag/vim-fish
+fatih/vim-go
 friedenberg/vim-fancy-comment
 friedenberg/vim-kitty-conf
 junegunn/vim-easy-align
