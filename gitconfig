@@ -72,3 +72,5 @@
   path = ~/.gitconfig.gpg
 [include]
   path = ~/.gitconfig.local
+[init]
+  defaultBranch = master
