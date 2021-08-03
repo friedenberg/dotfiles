@@ -28,7 +28,6 @@ metadata:
 # Note that these take files, not their contents:
 include-before-body: []
 include-after-body: []
-# include-in-header: ["${HOME}/.local/share/pandoc/nostyle.css"]
 resource-path: ["."]
 
 # turn on built-in citation processing.  Note that if you need
