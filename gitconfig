@@ -33,6 +33,7 @@
     git merge --ff-only \"$BRANCH_NAME\" && \
     git branch -D \"$BRANCH_NAME\"; \
     }; f"
+  om = !git status --short | ag '(?<=.[MA?] )(.*)$' --no-color --only-matching
   rebasem = rebase origin/master --interactive
   rebasemi = rebase origin/master --interactive
   show-rev = !git show -p stash@\\{\\$1\\}
