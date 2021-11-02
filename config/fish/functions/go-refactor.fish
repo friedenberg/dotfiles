@@ -23,5 +23,7 @@ function go-refactor
   if test (string lower $answer) = y
     $base_gofmt_cmd -w $files
   end
+
+  goimports -w $files
 end
 

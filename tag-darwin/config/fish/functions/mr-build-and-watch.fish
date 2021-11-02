@@ -12,5 +12,5 @@ function mr-build-and-watch
   set -l command $argv
 
   fswatch -ro $excludes . \
-  | xargs -I_ fish -c "echo; and $command; and echo done | ts; and bell; or bell Sosumi"
+  | xargs -I{} fish -c "echo; and $command; and echo done | ts; and bell; or bell Sosumi"
 end
