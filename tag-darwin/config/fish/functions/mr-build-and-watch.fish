@@ -1,5 +1,9 @@
 
 function mr-build-and-watch
+  if test (count $argv) -eq 0
+    set argv (cat MR_BUILD_AND_WATCH)
+  end
+
   argparse --name=mr-build-and-watch \
     'e/exclude=+' \
     'p/path=+' \
@@ -20,6 +24,6 @@ function mr-build-and-watch
 
   set -l command $argv
 
-  fswatch -ro $excludes $watch_path \
-  | xargs -I{} fish -c "echo; and $command; and echo done | ts; and bell; or bell Sosumi"
+  fswatch -or $excludes $watch_path \
+  | xargs -I{} fish -c "echo {}; and $command; and echo done | ts; and bell; or bell Sosumi"
 end
