@@ -5,7 +5,7 @@ endif
 
 syn region zitMetadatei start=/\v%^---$/ end=/\v^---$/ contains=zitMetadateiRootEtikettRegion
 
-syn match zitMetadateiRootEtikett /\v[^\n]+/ contained
+syn match zitMetadateiRootEtikett /\v[^\n]+/ contained contains=@NoSpell
 syn match zitMetadateiRootEtikettPrefix /\v^\* / contained nextgroup=zitMetadateiRootEtikett
 syn region zitMetadateiRootEtikettRegion start=/\v^\* / end=/$/ oneline contained contains=zitMetadateiRootEtikettPrefix,zitMetadateiRootEtikett
 
@@ -14,7 +14,7 @@ syn match zitEtikettPrefix /\v^# / contained
 syn region zitEtikettRegion start=/\v^# / end=/$/ oneline contains=zitEtikett,zitEtikettPrefix
 
 syn match zitZettelBezeichnung /\v[^\n]+$/ contained contains=@NoSpell
-syn match zitZettelHinweis /\v\w+/ contained
+syn match zitZettelHinweis /\v\w+/ contained contains=@NoSpell
 syn match zitZettelSeparator /\v\// contained
 syn match zitZettelPrefix /\v^- / contained
 syn region zitZettelHinweisRegion start=/\v\[/ end=/]/ oneline contains=zitZettelHinweis,zitZettelHinweisSeparator nextgroup=zitZettelBezeichnung
