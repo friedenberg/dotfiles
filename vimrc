@@ -19,6 +19,9 @@ set background=dark
 colorscheme solarized
 set cursorline
 
+" disable background color erase for kitty
+let &t_ut=''
+
 set undolevels=100
 set scrolloff=2
 
@@ -241,9 +244,29 @@ endfunction
 
 set tabline=%!MyTabLine()
 
+function! Format()
+  let save_pos = getpos(".")
+  normal gg=G
+  call setpos(".", save_pos)
+endfunction
+
+function! ShellFailed()
+  if v:shell_error
+    let contents = join(getline(1, '$'), "\n")
+    undo
+    :cexpr contents
+  endif
+endfunction
+
+augroup FILTER_ERROR
+  au!
+  autocmd ShellFilterPost * :call ShellFailed()
+augroup END
+
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>b :make<cr>
+nnoremap <leader>f :call Format()<cr>
 
 function Gf()
   try

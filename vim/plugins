@@ -6,9 +6,6 @@ dag/vim-fish
 editorconfig/editorconfig-vim
 friedenberg/vim-fancy-comment
 friedenberg/vim-kitty-conf
-google/vim-codefmt
-google/vim-glaive
-google/vim-maktaba
 junegunn/vim-easy-align
 osamuaoki/vim-spell-under
 stephpy/vim-php-cs-fixer
