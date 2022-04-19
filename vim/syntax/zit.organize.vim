@@ -13,12 +13,12 @@ syn match zitEtikett /\v[^\n]+/ contained contains=@NoSpell
 syn match zitEtikettPrefix /\v^# / contained
 syn region zitEtikettRegion start=/\v^# / end=/$/ oneline contains=zitEtikett,zitEtikettPrefix
 
-syn match zitZettelBezeichnung /\v[^\n]+$/ contained contains=@NoSpell
+syn match zitZettelBezeichnung /\v [^[\n][^\n]*$/ contained contains=@NoSpell
 syn match zitZettelHinweis /\v\w+/ contained contains=@NoSpell
 syn match zitZettelSeparator /\v\// contained
 syn match zitZettelPrefix /\v^- / contained
-syn region zitZettelHinweisRegion start=/\v\[/ end=/]/ oneline contains=zitZettelHinweis,zitZettelHinweisSeparator nextgroup=zitZettelBezeichnung
-syn region zitZettelRegion start=/\v^- / end=/$/ oneline contains=zitZettelHinweisRegion
+syn region zitZettelHinweisRegion start=/\v\[/ end=/]/ oneline contained contains=zitZettelHinweis,zitZettelHinweisSeparator nextgroup=zitZettelBezeichnung
+syn region zitZettelRegion start=/\v^- / end=/$/ oneline contains=zitZettelHinweisRegion,zitZettelBezeichnung
 
 highlight default link zitMetadatei Normal
 highlight default link zitMetadateiRootEtikett Title
