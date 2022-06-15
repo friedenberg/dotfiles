@@ -81,19 +81,12 @@ augroup vimrcEx
     \   exe "normal gg" |
     \ endif
 
-  " Invisible tabs for Go
-  autocmd FileType go setlocal list listchars=tab:\ \ ,trail:·,nbsp:·
+  autocmd BufRead,BufNewFile *.bats set filetype=bats
 
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile *.md set filetype=markdown
 
   set spell spelllang=en_us
-
-  " Automatically wrap at 80 characters for Markdown
-  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-
-  " Automatically wrap at 72 characters and spell check git commit messages
-  autocmd FileType gitcommit setlocal textwidth=72
 
   " Allow stylesheets to autocomplete hyphenated words
   autocmd FileType css,scss,sass setlocal iskeyword+=-
@@ -245,28 +238,28 @@ endfunction
 set tabline=%!MyTabLine()
 
 function! Format()
+  cexpr []
+  w
+
   let save_pos = getpos(".")
   normal gg=G
   call setpos(".", save_pos)
-endfunction
 
-function! ShellFailed()
   if v:shell_error
     let contents = join(getline(1, '$'), "\n")
     undo
     :cexpr contents
+    copen
+  else
+    w
+    ccl
   endif
 endfunction
 
-augroup FILTER_ERROR
-  au!
-  autocmd ShellFilterPost * :call ShellFailed()
-augroup END
-
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>b :make<cr>
 nnoremap <leader>f :call Format()<cr>
+nnoremap <leader>b :make<cr>
 
 function Gf()
   try
