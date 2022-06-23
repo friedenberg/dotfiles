@@ -20,6 +20,10 @@
   hig = log --pretty=nice --graph
   him = log --pretty=nice origin/master..HEAD
   hist = log --graph --pretty=hist --abbrev-commit
+  init-signed = "!f() { \
+    git init && \
+    git config --local include.path ~/.gitconfig-gpg; \
+    }; f"
   last = show HEAD
   last-branch = rev-parse --abbrev-ref @{-1}
   mergem = "!f() { \
