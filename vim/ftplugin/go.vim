@@ -1,6 +1,8 @@
 
+setlocal noexpandtab
+
 " Invisible tabs for Go
-setlocal list listchars=tab:\ \ ,trail:·,nbsp:·
+" setlocal list listchars=tab:\ \ ,trail:·,nbsp:·
 
 setlocal equalprg=goimports\ %
 let &makeprg = "go build && go test -v ./..."

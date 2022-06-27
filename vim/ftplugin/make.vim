@@ -1,2 +1,3 @@
 
-set noexpandtab shiftwidth=8 softtabstop=0
+setlocal noexpandtab 
+setlocal softtabstop=0
