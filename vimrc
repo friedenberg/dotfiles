@@ -256,6 +256,13 @@ function! Format()
   endif
 endfunction
 
+let cmd_edit_ftplugin = "execute(':tabe $HOME/.vimrc')"
+
+function EditFtplugin()
+  execute(":tabedit $HOME/.vim/ftplugin/".&ft.".vim")
+endfunction
+
+nnoremap <leader>et :call EditFtplugin()<cr>
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>f :call Format()<cr>
