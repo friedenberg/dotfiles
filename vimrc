@@ -278,14 +278,6 @@ endfunction
 
 noremap gf :call Gf()<CR>
 
-augroup autoformat_settings
-  " autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
-  " autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
-  " autocmd FileType java AutoFormatBuffer google-java-format
-  " autocmd FileType python AutoFormatBuffer yapf
-augroup END
-
-
 augroup pandoc_syntax
   au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
