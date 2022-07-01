@@ -23,7 +23,7 @@ function reset-gpg --description "Reloads GPG Agent"
   __reset-gpg_run gpg-connect-agent "scd serialno" "learn --force" /bye; or return
   __reset-gpg_run gpgconf --reload gpg-agent; or return
   __reset-gpg_run gpg-connect-agent updatestartuptty /bye; or return
-  __reset-gpg_run gpg --card-status; or return
+  __reset-gpg_run gpg --card-status >/dev/null 2>&1; or return
 
   return $status
 end
