@@ -1,2 +1,2 @@
 
-let &equalprg = "jq %"
+let &equalprg = "jq . %"
