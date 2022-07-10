@@ -12,6 +12,7 @@ endfunction
 
 call plug#begin()
 call LoadPluginFile('~/.vim/plugins')
+Plug '~/.vim/plugged/vim-zit'
 call LoadPluginFile('~/.vim/plugins.local')
 call plug#end()
 
@@ -256,6 +257,22 @@ function! Format()
   endif
 endfunction
 
+function! Test()
+  echo "Running tests..."
+  cexpr []
+  w
+
+  let contents = system(expandcmd(b:testprg))
+
+  if v:shell_error
+    :cexpr contents
+    copen
+  else
+    ccl
+    echo "Test succeeded!"
+  endif
+endfunction
+
 let cmd_edit_ftplugin = "execute(':tabe $HOME/.vimrc')"
 
 function EditFtplugin()
@@ -266,7 +283,10 @@ nnoremap <leader>et :call EditFtplugin()<cr>
 nnoremap <leader>ev :tabe $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>f :call Format()<cr>
+nnoremap <leader>t :call Test()<cr>
 nnoremap <leader>b :make<cr>
+nnoremap <leader>co :copen<cr>
+nnoremap <leader>cc :ccl<cr>
 
 function Gf()
   try
