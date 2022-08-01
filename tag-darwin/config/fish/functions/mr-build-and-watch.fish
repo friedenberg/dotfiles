@@ -4,16 +4,19 @@ function mr-build-and-watch
     echo (date) $argv
   end
 
-  if test (count $argv) -eq 0
-    set -l awk_script (dirname (status -f))/mr-build-and-watch-file.awk
-    set argv ($awk_script MR_BUILD_AND_WATCH | string unescape)
+  function __mr-build-and-watch-exec
+    if make
+      set -l success $status
+      bell
+    else
+      set -l success $status
+      bell Sosumi
+    end
   end
 
   argparse --name=mr-build-and-watch \
     'changed_files=+' \
     'c/clear=?' \
-    'e/exclude=+' \
-    'i/includes=+' \
     -- $argv
   or return
 
@@ -25,17 +28,9 @@ function mr-build-and-watch
     __mr-build-and-watch-echo changes detected: $_flag_changed_files
   end
 
-  __mr-build-and-watch-echo running "'$argv'"
+  __mr-build-and-watch-exec $argv
 
-  eval $argv
   echo
-  set -l success $status
-
-  if test $success -eq 0
-    bell
-  else
-    bell Sosumi
-  end
 
   if set -q _MR_BUILD_AND_WATCH_ONCE
     return $success
@@ -43,22 +38,24 @@ function mr-build-and-watch
 
   set -l excludes
 
-  for f in $_flag_e
+  for f in (make --silent exclude)
     set -a excludes --exclude (string trim $f)
   end
 
-  set -l includes
+  set -l watch
 
-  if test (count $_flag_i) -eq 0
-    set includes (pwd)
-  else
-    set includes $_flag_i
+  for f in (make --silent watch)
+    set -a watch (string trim $f)
   end
 
-  echo watching $includes >&2
+  if test (count $watch) -eq 0
+    set watch (pwd)
+  end
+
+  echo watching $watch >&2
   echo excluding $excludes >&2
 
   set -lx _MR_BUILD_AND_WATCH_ONCE 1
-  fswatch -r $excludes $includes \
-    | xargs -I{} -L1 fish -c "mr-build-and-watch --changed_files {} -- $argv"
+  fswatch -or $excludes $watch \
+    | xargs -I{} -L1 fish -c "mr-build-and-watch --changed_files {}"
 end
