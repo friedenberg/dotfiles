@@ -86,6 +86,8 @@ augroup vimrcEx
 
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile *.md set filetype=markdown
+  " prevents background color bleed on leading space characters
+  autocmd BufNewFile,BufRead * highlight clear SpecialKey
 
   set spell spelllang=en_us
 

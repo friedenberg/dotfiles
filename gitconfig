@@ -20,8 +20,7 @@
   hig = log --pretty=nice --graph
   him = log --pretty=nice origin/master..HEAD
   hist = log --graph --pretty=hist --abbrev-commit
-  init-signed = "!f() { \
-    git init && \
+  set-signed = "!f() { \
     git config --local include.path ~/.gitconfig-gpg; \
     }; f"
   last = show HEAD
