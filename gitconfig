@@ -15,6 +15,7 @@
   cop = checkout --patch
   cob = !git checkout -b $1 && git branch --set-upstream-to=origin/master
   com = checkout master
+  no-index-diff = diff --no-index --word-diff
   diffs = diff --staged
   hi = log --pretty=nice
   hig = log --pretty=nice --graph
