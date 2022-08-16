@@ -1,10 +1,9 @@
 
 " Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
-set shiftround
-set expandtab
+setlocal tabstop=2
+setlocal shiftwidth=2
+setlocal shiftround
+setlocal expandtab
 
-setlocal equalprg=shfmt\ %
-
-let &makeprg = "shellcheck -f gcc % >&1"
+let &l:equalprg = "shfmt %"
+let &l:makeprg = "shellcheck -f gcc % >&1"
