@@ -4,13 +4,34 @@ function mr-build-and-watch
     echo (date) $argv
   end
 
+  function __mr-build-and-watch-term_title
+    set -l prefix $argv[1]
+    echo -ne "\033]0;"$prefix" mr-build-and-watch\007"
+  end
+
+  function __mr-build-and-watch-building
+    __mr-build-and-watch-term_title 🟡
+  end
+
+  function __mr-build-and-watch-success
+    __mr-build-and-watch-term_title 🟢
+    bell &
+  end
+
+  function __mr-build-and-watch-failure
+    __mr-build-and-watch-term_title 🔴
+    bell Sosumi &
+  end
+
   function __mr-build-and-watch-exec
+    __mr-build-and-watch-building
+
     if make
       set -l success $status
-      bell
+      __mr-build-and-watch-success
     else
       set -l success $status
-      bell Sosumi
+      __mr-build-and-watch-failure
     end
   end
 
