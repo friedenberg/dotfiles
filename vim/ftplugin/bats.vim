@@ -1,10 +1,10 @@
 
-setlocal equalprg=shfmt\ %
+let &l:equalprg = "shfmt %"
+let &l:makeprg = "shellcheck -f gcc % && bats --jobs 8 --tap %"
+" let &l:makeprg = "shellcheck -f gcc % && bats --tap %"
 
-let &l:makeprg = "shellcheck -f gcc % && bats --tap %"
-
-setlocal comments=b:#
-setlocal commentstring=#%s
+let &l:comments = "b:#"
+let &l:commentstring = "#%s"
 
 "not ok 1 can_output_organize
 setlocal efm=%Enot\ ok\ %.\ %m,
