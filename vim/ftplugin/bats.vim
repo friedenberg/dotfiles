@@ -7,6 +7,7 @@ let &l:comments = "b:#"
 let &l:commentstring = "#%s"
 
 "not ok 1 can_output_organize
+"TODO-P4 fix issue with lines followed by `# skip` causing processing issues
 setlocal efm=%Enot\ ok\ %.\ %m,
 "# (from function `assert_output' in file zz-test/test_helper/bats-assert/src/assert_output.bash, line 194,
 "#  in test file zz-test/failed_organize.bats, line 59)
