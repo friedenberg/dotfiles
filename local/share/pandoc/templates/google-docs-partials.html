@@ -89,9 +89,6 @@ div.abstract-title {
   margin-bottom: 0.5em;
 }
 $endif$
-div > pre {
-  margin: 0  0;
-}
 code {
   font-family: $if(monofont)$$monofont$$else$Menlo, Monaco, 'Lucida Console', Consolas, monospace$endif$;
 $if(monobackgroundcolor)$
@@ -102,7 +99,7 @@ $endif$
   margin: 0;
 }
 pre {
-  margin: 0 0;
+  margin: 1em 0;
 $if(monobackgroundcolor)$
   background-color: $monobackgroundcolor$;
   padding: 1em;

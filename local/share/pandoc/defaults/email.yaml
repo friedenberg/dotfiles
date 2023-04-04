@@ -133,7 +133,6 @@ filters: [ "asana.lua" ]
 # track-changes: accept
 
 # html-q-tags: false
-document-css: false
 css:
 - ${HOME}/.local/share/pandoc/nostyle.css
 

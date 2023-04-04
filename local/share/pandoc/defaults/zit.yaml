@@ -1,6 +1,6 @@
 columns: 80
 from: markdown
-to: markdown+shortcut_reference_links-simple_tables+table_captions+line_blocks+fenced_code_attributes-raw_attribute+yaml_metadata_block
+to: markdown+shortcut_reference_links+simple_tables+table_captions+line_blocks+fenced_code_attributes-raw_attribute+yaml_metadata_block
 standalone: true
 reference-links: true
 reference-location: document

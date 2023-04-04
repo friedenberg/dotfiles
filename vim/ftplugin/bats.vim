@@ -1,4 +1,7 @@
 
+" tests have long literals
+setlocal wrap textwidth=0 wrapmargin=0
+
 let &l:equalprg = "shfmt %"
 let &l:makeprg = "shellcheck -f gcc % && bats --jobs 8 --tap %"
 " let &l:makeprg = "shellcheck -f gcc % && bats --tap %"
