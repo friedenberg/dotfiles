@@ -1,4 +1,6 @@
-#! /bin/bash -e
+#! /usr/bin/env bash
+
+PATH="$(realpath "$(dirname "$(readlink "$0")")/result/bin"):$PATH"
 
 cmd_gofmt="gofmt"
 
@@ -38,7 +40,7 @@ out2="$(mktemp)"
 trap "rm '$out1'" EXIT
 
 if ! $cmd_gofmt -s -e "$out1" >"$out2" 2>"$err"; then
-  sed "s/<standard input>/$in/g" <"$err" >&2
+  sed "s:<standard input>:$in:g" <"$err" >&2
   exit 1
 fi
 
