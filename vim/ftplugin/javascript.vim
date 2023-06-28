@@ -1,6 +1,5 @@
 
-" setlocal equalprg="npx eslint --fix-dry-run --fix-type layout --format unix --config $HOME/.vim/ftplugin/eslint.json %"
-" let &equalprg = "npx eslint --fix --fix-type layout --format unix %"
-let &l:equalprg = "npx --quiet prettier %"
+let s:path_bin = fnamemodify(resolve(expand('<sfile>:p')), ':p:h') . "/result/bin/"
+let &l:equalprg = s:path_bin."prettier %"
 
-let &l:makeprg = "npx eslint --format unix %"
+let &l:makeprg = s:path_bin."eslint --format unix %"

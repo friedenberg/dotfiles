@@ -7,4 +7,5 @@ set expandtab
 
 setlocal equalprg=shfmt\ %
 
-let &makeprg = "shellcheck -f gcc % >&1"
+let s:path = expand('<sfile>:p')
+let &makeprg = s:path." -f gcc % >&1"

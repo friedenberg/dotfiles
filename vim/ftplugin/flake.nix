@@ -57,10 +57,32 @@
                 pkgs;
                 [
                   bash
-                  gotools
-                  golines
+                  bats
                   gofumpt
+                  golines
+                  gotools
+                  jq
+                  pandoc
+                  parallel
+                  shellcheck
+                  shfmt
+                  # must be last due to bs in postBuild
+                  go_1_19
+                  nodePackages.eslint
+                  nodePackages.prettier
                 ];
+
+                postBuild = ''
+                  for f in "$out/lib/node_modules/.bin/"*; do
+                    path="$(readlink --canonicalize-missing "$f")"
+                    ln -s "$path" "$out/bin/$(basename $f)"
+                  done
+
+                  find \
+                    "$out/share/go/bin/" \
+                    ! -type d \
+                    -exec mv {} "$out/bin/" \;
+                '';
             };
 
             default = packages.all;
