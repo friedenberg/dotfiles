@@ -1,4 +1,4 @@
 COPY_ALWAYS="rcrc"
-EXCLUDES="fish_history result"
+EXCLUDES="fish_history result LICENSE"
 SYMLINK_DIRS="vim/ password-store/"
 TAGS="darwin termtabs gpg piv fish_foreign_env nix"
