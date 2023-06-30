@@ -72,19 +72,21 @@ augroup vimrcEx
   " Don't do it for commit messages, when the position is invalid, or when
   " inside an event handler (happens when dropping a file on gvim).
   autocmd BufReadPost *
-    \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
+        \ if &ft != 'gitcommit' && line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
 
   autocmd BufReadPost *
-    \ if &ft == 'gitcommit' |
-    \   exe "normal gg" |
-    \ endif
+        \ if &ft == 'gitcommit' |
+        \   exe "normal gg" |
+        \ endif
 
   autocmd BufRead,BufNewFile *.bats set filetype=bats
 
   " Set syntax highlighting for specific file types
   autocmd BufRead,BufNewFile *.md set filetype=markdown
+  autocmd BufNewFile,BufRead * call matchadd('SpecialKey', '\s\+')
+  autocmd BufNewFile,BufRead * call matchadd('NonText', '\n\+')
   " prevents background color bleed on leading space characters
   autocmd BufNewFile,BufRead * highlight clear SpecialKey
 
