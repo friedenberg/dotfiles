@@ -12,7 +12,6 @@ endfunction
 
 call plug#begin()
 call LoadPluginFile('~/.vim/plugins')
-Plug '~/.vim/plugged/vim-zit'
 call LoadPluginFile('~/.vim/plugins.local')
 call plug#end()
 
