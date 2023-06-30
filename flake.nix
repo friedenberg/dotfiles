@@ -22,10 +22,30 @@
                 with
                 pkgs;
                 [
+                  age
+                  bats
+                  csvkit
+                  curl
+                  figlet
                   fish
+                  git-secret
+                  gnuplot
+                  gpgme
+                  graphviz
+                  hostess
+                  httpie
+                  hub
+                  ocrmypdf
+                  paperkey
                   pinentry
+                  plantuml
                   rcm
+                  silver-searcher
+                  thefuck
+                  tldr
                   tmux
+                  wget
+                  yubico-piv-tool
                 ];
             };
 
