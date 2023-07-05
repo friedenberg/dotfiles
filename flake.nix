@@ -2,9 +2,17 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
     utils.url = "github:numtide/flake-utils";
+
+    zit = {
+      url = "github:friedenberg/zit";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
+      };
+    };
   };
 
-  outputs = { self, nixpkgs, utils }:
+  outputs = { self, nixpkgs, utils, zit }:
     (utils.lib.eachDefaultSystem
       (system:
         let
@@ -46,6 +54,7 @@
                   tmux
                   wget
                   yubico-piv-tool
+                  zit.packages.${system}.default
                 ];
             };
 
