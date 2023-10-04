@@ -43,6 +43,7 @@
                   hostess
                   httpie
                   hub
+                  neovim
                   ocrmypdf
                   paperkey
                   pinentry
