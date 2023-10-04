@@ -1,8 +1,9 @@
-#! /usr/bin/env bash
+#! /usr/bin/env bash -e
 
-PATH="$(realpath "$(dirname "$(readlink "$0")")/result/bin"):$PATH"
+PATH="$PATH:$(realpath "$(dirname "$(readlink "$0")")/result/bin")"
 
 test_one() (
+  set -e
   no="$1"
   pkg="$2"
   tmp="$(mktemp -d)"
@@ -32,4 +33,4 @@ echo "1..$#" >&2
 
 export -f test_one
 n_prc="$(sysctl -n hw.logicalcpu)"
-parallel -k "-j$n_prc" test_one "{#}" "{}" ::: "$@"
+parallel "-j$n_prc" test_one "{#}" "{}" ::: "$@"
