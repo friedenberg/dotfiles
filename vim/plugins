@@ -8,7 +8,10 @@ editorconfig/editorconfig-vim
 friedenberg/vim-fancy-comment
 friedenberg/vim-kitty-conf
 junegunn/vim-easy-align
+neovim/nvim-lspconfig
+ocaml/vim-ocaml
 osamuaoki/vim-spell-under
+shaunsingh/solarized.nvim
 stephpy/vim-php-cs-fixer
 tobyS/pdv
 tpope/vim-abolish
@@ -16,4 +19,3 @@ tpope/vim-commentary
 tpope/vim-projectionist
 tpope/vim-sensible
 vim-pandoc/vim-pandoc-syntax
-LnL7/vim-nix
