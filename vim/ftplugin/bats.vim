@@ -1,10 +1,11 @@
 
 " tests have long literals
 setlocal wrap textwidth=0 wrapmargin=0
+setlocal list listchars=tab:▸\ ,trail:·,nbsp:·
 
 let s:path_bin = fnamemodify(resolve(expand('<sfile>:p')), ':p:h') . "/result/bin/"
 let &l:equalprg = s:path_bin."shfmt %"
-let &l:makeprg = s:path_bin."shellcheck -f gcc % && ".s:path_bin."bats --jobs 8 --tap %"
+let &l:makeprg = "bash -c '".s:path_bin."shellcheck -f gcc % && ".s:path_bin."bats --jobs 8 --tap % >&1'"
 
 let &l:comments = "b:#"
 let &l:commentstring = "#%s"

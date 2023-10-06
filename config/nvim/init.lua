@@ -44,7 +44,7 @@ vim.api.nvim_create_user_command(
       return
     end
 
-    if vim.list_contains(codeActionKinds, "source.organizeImports") == false then
+    if vim.tbl_contains(codeActionKinds, "source.organizeImports") == false then
       return
     end
 
@@ -111,7 +111,7 @@ vim.api.nvim_create_user_command(
     if #vim.lsp.get_active_clients() == 0 then
       vim.cmd("call TestViaTestPrg()")
     else
-      vim.cmd.Echo("Not implemented")
+      vim.cmd.echo("'Not implemented'")
     end
   end,
   {}
@@ -120,7 +120,9 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_user_command(
   'Build',
   function(opts)
-    if #vim.lsp.get_active_clients() == 0 then
+    local client = lsp_util.get_lsp_client()
+
+    if client == nil then
       vim.cmd("make")
     else
       vim.diagnostic.setqflist()
@@ -140,7 +142,7 @@ set_keymaps{
   {'n', '<leader>f', vim.cmd.ApplyImportsAndFormat},
   {'n', '<leader>b', vim.cmd.Build},
   {'n', '<leader>t', vim.cmd.Test},
-  {'n', '<C-k>', vim.lsp.buf.hover},
+  {'n', '<C-i>', vim.lsp.buf.hover},
 }
 -- buf_set_keymaps({
 --   {'n', '<leader>f', '<Cmd>lua vim.cmd.ApplyImportsAndFormat()<CR>'},
