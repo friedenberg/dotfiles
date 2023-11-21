@@ -438,7 +438,7 @@ $endif$
 
 \address{
   $for(from-address/pairs)$
-  $it.value$\\
+  $it.value/uppercase$\\
   $endfor$
   \\
   \today
@@ -449,7 +449,7 @@ $endif$
 % \RaggedRight
 \begin{letter}{
   $for(to-address/pairs)$
-  $it.value$\\
+  $it.value/uppercase$\\
   $endfor$
 }
 \opening{$opening$}
