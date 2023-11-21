@@ -45,6 +45,7 @@
                   hub
                   neovim
                   ocrmypdf
+                  pandoc
                   paperkey
                   pinentry
                   plantuml

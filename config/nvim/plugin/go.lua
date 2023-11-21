@@ -9,9 +9,6 @@ require'lspconfig'.gopls.setup{
   settings = {
     gopls = {
       gofumpt = true,
-      formatting = {
-        gofumpt = true,
-      },
       experimentalPostfixCompletions = true,
       analyses = {
         unusedparams = true,

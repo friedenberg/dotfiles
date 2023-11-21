@@ -182,6 +182,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>444B4D35-D43F-41C9-A190-D899837F7011</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>269A278F-6548-421F-9F51-4AC1E96D977C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>44D0CD56-FD47-468D-A8FB-BE7C24D96B1C</key>
 		<array>
 			<dict>
@@ -503,6 +516,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>E2D4A7FF-966A-4467-8B00-8B9BD28FF775</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>444B4D35-D43F-41C9-A190-D899837F7011</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -1661,6 +1687,70 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
+				<string>../run.bash zit cat-alfred ?e</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>444B4D35-D43F-41C9-A190-D899837F7011</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>zmh</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>E2D4A7FF-966A-4467-8B00-8B9BD28FF775</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
 				<string>../run.bash zit cat-alfred :e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1781,7 +1871,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>2675</real>
+			<real>2810</real>
 		</dict>
 		<key>064D3FF9-4A53-4386-A85C-ADBC071A4B45</key>
 		<dict>
@@ -1857,6 +1947,13 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>ypos</key>
 			<real>2290</real>
 		</dict>
+		<key>444B4D35-D43F-41C9-A190-D899837F7011</key>
+		<dict>
+			<key>xpos</key>
+			<real>180</real>
+			<key>ypos</key>
+			<real>2545</real>
+		</dict>
 		<key>44D0CD56-FD47-468D-A8FB-BE7C24D96B1C</key>
 		<dict>
 			<key>xpos</key>
@@ -1876,7 +1973,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2545</real>
+			<real>2680</real>
 		</dict>
 		<key>4EF55715-BDFA-4F65-BFBF-B86952B87130</key>
 		<dict>
@@ -1885,7 +1982,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>375</real>
 			<key>ypos</key>
-			<real>1820</real>
+			<real>1530</real>
 		</dict>
 		<key>591C4D35-1327-4991-A803-84171A901C0A</key>
 		<dict>
@@ -1894,7 +1991,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>525</real>
 			<key>ypos</key>
-			<real>1920</real>
+			<real>1630</real>
 		</dict>
 		<key>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</key>
 		<dict>
@@ -1915,7 +2012,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>2545</real>
+			<real>2680</real>
 		</dict>
 		<key>6F1542BC-114F-4808-ADD1-EEC3BD6D4814</key>
 		<dict>
@@ -1931,7 +2028,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>240</real>
 			<key>ypos</key>
-			<real>1875</real>
+			<real>1585</real>
 		</dict>
 		<key>8445F8DA-955D-45F0-B885-50BC40C54D8A</key>
 		<dict>
@@ -1972,7 +2069,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>240</real>
 			<key>ypos</key>
-			<real>1975</real>
+			<real>1685</real>
 		</dict>
 		<key>A06D2CD5-673F-419A-AB99-A550A0EACFC5</key>
 		<dict>
@@ -1995,14 +2092,14 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2675</real>
+			<real>2810</real>
 		</dict>
 		<key>B25DCC72-385D-4538-91F1-28082AF95CFA</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2025</real>
+			<real>1735</real>
 		</dict>
 		<key>B6B29721-37EA-486A-A5AF-559FF43D7156</key>
 		<dict>
@@ -2041,7 +2138,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>375</real>
 			<key>ypos</key>
-			<real>2055</real>
+			<real>1765</real>
 		</dict>
 		<key>D761F97C-7340-4373-9717-EB499709B092</key>
 		<dict>
@@ -2058,6 +2155,13 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<real>440</real>
 			<key>ypos</key>
 			<real>1375</real>
+		</dict>
+		<key>E2D4A7FF-966A-4467-8B00-8B9BD28FF775</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>2545</real>
 		</dict>
 		<key>E62888FE-94ED-4737-8F22-0ADAEA07B61C</key>
 		<dict>
@@ -2078,7 +2182,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>1790</real>
+			<real>1500</real>
 		</dict>
 		<key>EC3C07B8-3DDD-43D7-AA29-FD519DC81DD1</key>
 		<dict>
