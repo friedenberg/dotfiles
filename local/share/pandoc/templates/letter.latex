@@ -35,8 +35,10 @@ $if(background-image)$
 }
 $endif$
 \usepackage[tmargin=0.5in,textwidth=5in]{geometry}
+\usepackage{graphicx}
 \usepackage{ragged2e}
 \usepackage{pgfpages}
+% \usepackage{phonenumber}
 \setbeamertemplate{caption}[numbered]
 \setbeamertemplate{caption label separator}{: }
 \setbeamercolor{caption name}{fg=normal text.fg}
@@ -438,8 +440,19 @@ $endif$
 
 \address{
   $for(from-address/pairs)$
-  $it.value/uppercase$\\
+  $it.value/uppercase$
+  \\
   $endfor$
+  $if(from-email)$
+    \\
+    \href{mailto:$from-email$}{$from-email$}
+  $endif$
+  $if(from-phone)$
+    \\
+    \href{tel:$from-phone$}{$from-phone$}
+    % \phonenumber[country=US]{$from-phone$}
+  $endif$
+  \\
   \\
   \today
 }

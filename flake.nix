@@ -38,6 +38,7 @@
                   fish
                   git-secret
                   gnuplot
+                  gofumpt
                   gpgme
                   graphviz
                   hostess

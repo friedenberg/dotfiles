@@ -1,4 +1,6 @@
 
+set shell=/bin/bash
+
 set mouse=
 " set ttymouse=
 

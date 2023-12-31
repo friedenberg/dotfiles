@@ -5,7 +5,8 @@ PATH="$PATH:$(realpath "$(dirname "$(readlink "$0")")/result/bin")"
 test_one() (
   set -e
   no="$1"
-  pkg="$2"
+  file="$2"
+  pkg="$(dirname "$file")"
   tmp="$(mktemp -d)"
   trap "rm -r '$tmp'" EXIT
 

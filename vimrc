@@ -1,5 +1,3 @@
-set shell=/bin/bash
-
 source ~/.config/nvim/load_plugin_file.vim
 
 call plug#begin()
