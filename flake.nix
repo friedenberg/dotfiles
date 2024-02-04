@@ -4,7 +4,7 @@
     utils.url = "github:numtide/flake-utils";
 
     zit = {
-      url = "github:friedenberg/zit";
+      url = "github:friedenberg/zit?dir=go/zit";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
