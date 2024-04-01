@@ -8,6 +8,7 @@ dag/vim-fish
 editorconfig/editorconfig-vim
 friedenberg/vim-fancy-comment
 friedenberg/vim-kitty-conf
+gisraptor/vim-lilypond-integrator
 junegunn/vim-easy-align
 neovim/nvim-lspconfig
 ocaml/vim-ocaml

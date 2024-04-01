@@ -128,7 +128,14 @@ function(opts)
   if client == nil then
     vim.cmd("make")
   else
-    vim.diagnostic.setqflist({ severity = "error" })
+    local opts = { severity = "error" }
+    local diags = vim.diagnostic.get(nil, opts)
+
+    if #diags > 0 then
+      vim.diagnostic.setqflist(opts)
+    else
+      vim.cmd("echom 'Build succeeded!'")
+    end
   end
 end,
 {}

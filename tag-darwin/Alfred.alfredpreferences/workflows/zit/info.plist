@@ -91,37 +91,24 @@
 				<false/>
 			</dict>
 		</array>
+		<key>0FE2643B-ED04-4E0A-A79E-AD6296C53FD3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>EE1F22BE-90B0-4D8A-BC7C-34E1FC675097</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>12514196-06D7-4396-A40C-C1958AD23AB6</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>8B720BD9-B13E-4656-BE1C-A2E9375F0A2E</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>23B95AB5-0935-42E5-BA4E-628B3E2D2096</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>24B1F7F6-3BAB-45A2-90C6-6FE0E15B065D</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>23B95AB5-0935-42E5-BA4E-628B3E2D2096</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -143,11 +130,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>2F477343-B149-41BB-973F-4A74B2061F73</key>
+		<key>2AF16BE7-869B-4204-A50D-920B3C6F4330</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>46EA9F03-CB57-4F33-BA08-1DC6CDD95937</string>
+				<string>3C4F4BA9-83C6-46BF-BA7D-618FE4B64BB5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -182,37 +169,24 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3C4F4BA9-83C6-46BF-BA7D-618FE4B64BB5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>444B4D35-D43F-41C9-A190-D899837F7011</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>269A278F-6548-421F-9F51-4AC1E96D977C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>44D0CD56-FD47-468D-A8FB-BE7C24D96B1C</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>A34229EC-1FD7-49E8-9596-7614BEAB4523</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>46EA9F03-CB57-4F33-BA08-1DC6CDD95937</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -285,19 +259,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>269A278F-6548-421F-9F51-4AC1E96D977C</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>6F1542BC-114F-4808-ADD1-EEC3BD6D4814</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>23B95AB5-0935-42E5-BA4E-628B3E2D2096</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -384,19 +345,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>A34229EC-1FD7-49E8-9596-7614BEAB4523</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>A4B5282D-8B29-4FB5-B5AA-3B29DC84E388</key>
 		<array>
 			<dict>
@@ -464,6 +412,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>E62888FE-94ED-4737-8F22-0ADAEA07B61C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>CB4A4AF1-7DF0-4AF1-8C1D-AF28025E9A39</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3C4F4BA9-83C6-46BF-BA7D-618FE4B64BB5</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -550,8 +511,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>E65C2DBD-A2C5-4DC4-A97E-C9EE6512B17D</key>
-		<array/>
 		<key>E930A5C7-5894-49B1-A64C-58F1EA230567</key>
 		<array>
 			<dict>
@@ -580,6 +539,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2FADD146-953E-4E59-AC83-1D5DC61FB5B4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EE1F22BE-90B0-4D8A-BC7C-34E1FC675097</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -920,6 +892,31 @@ nohup ../run.bash zit edit -mode "$actions" "$1"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>source up.bash
+set -x
+../run.bash .zit/bin/chrome push "$@"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>EE1F22BE-90B0-4D8A-BC7C-34E1FC675097</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -945,15 +942,15 @@ nohup ../run.bash zit edit -mode "$actions" "$1"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>../run.bash zit cat-alfred !toml-bookmark</string>
+				<string>../run.bash zit show -format etiketten-newlines !toml-bookmark | sort | uniq -c | jq -R '[. | split(" ") | .[] | select(. != "")] | {title: .[1], subtitle: .[0], arg: (.[1] + ":z"), uid: ("zit://" + .[1])}' | jq -s '{items: .}'</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>z</string>
+				<string></string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Open !toml-bookark Zettelen</string>
+				<string>Open !toml-bookark etiketten</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -962,159 +959,7 @@ nohup ../run.bash zit edit -mode "$actions" "$1"</string>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>2F477343-B149-41BB-973F-4A74B2061F73</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>source up.bash
-set -x
-.zit/bin/chrome push "$@"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>46EA9F03-CB57-4F33-BA08-1DC6CDD95937</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>zusa</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>source up.bash
-set -x
-zit pull chrome !toml-bookmark "$@"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>z</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Save all !toml-bookark Zettelen</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>E65C2DBD-A2C5-4DC4-A97E-C9EE6512B17D</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>source up.bash
-set -x
-tag="zz-import-$(date -u +%Y-%m-%d)"
-.zit/bin/chrome pull "$tag"
-../run.bash zit organize "$tag"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>A34229EC-1FD7-49E8-9596-7614BEAB4523</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>zus</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>../run.bash zit cat-alfred !toml-bookmark:e</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>z</string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Save !toml-bookark Zettelen using Etikett</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>44D0CD56-FD47-468D-A8FB-BE7C24D96B1C</string>
+			<string>0FE2643B-ED04-4E0A-A79E-AD6296C53FD3</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -1146,15 +991,15 @@ tag="zz-import-$(date -u +%Y-%m-%d)"
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>../run.bash zit cat-alfred !toml-bookmark:e</string>
+				<string>../run.bash zit cat-alfred :e</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>z</string>
+				<string></string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Save !toml-bookark Zettelen using existing Etikett</string>
+				<string>Save !toml-bookark etiketten</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -1163,7 +1008,7 @@ tag="zz-import-$(date -u +%Y-%m-%d)"
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>24B1F7F6-3BAB-45A2-90C6-6FE0E15B065D</string>
+			<string>CB4A4AF1-7DF0-4AF1-8C1D-AF28025E9A39</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -1175,9 +1020,8 @@ tag="zz-import-$(date -u +%Y-%m-%d)"
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>source up.bash
-set -x
-.zit/bin/chrome pull "$@"</string>
+				<string>set -x
+../run.bash .zit/bin/chrome pull "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1188,7 +1032,7 @@ set -x
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>23B95AB5-0935-42E5-BA4E-628B3E2D2096</string>
+			<string>3C4F4BA9-83C6-46BF-BA7D-618FE4B64BB5</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -1202,14 +1046,14 @@ set -x
 				<key>subtext</key>
 				<string></string>
 				<key>text</key>
-				<string>Save !toml-bookark Zettelen using new Etikett</string>
+				<string>Save new !toml-bookmark etiketten</string>
 				<key>withspace</key>
 				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.input.keyword</string>
 			<key>uid</key>
-			<string>6F1542BC-114F-4808-ADD1-EEC3BD6D4814</string>
+			<string>2AF16BE7-869B-4204-A50D-920B3C6F4330</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1864,7 +1708,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>1375</real>
+			<real>1530</real>
 		</dict>
 		<key>055AD868-B2EC-4355-A89E-DC2B2195E6A0</key>
 		<dict>
@@ -1898,26 +1742,19 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>ypos</key>
 			<real>490</real>
 		</dict>
+		<key>0FE2643B-ED04-4E0A-A79E-AD6296C53FD3</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>725</real>
+		</dict>
 		<key>12514196-06D7-4396-A40C-C1958AD23AB6</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
 			<real>2160</real>
-		</dict>
-		<key>23B95AB5-0935-42E5-BA4E-628B3E2D2096</key>
-		<dict>
-			<key>xpos</key>
-			<real>245</real>
-			<key>ypos</key>
-			<real>965</real>
-		</dict>
-		<key>24B1F7F6-3BAB-45A2-90C6-6FE0E15B065D</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>965</real>
 		</dict>
 		<key>269A278F-6548-421F-9F51-4AC1E96D977C</key>
 		<dict>
@@ -1926,12 +1763,12 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>ypos</key>
 			<real>2510</real>
 		</dict>
-		<key>2F477343-B149-41BB-973F-4A74B2061F73</key>
+		<key>2AF16BE7-869B-4204-A50D-920B3C6F4330</key>
 		<dict>
 			<key>xpos</key>
-			<real>30</real>
+			<real>35</real>
 			<key>ypos</key>
-			<real>705</real>
+			<real>1010</real>
 		</dict>
 		<key>2FADD146-953E-4E59-AC83-1D5DC61FB5B4</key>
 		<dict>
@@ -1947,26 +1784,19 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>ypos</key>
 			<real>2290</real>
 		</dict>
+		<key>3C4F4BA9-83C6-46BF-BA7D-618FE4B64BB5</key>
+		<dict>
+			<key>xpos</key>
+			<real>245</real>
+			<key>ypos</key>
+			<real>870</real>
+		</dict>
 		<key>444B4D35-D43F-41C9-A190-D899837F7011</key>
 		<dict>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
 			<real>2545</real>
-		</dict>
-		<key>44D0CD56-FD47-468D-A8FB-BE7C24D96B1C</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>835</real>
-		</dict>
-		<key>46EA9F03-CB57-4F33-BA08-1DC6CDD95937</key>
-		<dict>
-			<key>xpos</key>
-			<real>245</real>
-			<key>ypos</key>
-			<real>705</real>
 		</dict>
 		<key>486C81D5-9C4F-46E2-9330-8FF327B98308</key>
 		<dict>
@@ -1980,18 +1810,18 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>note</key>
 			<string>-kind files-copy</string>
 			<key>xpos</key>
-			<real>375</real>
+			<real>385</real>
 			<key>ypos</key>
-			<real>1530</real>
+			<real>1755</real>
 		</dict>
 		<key>591C4D35-1327-4991-A803-84171A901C0A</key>
 		<dict>
 			<key>note</key>
 			<string>z new --with-file</string>
 			<key>xpos</key>
-			<real>525</real>
+			<real>535</real>
 			<key>ypos</key>
-			<real>1630</real>
+			<real>1855</real>
 		</dict>
 		<key>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</key>
 		<dict>
@@ -2014,21 +1844,14 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>ypos</key>
 			<real>2680</real>
 		</dict>
-		<key>6F1542BC-114F-4808-ADD1-EEC3BD6D4814</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>1095</real>
-		</dict>
 		<key>7C84E71B-3981-4226-A420-31E84E93C20A</key>
 		<dict>
 			<key>note</key>
 			<string>-actions edit,open-files</string>
 			<key>xpos</key>
-			<real>240</real>
+			<real>250</real>
 			<key>ypos</key>
-			<real>1585</real>
+			<real>1810</real>
 		</dict>
 		<key>8445F8DA-955D-45F0-B885-50BC40C54D8A</key>
 		<dict>
@@ -2067,9 +1890,9 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>note</key>
 			<string>-actions edit,open-files</string>
 			<key>xpos</key>
-			<real>240</real>
+			<real>250</real>
 			<key>ypos</key>
-			<real>1685</real>
+			<real>1910</real>
 		</dict>
 		<key>A06D2CD5-673F-419A-AB99-A550A0EACFC5</key>
 		<dict>
@@ -2079,13 +1902,6 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<real>280</real>
 			<key>ypos</key>
 			<real>260</real>
-		</dict>
-		<key>A34229EC-1FD7-49E8-9596-7614BEAB4523</key>
-		<dict>
-			<key>xpos</key>
-			<real>245</real>
-			<key>ypos</key>
-			<real>835</real>
 		</dict>
 		<key>A4B5282D-8B29-4FB5-B5AA-3B29DC84E388</key>
 		<dict>
@@ -2097,9 +1913,9 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 		<key>B25DCC72-385D-4538-91F1-28082AF95CFA</key>
 		<dict>
 			<key>xpos</key>
-			<real>30</real>
+			<real>40</real>
 			<key>ypos</key>
-			<real>1735</real>
+			<real>1960</real>
 		</dict>
 		<key>B6B29721-37EA-486A-A5AF-559FF43D7156</key>
 		<dict>
@@ -2122,6 +1938,13 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>ypos</key>
 			<real>2290</real>
 		</dict>
+		<key>CB4A4AF1-7DF0-4AF1-8C1D-AF28025E9A39</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>870</real>
+		</dict>
 		<key>CBD7690E-326B-4130-AC0C-928BA90D0CAB</key>
 		<dict>
 			<key>note</key>
@@ -2129,23 +1952,23 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>440</real>
 			<key>ypos</key>
-			<real>1235</real>
+			<real>1390</real>
 		</dict>
 		<key>D4626ED2-6585-4F85-8F85-16126374007D</key>
 		<dict>
 			<key>note</key>
 			<string>-kind files</string>
 			<key>xpos</key>
-			<real>375</real>
+			<real>385</real>
 			<key>ypos</key>
-			<real>1765</real>
+			<real>1990</real>
 		</dict>
 		<key>D761F97C-7340-4373-9717-EB499709B092</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>1235</real>
+			<real>1390</real>
 		</dict>
 		<key>DF84B909-1E7A-4BD8-930B-B684AE486CC4</key>
 		<dict>
@@ -2154,7 +1977,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>440</real>
 			<key>ypos</key>
-			<real>1375</real>
+			<real>1530</real>
 		</dict>
 		<key>E2D4A7FF-966A-4467-8B00-8B9BD28FF775</key>
 		<dict>
@@ -2170,19 +1993,12 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>ypos</key>
 			<real>2290</real>
 		</dict>
-		<key>E65C2DBD-A2C5-4DC4-A97E-C9EE6512B17D</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>830</real>
-		</dict>
 		<key>E930A5C7-5894-49B1-A64C-58F1EA230567</key>
 		<dict>
 			<key>xpos</key>
-			<real>30</real>
+			<real>40</real>
 			<key>ypos</key>
-			<real>1500</real>
+			<real>1725</real>
 		</dict>
 		<key>EC3C07B8-3DDD-43D7-AA29-FD519DC81DD1</key>
 		<dict>
@@ -2192,6 +2008,13 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<real>280</real>
 			<key>ypos</key>
 			<real>395</real>
+		</dict>
+		<key>EE1F22BE-90B0-4D8A-BC7C-34E1FC675097</key>
+		<dict>
+			<key>xpos</key>
+			<real>245</real>
+			<key>ypos</key>
+			<real>725</real>
 		</dict>
 		<key>F60AF8A6-A89F-4B56-9FE0-3C117CBF0AB3</key>
 		<dict>

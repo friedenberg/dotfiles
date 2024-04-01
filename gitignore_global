@@ -6,3 +6,4 @@ TERMTABS_NAME
 .DS_Store
 result*
 *.old
+.direnv/
