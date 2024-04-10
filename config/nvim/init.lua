@@ -86,13 +86,34 @@ function(opts)
       return false
     end
 
+    local cursor = vim.api.nvim_win_get_cursor(0)
     vim.lsp.buf.format{async = false}
+    -- TODO take min of last line or cursors
+    vim.api.nvim_win_set_cursor(0, cursor)
 
     return true
   end
 
   if tryLspFormat() == false then
     vim.cmd("call FormatViaEqualsPrg()")
+    -- function! FormatViaEqualsPrg()
+    --   cexpr []
+    --   w
+
+    --   let save_pos = getpos(".")
+    --   normal gg=G
+    --   call setpos(".", save_pos)
+
+    --   if v:shell_error
+    --     let contents = join(getline(1, '$'), "\n")
+    --     undo
+    --     :cexpr contents
+    --     copen
+    --   else
+    --     w
+    --     ccl
+    --   endif
+    -- endfunction
   end
 end,
 {}

@@ -141,6 +141,7 @@ nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 set wildmenu
 set wildmode=list:longest
 
+" TODO move to init.lua
 function! FormatViaEqualsPrg()
   cexpr []
   w
@@ -160,6 +161,7 @@ function! FormatViaEqualsPrg()
   endif
 endfunction
 
+" TODO move to init.lua
 function Gf()
   try
     exec "normal! \<c-w>gf"
@@ -168,6 +170,7 @@ function Gf()
   endtry
 endfunction
 
+" TODO move to init.lua
 function! TestViaTestPrg()
   echo "Running tests..."
   cexpr []
