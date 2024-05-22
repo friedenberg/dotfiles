@@ -8,4 +8,5 @@ function bell
   set sound (string sub -l1 (string upper $sound))(string sub -s2 $sound)
 
   afplay /System/Library/Sounds/$sound.aiff &
+  disown $last_pid
 end

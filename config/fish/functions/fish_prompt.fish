@@ -19,7 +19,7 @@ function fish_prompt --description 'Write out the prompt'
   if git rev-parse --is-inside-work-tree >/dev/null 2>&1
     set -l stash_count (git stash list | count)
 
-    if test $stash_count -gt 1
+    if test $stash_count -gt 0
       printf '(%s) ' $stash_count
     end
   end
