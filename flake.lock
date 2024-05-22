@@ -140,11 +140,11 @@
       },
       "locked": {
         "dir": "go/zit",
-        "lastModified": 1712750821,
-        "narHash": "sha256-LkhIjcgbz+Hla8bFUgqcWhIT1iM12X2pxEs6Sm5YPrE=",
+        "lastModified": 1716235716,
+        "narHash": "sha256-TDlNlxukXJeAFleUQG/opDZNUItoNhX4S8wpwGrqW7s=",
         "owner": "friedenberg",
         "repo": "zit",
-        "rev": "341859750671129e8bccf5e594778a1527cca03e",
+        "rev": "101b9e2deba179751bcff1248500099f0a1e6dda",
         "type": "github"
       },
       "original": {

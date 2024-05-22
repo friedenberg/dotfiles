@@ -1,6 +1,6 @@
 function fish_prompt --description 'Write out the prompt'
   set -l last_status $status
-  echo ''
+  printf ' '
 
   if not set -q __fish_prompt_normal
     set -g __fish_prompt_normal (set_color normal)
@@ -14,7 +14,19 @@ function fish_prompt --description 'Write out the prompt'
   set -g __fish_git_prompt_showuntrackedfiles true
   set -g __fish_git_prompt_showcolorhints true
   set -g __fish_git_prompt_showdirtystate true
-  printf '%s ' (__fish_git_prompt)
+  printf '%s ' (fish_git_prompt)
+
+  if git rev-parse --is-inside-work-tree >/dev/null 2>&1
+    set -l stash_count (git stash list | count)
+
+    if test $stash_count -gt 1
+      printf '(%s) ' $stash_count
+    end
+  end
+
+  if set -q bell_on_exit
+    printf '🔔 ' $stash_count
+  end
 
   if not test $last_status -eq 0
     set_color $fish_color_error

@@ -34,3 +34,19 @@ __source_if_exists $ASDF_DIR/asdf.fish
 for file in (find ~/.config/fish -iname '*-config.fish' -print0 | string split0)
   __source_if_exists $file
 end
+
+function on_process_exit --on-event fish_postexec
+  set -l postexec_status $status
+
+  if not set -q bell_on_exit
+    return
+  end
+
+  begin
+    if test $postexec_status -eq 0
+      bell
+    else
+      bell Sosumi
+    end
+  end
+end
