@@ -1417,6 +1417,25 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -1477,25 +1496,6 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<string>C77AC6A2-AC57-4817-AE11-A9B51FBB00D9</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>61F2BA51-DFAC-482A-BCA0-67082B2BE2EB</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>type</key>
@@ -1715,7 +1715,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>2810</real>
+			<real>2930</real>
 		</dict>
 		<key>064D3FF9-4A53-4386-A85C-ADBC071A4B45</key>
 		<dict>
@@ -1761,7 +1761,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>395</real>
 			<key>ypos</key>
-			<real>2510</real>
+			<real>2630</real>
 		</dict>
 		<key>2AF16BE7-869B-4204-A50D-920B3C6F4330</key>
 		<dict>
@@ -1796,14 +1796,14 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>2545</real>
+			<real>2665</real>
 		</dict>
 		<key>486C81D5-9C4F-46E2-9330-8FF327B98308</key>
 		<dict>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2680</real>
+			<real>2800</real>
 		</dict>
 		<key>4EF55715-BDFA-4F65-BFBF-B86952B87130</key>
 		<dict>
@@ -1842,7 +1842,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>2680</real>
+			<real>2800</real>
 		</dict>
 		<key>7C84E71B-3981-4226-A420-31E84E93C20A</key>
 		<dict>
@@ -1908,7 +1908,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2810</real>
+			<real>2930</real>
 		</dict>
 		<key>B25DCC72-385D-4538-91F1-28082AF95CFA</key>
 		<dict>
@@ -1929,7 +1929,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2420</real>
+			<real>2540</real>
 		</dict>
 		<key>C822DAF0-D9F7-43B4-907B-C5A8856CE025</key>
 		<dict>
@@ -1984,7 +1984,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>2545</real>
+			<real>2665</real>
 		</dict>
 		<key>E62888FE-94ED-4737-8F22-0ADAEA07B61C</key>
 		<dict>
@@ -2021,7 +2021,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>xpos</key>
 			<real>180</real>
 			<key>ypos</key>
-			<real>2420</real>
+			<real>2540</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>

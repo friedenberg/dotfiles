@@ -1,6 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
+    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     utils.url = "github:numtide/flake-utils";
 
     zit = {
@@ -12,7 +13,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, utils, zit }:
+  outputs = { self, nixpkgs, nixpkgs-master, utils, zit }:
     (utils.lib.eachDefaultSystem
       (system:
         let
