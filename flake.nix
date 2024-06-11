@@ -32,30 +32,60 @@
                 pkgs;
                 [
                   age
+                  asdf
+                  asdf-vm
                   bats
+                  cdparanoia
+                  coreutils
                   csvkit
                   curl
+                  curlftpfs
+                  dash
+                  ddrescue
+                  direnv
+                  ffmpeg
                   figlet
                   fish
+                  fontconfig
+                  fswatch
+                  gawk
+                  gftp
                   git-secret
+                  gnumake
                   gnuplot
-                  gofumpt
                   gpgme
                   graphviz
                   hostess
                   httpie
                   hub
+                  imagemagick
+                  isolyzer
+                  jq
+                  lftp
+                  libcdio
+                  moreutils
                   neovim
+                  nix-direnv
+                  nixpkgs-fmt
                   ocrmypdf
                   pandoc
                   paperkey
                   pinentry
                   plantuml
                   rcm
+                  reattach-to-user-namespace
+                  rsync
+                  shellcheck
+                  shfmt
                   silver-searcher
+                  socat
+                  sshfs-fuse
                   thefuck
+                  timidity
                   tldr
                   tmux
+                  tree
+                  vim
                   wget
                   yubico-piv-tool
                   zit.packages.${system}.default

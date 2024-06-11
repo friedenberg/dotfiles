@@ -1,7 +1,7 @@
 
 " Invisible tabs for Go
 setlocal list listchars=tab:\ \ ,trail:·,nbsp:·
-set highlight clear SpellBad
+" set highlight clear SpellBad
 
 let &l:equalprg = "$HOME/.vim/ftplugin/go-format.bash %"
 let b:testprg = "$HOME/.vim/ftplugin/go-test.bash %"
