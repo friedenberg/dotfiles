@@ -663,17 +663,17 @@
 				<key>script</key>
 				<string>case "$actions" in
 	zettel)
-    nohup ./gui.bash zit edit -mode zettel-only "$1"
+    nohup ../run.bash zit edit -mode zettel-only "$1"
 	;;
 	
 	akte)
-	./gui.bash zit checkout -mode akte-only "$1"
-	ext="$(./gui.bash zit cat-objekte -type zettel "$1" | grep "AkteExt" | cut -d' ' -f2)"
+	../run.bash zit checkout -mode akte-only "$1"
+	ext="$(../run.bash zit cat-objekte -type zettel "$1" | grep "AkteExt" | cut -d' ' -f2)"
 	open "$1.$ext"
 	;;
 	
 	both)
-  nohup ./gui.bash zit edit "$1"
+  nohup ../run.bash zit edit "$1"
 	;;
 
 	*)
@@ -764,7 +764,7 @@ esac</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string>set -x
-./gui.bash zit edit -mode "$actions" "$1"</string>
+../run.bash zit edit -mode "$actions" "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -899,7 +899,7 @@ esac</string>
 				<key>script</key>
 				<string>source up.bash
 set -x
-./gui.bash .zit/bin/chrome push "$@"</string>
+../run.bash .zit/bin/chrome push "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1021,7 +1021,7 @@ set -x
 				<integer>102</integer>
 				<key>script</key>
 				<string>set -x
-./gui.bash .zit/bin/chrome pull "$@"</string>
+../run.bash .zit/bin/chrome pull "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1084,7 +1084,7 @@ set -x
 				<key>script</key>
 				<string>source up.bash
 
-nohup ./gui.bash zit add -organize -delete "$@"</string>
+nohup ../run.bash zit add -organize -delete "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1108,9 +1108,9 @@ nohup ./gui.bash zit add -organize -delete "$@"</string>
 				<integer>102</integer>
 				<key>script</key>
 				<string>if [[ "$#" -gt 0 ]]; then
-	./gui.bash zit new -edit=true -bezeichnung "$*"
+	../run.bash zit new -edit=true -bezeichnung "$*"
 else
-	./gui.bash zit new -edit=true
+	../run.bash zit new -edit=true
 fi</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
@@ -1312,7 +1312,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>./gui.bash zit new-empty</string>
+				<string>../run.bash zit new-empty</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1393,7 +1393,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>./gui.bash zit cat-alfred :z</string>
+				<string>../run.bash zit cat-alfred :z</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1989,7 +1989,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 		<key>E62888FE-94ED-4737-8F22-0ADAEA07B61C</key>
 		<dict>
 			<key>xpos</key>
-			<real>180</real>
+			<real>190</real>
 			<key>ypos</key>
 			<real>2290</real>
 		</dict>
