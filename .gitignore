@@ -9,3 +9,4 @@ vim/plugged
 host-*/
 .gitsecret/keys/random_seed
 !*.secret
+ssh/config
