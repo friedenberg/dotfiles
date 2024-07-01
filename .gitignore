@@ -7,3 +7,5 @@ config/thefuck/__pycache__/
 vim/plugged
 *.netrwhist
 host-*/
+.gitsecret/keys/random_seed
+!*.secret
