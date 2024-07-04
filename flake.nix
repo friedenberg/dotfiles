@@ -12,6 +12,12 @@
       };
     };
 
+    kmonad = {
+       url = "git+https://github.com/kmonad/kmonad?submodules=1&dir=nix";
+  inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+
 #     brew-api = {
 #       url = "github:BatteredBunny/brew-api";
 #       flake = false;
@@ -23,7 +29,7 @@
 #     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-master, utils, zit}:
+  outputs = { self, nixpkgs, nixpkgs-master, utils, zit, kmonad}:
   (utils.lib.eachDefaultSystem
   (system:
   let
@@ -60,6 +66,7 @@
             fswatch
             gawk
             gftp
+            git
             git-secret
             gnumake
             gnuplot
@@ -71,6 +78,7 @@
             imagemagick
             isolyzer
             jq
+            kmonad
             lftp
             libcdio
             moreutils
@@ -83,7 +91,7 @@
             pinentry
             plantuml
             rcm
-            reattach-to-user-namespace
+            # reattach-to-user-namespace
             rsync
             shellcheck
             shfmt
@@ -98,6 +106,7 @@
             vim
             wget
             yubico-piv-tool
+            kmonad.packages.${system}.default
             zit.packages.${system}.default
           ];
         };

@@ -4,7 +4,7 @@ set shell=/bin/bash
 set mouse=
 " set ttymouse=
 
-colorscheme Solarized
+colorscheme solarized
 set cursorline
 
 " highlight! link CursorLineSign CursorLineNr

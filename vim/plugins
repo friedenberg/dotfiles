@@ -10,7 +10,6 @@ friedenberg/vim-fancy-comment
 friedenberg/vim-kitty-conf
 gisraptor/vim-lilypond-integrator
 junegunn/vim-easy-align
-neovim/nvim-lspconfig
 ocaml/vim-ocaml
 osamuaoki/vim-spell-under
 stephpy/vim-php-cs-fixer
