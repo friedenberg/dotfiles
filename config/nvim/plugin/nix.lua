@@ -1,2 +1,2 @@
 
-require'lspconfig'.nixd.setup{}
+require'lspconfig'.statix.setup{}

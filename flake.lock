@@ -40,63 +40,23 @@
         "type": "github"
       }
     },
-    "kmonad": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "dir": "nix",
-        "lastModified": 1717741147,
-        "narHash": "sha256-VcGu0i6/2PVFHmyrnLivxEARX2bcPLxgkSFoUYjx3YY=",
-        "ref": "refs/heads/master",
-        "rev": "235b42610758355a664c153999c1ff03b4d918e6",
-        "revCount": 793,
-        "submodules": true,
-        "type": "git",
-        "url": "https://github.com/kmonad/kmonad?dir=nix"
-      },
-      "original": {
-        "dir": "nix",
-        "submodules": true,
-        "type": "git",
-        "url": "https://github.com/kmonad/kmonad?dir=nix"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1704290814,
-        "narHash": "sha256-LWvKHp7kGxk/GEtlrGYV68qIvPHkU9iToomNFGagixU=",
+        "lastModified": 1719956923,
+        "narHash": "sha256-nNJHJ9kfPdzYsCOlHOnbiiyKjZUW5sWbwx3cakg3/C4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "70bdadeb94ffc8806c0570eb5c2695ad29f0e421",
+        "rev": "706eef542dec88cc0ed25b9075d3037564b2d164",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-23.05",
+        "ref": "nixos-24.05",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
     "nixpkgs-master": {
-      "locked": {
-        "lastModified": 1720040851,
-        "narHash": "sha256-hagh1wkA0rXK5Ijh/ZfAdlv0v760JXmxiKHL4C+sAcs=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "3ac917c94dbb72b84fb7067c26643b489ef64507",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "master",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-master_2": {
       "locked": {
         "lastModified": 1711809591,
         "narHash": "sha256-XFLxllKomIpgAuvNgiLRbM0sOzDxOyOJ0MOTLLf4z+c=",
@@ -114,9 +74,7 @@
     },
     "root": {
       "inputs": {
-        "kmonad": "kmonad",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-master": "nixpkgs-master",
         "utils": "utils",
         "zit": "zit"
       }
@@ -175,7 +133,7 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "nixpkgs-master": "nixpkgs-master_2",
+        "nixpkgs-master": "nixpkgs-master",
         "utils": [
           "utils"
         ]
