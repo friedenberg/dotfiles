@@ -1,9 +1,13 @@
-source ~/.config/nvim/load_plugin_file.vim
+
+source $HOME/.config/vim/load_plugin_file.vim
+source $HOME/.config/vim/rc_before_plugins.vim
 
 call plug#begin()
 call LoadPluginFile('~/.vim/plugins')
 call LoadPluginFile('~/.vim/plugins.local')
 call plug#end()
+
+source $HOME/.config/vim/rc_after_plugins.vim
 
 " set background=dark
 " " Switch syntax highlighting on, when the terminal has colors
@@ -64,8 +68,4 @@ noremap gf :call Gf()<CR>
 augroup pandoc_syntax
   au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
-
-if filereadable($HOME . "/.vimrc.common")
-  source ~/.vimrc.common
-endif
 

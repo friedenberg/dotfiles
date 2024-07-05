@@ -4,8 +4,8 @@ set shell=/bin/bash
 set mouse=
 " set ttymouse=
 
-colorscheme solarized
 set cursorline
+set signcolumn=yes
 
 " highlight! link CursorLineSign CursorLineNr
 " highlight! link DiagnosticError LineNr

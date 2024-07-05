@@ -1,3 +1,4 @@
-EXCLUDES="rcrc result fish_history LICENSE Alfred.alfredpreferences"
-SYMLINK_DIRS="password-store vim config/nvim"
-TAGS="termtabs gpg fish_foreign_env nix"
+COPY_ALWAYS="rcrc"
+EXCLUDES="result fish_history LICENSE Alfred.alfredpreferences"
+SYMLINK_DIRS="password-store vim config/vim"
+TAGS="darwin termtabs gpg piv fish_foreign_env nix"

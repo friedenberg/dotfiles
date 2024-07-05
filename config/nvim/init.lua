@@ -1,16 +1,7 @@
 
-vim.cmd [[
-source ~/.config/nvim/load_plugin_file.vim
-call plug#begin()
-call LoadPluginFile('~/.vim/plugins')
-call LoadPluginFile('~/.vim/plugins.local')
-call plug#end()
-]]
-
-vim.cmd("set signcolumn=yes")
-vim.cmd("set cursorline")
-
-vim.cmd('source ~/.vimrc.common')
+vim.cmd("source $HOME/.config/vim/rc_before_plugins.vim")
+require("config.lazy")
+vim.cmd("source $HOME/.config/vim/rc_after_plugins.vim")
 
 vim.diagnostic.config({
   virtual_text = false
