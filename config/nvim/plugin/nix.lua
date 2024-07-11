@@ -1,2 +1,9 @@
-
-require'lspconfig'.statix.setup{}
+require 'lspconfig'.nil_ls.setup {
+  settings = {
+    ["nil"] = {
+      formatting = {
+        command = { "nixpkgs-fmt" },
+      },
+    },
+  },
+}

@@ -1,5 +1,10 @@
 return {
   { dir = "~/eng/zit/zz-vim/", },
+  { "direnv/direnv.vim" },
+  { "fladson/vim-kitty", },
+  {
+    "direnv/direnv",
+  },
   {
     'aklt/plantuml-syntax',
   },
@@ -22,20 +27,22 @@ return {
   {
     "LnL7/vim-nix",
   },
+  {
+    "vim-pandoc/vim-pandoc-syntax",
+  },
+  { "StanAngeloff/php.vim", },
+  { "bfrg/vim-jq", },
+  { "cespare/vim-toml", },
+  { "dag/vim-fish", },
+  { "friedenberg/vim-fancy-comment", },
+  -- gisraptor/vim-lilypond-integrator
   -- junegunn/vim-easy-align
   -- tpope/vim-abolish
   -- tpope/vim-projectionist
-  -- StanAngeloff/php.vim
-  -- bfrg/vim-jq
-  -- cespare/vim-toml
-  -- dag/vim-fish
   -- editorconfig/editorconfig-vim
-  -- friedenberg/vim-fancy-comment
   -- friedenberg/vim-kitty-conf
-  -- gisraptor/vim-lilypond-integrator
   -- ocaml/vim-ocaml
   -- osamuaoki/vim-spell-under
   -- stephpy/vim-php-cs-fixer
   -- tobyS/pdv
-  -- vim-pandoc/vim-pandoc-syntax
 }

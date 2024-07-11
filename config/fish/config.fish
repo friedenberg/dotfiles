@@ -29,8 +29,6 @@ end
 
 fish_add_path $HOME/.dotfiles/result/bin
 
-__source_if_exists $ASDF_DIR/asdf.fish
-
 for file in (find ~/.config/fish -iname '*-config.fish' -print0 | string split0)
   __source_if_exists $file
 end

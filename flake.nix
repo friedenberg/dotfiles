@@ -88,6 +88,7 @@
                   pandoc
                   paperkey
                   # pinentry
+                  parallel
                   plantuml
                   rcm
                   # reattach-to-user-namespace

@@ -1,4 +1,3 @@
-
 vim.cmd("source $HOME/.config/vim/rc_before_plugins.vim")
 require("config.lazy")
 vim.cmd("source $HOME/.config/vim/rc_after_plugins.vim")
@@ -26,7 +25,7 @@ vim.api.nvim_create_user_command(
 
     local codeActionProvider = caps["codeActionProvider"]
 
-    if codeActionProvider == nil then
+    if codeActionProvider == nil or type(codeActionProvider) ~= "table" then
       return
     end
 

@@ -232,7 +232,7 @@ function! TestViaTestPrg()
     copen
   else
     ccl
-    echo "Test succeeded!"
+    echo "Test succeeded! " . b:testprg
   endif
 endfunction
 

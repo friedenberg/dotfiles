@@ -1,15 +1,13 @@
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-local config = {
-  cmd = {'gopls'},
+require 'lspconfig'.gopls.setup {
+  cmd = { 'gopls' },
   -- for postfix snippets and analyzers
   capabilities = capabilities,
   settings = {
     gopls = {
-      -- ["formatting.gofumpt"] = true,
-      ["gofumpt"] = true,
+      gofumpt = true,
       experimentalPostfixCompletions = true,
       analyses = {
         unusedparams = true,
@@ -19,7 +17,3 @@ local config = {
     },
   },
 }
-
--- config.settings.gopls["formatting.gofumpt"] = true
-
-require'lspconfig'.gopls.setup(config)
