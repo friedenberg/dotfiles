@@ -90,6 +90,7 @@
                   pandoc
                   paperkey
                   # pinentry
+                  # pinentry-mac
                   # parallel
                   plantuml
                   rcm
