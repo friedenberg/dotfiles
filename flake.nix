@@ -69,6 +69,7 @@
                   git-secret
                   gnumake
                   gnuplot
+                  gnupg
                   gpgme
                   graphviz
                   hostess
@@ -88,7 +89,7 @@
                   pandoc
                   paperkey
                   # pinentry
-                  parallel
+                  # parallel
                   plantuml
                   rcm
                   # reattach-to-user-namespace

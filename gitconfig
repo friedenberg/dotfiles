@@ -1,6 +1,5 @@
-[user]
-  name = Sasha Friedenberg
-  email = cornflake.matchbox397@icantbelieveitsnotgmail.com
+# vim: ft=gitconfig
+
 [core]
   editor = vim
   whitespace = nowarn
@@ -76,10 +75,6 @@
   rebase = true
 [advice]
   detachedHead = false
-[include]
-  path = ~/.gitconfig.gpg
-[include]
-  path = ~/.gitconfig.piv
 [include]
   path = ~/.gitconfig.local
 [init]
