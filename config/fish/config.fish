@@ -27,6 +27,7 @@ function __source_if_exists
   end
 end
 
+direnv hook fish | source
 fish_add_path $HOME/.dotfiles/result/bin
 
 for file in (find ~/.config/fish -iname '*-config.fish' -print0 | string split0)

@@ -49,6 +49,7 @@
                   age
                   asdf
                   asdf-vm
+                  bashInteractive
                   bats
                   # cdparanoia
                   coreutils
