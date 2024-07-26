@@ -34,7 +34,7 @@ for file in (find ~/.config/fish -iname '*-config.fish' -print0 | string split0)
 end
 
 function __cow_bell_on_process_exit --on-event fish_postexec
-  set -l postexec_status $status
+  set -l postexec_status $pipestatus
 
   if not set -q bell_on_exit
     return

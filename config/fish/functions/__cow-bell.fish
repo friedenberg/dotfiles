@@ -2,11 +2,12 @@
 function __cow-bell
   set -l postexec_status $argv
 
-  begin
-    if test $postexec_status -eq 0
-      bell
-    else
+  for st in $postexec_status
+    if test $st -ne 0
       bell Sosumi
+      return
     end
   end
+
+  bell
 end

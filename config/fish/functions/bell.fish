@@ -14,7 +14,7 @@ function bell
 
   switch (uname -s)
     case "Darwin"
-      __bell_macos
+      __bell_macos $argv
 
     case '*'
       tput bel
