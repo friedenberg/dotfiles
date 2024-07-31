@@ -10,12 +10,10 @@ export PATH="$bin_result:$PATH"
 
 cp rcrc ~/.rcrc
 printf "DOTFILES_DIRS=\"%s\"" "$(pwd)" >> ~/.rcrc
-"$bin_result/rcup"
+"$bin_result/rcup" -f
 "$bin_fish" -c "fish_add_path $bin_result"
 
 sudo echo "$bin_fish" >> /etc/shells
 sudo chsh -s "$bin_fish"
 
-# TODO bootstrap nix
-# build nix
-# boostrap RCM
+echo "You should run \`exec fish\` to switch to the installed shell" >&2
