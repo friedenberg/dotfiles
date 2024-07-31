@@ -12,7 +12,7 @@ cp rcrc ~/.rcrc
 printf "DOTFILES_DIRS=\"%s\"" "$(pwd)" >> ~/.rcrc
 "$bin_result/rcup" -f
 
-sudo echo "$bin_fish" >> /etc/shells
+sudo bash -c "echo '$bin_fish' >> /etc/shells"
 sudo chsh -s "$bin_fish"
 
 echo "You should run \`exec fish\` to switch to the installed shell" >&2
