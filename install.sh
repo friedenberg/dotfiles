@@ -12,8 +12,10 @@ printf "DOTFILES_DIRS=\"%s\"" "$(pwd)" >> ~/.rcrc
 ./result/bin/rcup
 fish -c "fish_add_path $bin_result"
 
-env
-pwd
+bin_fish="$(readlink "$bin_result/fish")"
+sudo echo "$bin_fish" >> /etc/shells
+sudo chsh -s "$bin_fish"
+
 # TODO bootstrap nix
 # build nix
 # boostrap RCM
