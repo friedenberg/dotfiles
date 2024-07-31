@@ -4,7 +4,7 @@ curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
 sudo /nix/var/nix/profiles/default/bin/nix build
 cp rcrc ~/.rcrc
-pwd >> ~/.rcrc
+printf "DOTFILES_DIRS=\"%s\"" "$(pwd)"
 ./result/bin/rcup
 env
 pwd
