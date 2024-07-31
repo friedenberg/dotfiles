@@ -1,6 +1,16 @@
 # vim: set syntax=fish:
 
-reset-gpg
+if test -n $SSH_SSH_AUTH_SOCK
+  eval (ssh-agent -c) >/dev/null
+  set -gx SSH_SSH_AUTH_SOCK $SSH_AUTH_SOCK
+  set -e SSH_AUTH_SOCK
+end
+
+if test -n $GPG_SSH_AUTH_SOCK
+  reset-gpg
+  set -gx GPG_SSH_AUTH_SOCK $SSH_AUTH_SOCK
+  set -e SSH_AUTH_SOCK
+end
 
 # aliasing `thefuck` to `fuck`
 if command -s thefuck > /dev/null
@@ -8,6 +18,7 @@ if command -s thefuck > /dev/null
 end
 
 # hushing motd unless it has changed
+# TODO change to using XDG
 if test -f /etc/motd
   if not cmp -s ~/.hushlogin /etc/motd
     tee ~/.hushlogin < /etc/motd
