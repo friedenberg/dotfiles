@@ -12,3 +12,4 @@ host-*/
 ssh/config
 my-gitconfig
 *.bak
+ssh/my-config

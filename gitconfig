@@ -77,5 +77,7 @@
   detachedHead = false
 [include]
   path = ~/.gitconfig.local
+[includeIf "hasconfig:remote.*.url:git@my-github:*/**"]
+  path = ~/.my-gitconfig
 [init]
   defaultBranch = master
