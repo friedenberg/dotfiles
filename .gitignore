@@ -9,9 +9,7 @@ vim/plugged
 host-*/
 .gitsecret/keys/random_seed
 !*.secret
-ssh/config
 my-gitconfig
 *.bak
-ssh/my-config
 ssh/my-secret-config
 ssh/sasha_linenisgreat_com.pub
