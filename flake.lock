@@ -68,11 +68,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1721949857,
-        "narHash": "sha256-DID446r8KsmJhbCzx4el8d9SnPiE8qa6+eEQOJ40vR0=",
+        "lastModified": 1722651103,
+        "narHash": "sha256-IRiJA0NVAoyaZeKZluwfb2DoTpBAj+FLI0KfybBeDU0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a1cc729dcbc31d9b0d11d86dc7436163548a9665",
+        "rev": "a633d89c6dc9a2a8aae11813a62d7c58b2c0cc51",
         "type": "github"
       },
       "original": {
@@ -182,11 +182,11 @@
       },
       "locked": {
         "dir": "go/zit",
-        "lastModified": 1722006463,
-        "narHash": "sha256-hXUF0fMHqvnjv+JYtPyrwO5r+mSiQkX97qEDLI++PHU=",
+        "lastModified": 1722781076,
+        "narHash": "sha256-PJu/uKvikgc71Z3WxzY6NWVMFYtnWwq52/Ycs7VQqCo=",
         "owner": "friedenberg",
         "repo": "zit",
-        "rev": "162dd0bcb0ae47bb497cf695a7f59f47daadc53f",
+        "rev": "e936806f8c4ee24548927155bcba3f041617c4c4",
         "type": "github"
       },
       "original": {
