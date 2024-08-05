@@ -91,7 +91,7 @@
                   paperkey
                   # pinentry
                   # pinentry-mac
-                  # parallel
+                  parallel
                   plantuml
                   rcm
                   # reattach-to-user-namespace
