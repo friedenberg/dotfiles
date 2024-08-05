@@ -1,5 +1,7 @@
 # vim: ft=sshconfig
 
+Include ~/.ssh/my-secret-config
+
 Host my-github
   Hostname github.com
   PreferredAuthentications publickey
@@ -7,4 +9,3 @@ Host my-github
   ControlPath none
   IdentityFile ~/.ssh/sasha_linenisgreat_com.pub
 
-Include ~/.ssh/my-secret-config

@@ -1,16 +1,13 @@
 # vim: set syntax=fish:
 
-#function reset-gpg --on-event fish_preexec --description "Reloads GPG Agent"
 function reset-gpg --description "Reloads GPG Agent"
-  set -l output (mktemp)
-
-  function __reset-gpg_run --inherit-variable output
+  function __reset-gpg_run
     set -l cmd $argv
-    $cmd > "$output" 2>&1
+    set -l output ($cmd 2>&1)
 
     if test $status -ne 0
       echo "failed to run command: $cmd" >&2
-      cat "$output"
+      echo "$output"
       return 1
     end
   end

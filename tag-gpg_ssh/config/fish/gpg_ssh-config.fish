@@ -1,0 +1,2 @@
+
+set -gx SSH_AUTH_SOCK $GPG_SSH_AUTH_SOCK
