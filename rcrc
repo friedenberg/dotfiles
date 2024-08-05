@@ -1,3 +1,21 @@
-EXCLUDES="rcrc install.sh fish_history LICENSE Alfred.alfredpreferences *.secret install.sh"
-SYMLINK_DIRS="password-store vim config/vim result"
-TAGS="nix"
+EXCLUDES="
+  *.secret
+  Alfred.alfredpreferences
+  LICENSE
+  fish_history
+  install.sh
+  rcrc
+  result
+"
+
+SYMLINK_DIRS="
+  config/vim
+  password-store
+  vim
+"
+
+TAGS="
+  gpg
+  nix
+  termtabs
+"
