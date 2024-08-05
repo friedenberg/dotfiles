@@ -11,5 +11,5 @@ host-*/
 !*.secret
 my-gitconfig
 *.bak
-ssh/my-secret-config
 ssh/sasha_linenisgreat_com.pub
+ssh/my-secret-config
