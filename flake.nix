@@ -103,6 +103,7 @@
                   sshfs-fuse
                   thefuck
                   timidity
+                  timg
                   tldr
                   tmux
                   tree
