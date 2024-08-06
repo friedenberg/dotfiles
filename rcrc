@@ -15,6 +15,7 @@ SYMLINK_DIRS="
 "
 
 TAGS="
+  direnv
   gpg
   nix
   termtabs
