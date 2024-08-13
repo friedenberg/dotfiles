@@ -51,6 +51,11 @@ set shiftwidth=2
 set shiftround
 set expandtab
 
+# sets fold fill characters to be blank
+set fillchars=fold:\ 
+# removes the underline from folded sections
+hi Folded term=bold cterm=NONE
+
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')
   " Use Ag over Grep

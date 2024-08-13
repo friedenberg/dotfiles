@@ -2,14 +2,18 @@ EXCLUDES="
   *.secret
   Alfred.alfredpreferences
   LICENSE
+  config/direnv/direnv.toml
   fish_history
+  flake*
   install.sh
+  local/share/fish/generated_completions
   rcrc
   result
 "
 
 SYMLINK_DIRS="
   config/vim
+  config/nvim
   password-store
   vim
 "
