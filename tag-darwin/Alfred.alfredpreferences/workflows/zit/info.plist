@@ -705,7 +705,7 @@ esac</string>
 				<key>variables</key>
 				<dict>
 					<key>actions</key>
-					<string>akte</string>
+					<string>blob</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -838,7 +838,7 @@ esac</string>
 				<key>variables</key>
 				<dict>
 					<key>actions</key>
-					<string>akte</string>
+					<string>blob</string>
 				</dict>
 			</dict>
 			<key>type</key>
@@ -1560,7 +1560,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>keyword</key>
-				<string>zmh</string>
+				<string>zth</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.snippet</string>
@@ -1624,7 +1624,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>keyword</key>
-				<string>zm</string>
+				<string>zt</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.snippet</string>
@@ -1736,7 +1736,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 		<key>0C5B8A2B-102D-4F3B-8C3E-619FB90D0421</key>
 		<dict>
 			<key>note</key>
-			<string>akte</string>
+			<string>blob</string>
 			<key>xpos</key>
 			<real>280</real>
 			<key>ypos</key>
@@ -1879,7 +1879,7 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 		<key>950160DE-830C-4407-BD99-4B01572757EC</key>
 		<dict>
 			<key>note</key>
-			<string>akte</string>
+			<string>blob</string>
 			<key>xpos</key>
 			<real>280</real>
 			<key>ypos</key>
