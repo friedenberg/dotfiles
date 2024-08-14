@@ -1,7 +1,6 @@
 # vim: ft=gitconfig
 
 [core]
-  editor = vim
   whitespace = nowarn
   excludesfile = ~/.gitignore_global
 [alias]

@@ -1,11 +1,3 @@
 #! /bin/bash -e
 
-export EDITOR=nvim
-# PATH="$HOME/.nix-profile/bin:$PATH"
-# PATH="$HOME/.dotfiles/result/bin:$PATH"
-
-if ! tty >/dev/null 2>&1; then
-  exec /Applications/kitty.app/Contents/MacOS/kitty "$EDITOR" "$@"
-else
-  exec "$EDITOR" "$@"
-fi
+exec "$HOME/.local/bin/vim" "$@"

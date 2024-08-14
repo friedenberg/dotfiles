@@ -1,2 +1,13 @@
 #! /bin/bash -e
-exec "$HOME/.local/bin/editor"
+
+which_vim="vim"
+
+if command -v nvim >/dev/null 2>&1; then
+  which_vim="nvim"
+fi
+
+if ! tty >/dev/null 2>&1; then
+  exec /Applications/kitty.app/Contents/MacOS/kitty "$which_vim" "$@"
+else
+  exec "$which_vim" "$@"
+fi
