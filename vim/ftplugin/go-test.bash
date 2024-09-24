@@ -1,6 +1,6 @@
 #! /usr/bin/env bash -e
 
-PATH="$PATH:$(realpath "$(dirname "$(readlink "$0")")/result/bin")"
+PATH="$PATH:$(realpath "$(dirname "$0")/result/bin")"
 
 test_one() (
   set -e

@@ -19,6 +19,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>037FADF9-3E1F-41FC-8001-77273F17D393</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>055AD868-B2EC-4355-A89E-DC2B2195E6A0</key>
 		<array>
 			<dict>
@@ -95,11 +108,21 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>EE1F22BE-90B0-4D8A-BC7C-34E1FC675097</string>
+				<string>CFB93F61-BF26-45D8-B160-827B21A0DA02</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>037FADF9-3E1F-41FC-8001-77273F17D393</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>organize before checking out</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -420,11 +443,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>CB4A4AF1-7DF0-4AF1-8C1D-AF28025E9A39</key>
+		<key>CBD7690E-326B-4130-AC0C-928BA90D0CAB</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>3C4F4BA9-83C6-46BF-BA7D-618FE4B64BB5</string>
+				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -433,7 +456,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>CBD7690E-326B-4130-AC0C-928BA90D0CAB</key>
+		<key>CFB93F61-BF26-45D8-B160-827B21A0DA02</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -539,19 +562,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>2FADD146-953E-4E59-AC83-1D5DC61FB5B4</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>EE1F22BE-90B0-4D8A-BC7C-34E1FC675097</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>8445F8DA-955D-45F0-B885-50BC40C54D8A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -892,31 +902,6 @@ esac</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<true/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>source up.bash
-set -x
-../run.bash .zit/bin/chrome push "$@"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>EE1F22BE-90B0-4D8A-BC7C-34E1FC675097</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<true/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -950,7 +935,7 @@ set -x
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
-				<string>Open !toml-bookark etiketten</string>
+				<string>Open !toml-bookmark tags</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -966,51 +951,73 @@ set -x
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>alfredfiltersresults</key>
+				<key>concurrently</key>
 				<true/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>2</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
-				<key>keyword</key>
-				<string>zus</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string></string>
 				<key>script</key>
-				<string>../run.bash zit cat-alfred :e</string>
+				<string>source up.bash
+set -x
+../run.bash zit checkout -kasten browser "$@" !toml-bookmark</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
-				<key>subtext</key>
-				<string></string>
-				<key>title</key>
-				<string>Save !toml-bookark etiketten</string>
 				<key>type</key>
 				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>CB4A4AF1-7DF0-4AF1-8C1D-AF28025E9A39</string>
+			<string>CFB93F61-BF26-45D8-B160-827B21A0DA02</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<true/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>source up.bash
+set -x
+../run.bash zit checkout -organize -kasten browser "$@" !toml-bookmark</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>037FADF9-3E1F-41FC-8001-77273F17D393</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>zus</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Save new !toml-bookmark tags</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2AF16BE7-869B-4204-A50D-920B3C6F4330</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1021,7 +1028,7 @@ set -x
 				<integer>102</integer>
 				<key>script</key>
 				<string>set -x
-../run.bash .zit/bin/chrome pull "$@"</string>
+../run.bash zit checkin -kasten browser -organize !browser-tab</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -1035,27 +1042,6 @@ set -x
 			<string>3C4F4BA9-83C6-46BF-BA7D-618FE4B64BB5</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>zus</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Save new !toml-bookmark etiketten</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>2AF16BE7-869B-4204-A50D-920B3C6F4330</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1710,6 +1696,13 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>ypos</key>
 			<real>1530</real>
 		</dict>
+		<key>037FADF9-3E1F-41FC-8001-77273F17D393</key>
+		<dict>
+			<key>xpos</key>
+			<real>240</real>
+			<key>ypos</key>
+			<real>845</real>
+		</dict>
 		<key>055AD868-B2EC-4355-A89E-DC2B2195E6A0</key>
 		<dict>
 			<key>xpos</key>
@@ -1766,9 +1759,9 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 		<key>2AF16BE7-869B-4204-A50D-920B3C6F4330</key>
 		<dict>
 			<key>xpos</key>
-			<real>35</real>
+			<real>30</real>
 			<key>ypos</key>
-			<real>1010</real>
+			<real>970</real>
 		</dict>
 		<key>2FADD146-953E-4E59-AC83-1D5DC61FB5B4</key>
 		<dict>
@@ -1787,9 +1780,9 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 		<key>3C4F4BA9-83C6-46BF-BA7D-618FE4B64BB5</key>
 		<dict>
 			<key>xpos</key>
-			<real>245</real>
+			<real>240</real>
 			<key>ypos</key>
-			<real>870</real>
+			<real>970</real>
 		</dict>
 		<key>444B4D35-D43F-41C9-A190-D899837F7011</key>
 		<dict>
@@ -1938,13 +1931,6 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<key>ypos</key>
 			<real>2290</real>
 		</dict>
-		<key>CB4A4AF1-7DF0-4AF1-8C1D-AF28025E9A39</key>
-		<dict>
-			<key>xpos</key>
-			<real>30</real>
-			<key>ypos</key>
-			<real>870</real>
-		</dict>
 		<key>CBD7690E-326B-4130-AC0C-928BA90D0CAB</key>
 		<dict>
 			<key>note</key>
@@ -1953,6 +1939,13 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<real>440</real>
 			<key>ypos</key>
 			<real>1390</real>
+		</dict>
+		<key>CFB93F61-BF26-45D8-B160-827B21A0DA02</key>
+		<dict>
+			<key>xpos</key>
+			<real>240</real>
+			<key>ypos</key>
+			<real>725</real>
 		</dict>
 		<key>D4626ED2-6585-4F85-8F85-16126374007D</key>
 		<dict>
@@ -2008,13 +2001,6 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 			<real>280</real>
 			<key>ypos</key>
 			<real>395</real>
-		</dict>
-		<key>EE1F22BE-90B0-4D8A-BC7C-34E1FC675097</key>
-		<dict>
-			<key>xpos</key>
-			<real>245</real>
-			<key>ypos</key>
-			<real>725</real>
 		</dict>
 		<key>F60AF8A6-A89F-4B56-9FE0-3C117CBF0AB3</key>
 		<dict>
