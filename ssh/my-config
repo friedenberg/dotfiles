@@ -1,7 +1,7 @@
 # vim: ft=sshconfig
 
-Host *
-  Tag mine
+# Host *
+  # Tag mine
 
 Host my-github, codeberg.org
   PreferredAuthentications publickey
