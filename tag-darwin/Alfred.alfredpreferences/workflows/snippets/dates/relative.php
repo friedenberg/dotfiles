@@ -26,14 +26,14 @@ if (empty($value)) {
 $date = date_create($value);
 
 $formats = [
-  ["Week Number",    "W",           "snippets.date.week_number"],
-  ["Year Week ",     "Y-\WW",       "snippets.date.year_week"],
-  ["Time Zone",      "e",           "snippets.date.time_zone"],
-  ["Unix",           "U",           "snippets.date.unix"],
-  ["Unix Millis",    "Uv",          "snippets.date.unix_millis"],
-  ["File Safe Date", "Y-m-d",       "snippets.date.file_safe_date"],
-  ["ISO 8601",       "c",           "snippets.date.iso8601"],
-  ["RFC 2822",       "r",           "snippets.date.rfc2822"],
+  ["Week Number",    "W",                 "snippets.date.week_number"],
+  ["Year Week ",     "Y-\WW",             "snippets.date.year_week"],
+  ["Time Zone",      "e",                 "snippets.date.time_zone"],
+  ["Unix",           "U",                 "snippets.date.unix"],
+  ["File Safe Date", "Y-m-d",             "snippets.date.file_safe_date"],
+  ["ISO 8601",       "c",                 "snippets.date.iso8601"],
+  ["RFC 2822",       "r",                 "snippets.date.rfc2822"],
+  ["RFC 3339",       \DateTime::RFC3339,  "snippets.date.rfc2822"],
 ];
 
 $output = array_map(

@@ -3,7 +3,7 @@
 Host *
   Tag mine
 
-Host *
+Host my-github, codeberg.org
   PreferredAuthentications publickey
   ControlMaster no
   ControlPath none

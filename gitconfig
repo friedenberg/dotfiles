@@ -76,6 +76,8 @@
   detachedHead = false
 [include]
   path = ~/.gitconfig.local
+[includeIf "hasconfig:remote.*.url:git@codeberg.org:*/**"]
+  path = ~/.my-gitconfig
 [includeIf "hasconfig:remote.*.url:git@my-github:*/**"]
   path = ~/.my-gitconfig
 [init]
