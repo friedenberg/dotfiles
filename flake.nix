@@ -79,6 +79,7 @@
                   imagemagick
                   isolyzer
                   jq
+                  just
                   # kmonad
                   lftp
                   libcdio
