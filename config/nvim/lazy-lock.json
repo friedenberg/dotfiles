@@ -1,0 +1,19 @@
+{
+  "direnv": { "branch": "master", "commit": "978008aa7c66e5beb3e3c4a7705c3d0ce4f99f1c" },
+  "direnv.vim": { "branch": "master", "commit": "ab2a7e08dd630060cd81d7946739ac7442a4f269" },
+  "lazy.nvim": { "branch": "main", "commit": "cf8ecc2c5e4332760431a33534240b0cbc6680ab" },
+  "nvim-lspconfig": { "branch": "master", "commit": "edd9591199d1c78c0cb20514231f7f936f9412a2" },
+  "php.vim": { "branch": "master", "commit": "930aec5c7026297a6630bd2940c08c5ff552cf2a" },
+  "plantuml-syntax": { "branch": "master", "commit": "9d4900aa16674bf5bb8296a72b975317d573b547" },
+  "vim-colors-solarized": { "branch": "master", "commit": "528a59f26d12278698bb946f8fb82a63711eec21" },
+  "vim-commentary": { "branch": "master", "commit": "64a654ef4a20db1727938338310209b6a63f60c9" },
+  "vim-fancy-comment": { "branch": "main", "commit": "242844679d2ca4f02b97afa01f1d9de5e984d837" },
+  "vim-fish": { "branch": "master", "commit": "50b95cbbcd09c046121367d49039710e9dc9c15f" },
+  "vim-jq": { "branch": "master", "commit": "c6c96aee6c7a51195d1b59eb0ebdbf5d566f60e6" },
+  "vim-just": { "branch": "main", "commit": "c11e414956e748255ee56cba9a8a10ae68dff728" },
+  "vim-kitty": { "branch": "main", "commit": "9cc594a634308aa3bfaf3da5b5e741da1c0144c1" },
+  "vim-nix": { "branch": "master", "commit": "e25cd0f2e5922f1f4d3cd969f92e35a9a327ffb0" },
+  "vim-pandoc-syntax": { "branch": "master", "commit": "16939cda184ff555938cc895cc62477c172997f9" },
+  "vim-sensible": { "branch": "master", "commit": "0ce2d843d6f588bb0c8c7eec6449171615dc56d9" },
+  "vim-toml": { "branch": "main", "commit": "d36caa6b1cf508a4df1c691f915572fc02143258" }
+}
