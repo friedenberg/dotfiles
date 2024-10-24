@@ -1,13 +1,11 @@
 # vim: ft=sshconfig
 
 Host *
-  Tag mine
-
-Host my-github, codeberg.org
   PreferredAuthentications publickey
   ControlMaster no
   ControlPath none
   IdentityFile ~/.ssh/sasha_linenisgreat_com.pub
+  IdentityAgent ~/.local/state/ssh/ssh_auth_sock_gpg
 
 Include ~/.ssh/my-secret-config
 
