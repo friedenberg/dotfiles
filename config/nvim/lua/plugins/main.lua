@@ -2,6 +2,7 @@ return {
   { dir = "~/eng/zit/zz-vim/", },
   { "direnv/direnv.vim" },
   { "fladson/vim-kitty", },
+  { "NoahTheDuke/vim-just", },
   {
     "direnv/direnv",
   },
