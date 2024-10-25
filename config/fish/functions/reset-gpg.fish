@@ -15,7 +15,7 @@ function reset-gpg --description "Reloads GPG Agent"
   # set -e SSH_AGENT_PID
   set -gx GPG_TTY (tty)
 
-  ln -sf (gpgconf --list-dirs agent-ssh-socket) $HOME/.local/state/ssh/ssh_auth_sock_gpg
+  ln -sf (gpgconf --list-dirs agent-ssh-socket) $HOME/.local/state/ssh/gpg-agent.sock
 
   __reset-gpg_run gpg-connect-agent "scd serialno" "learn --force" /bye; or return
   __reset-gpg_run gpgconf --reload gpg-agent; or return

@@ -74,6 +74,7 @@
   rebase = true
 [advice]
   detachedHead = false
+  skippedCherryPicks = false
 [include]
   path = ~/.gitconfig.local
 [includeIf "hasconfig:remote.*.url:git@codeberg.org:*/**"]

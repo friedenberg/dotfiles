@@ -5,7 +5,8 @@ Host *
   ControlMaster no
   ControlPath none
   IdentityFile ~/.ssh/sasha_linenisgreat_com.pub
-  IdentityAgent ~/.local/state/ssh/ssh_auth_sock_gpg
+  # LocalForward /Users/sasha.friedenberg/.local/state/ssh/gpg-agent.sock ~/.local/state/ssh/gpg-agent.sock
+  # LocalForward /Users/sasha.friedenberg/.local/state/ssh/ssh-agent.sock ~/.local/state/ssh/ssh-agent.sock
 
 Include ~/.ssh/my-secret-config
 

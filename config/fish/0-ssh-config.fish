@@ -1,10 +1,10 @@
 
+mkdir -p $HOME/.local/state/ssh
 set -l SSH_OLD_AUTH_SOCK $SSH_AUTH_SOCK
 
-if not test -L $HOME/.local/state/ssh/ssh_auth_sock_ssh
+if not test -L $HOME/.local/state/ssh/ssh-agent.sock
   eval (ssh-agent -c) >/dev/null
-  mkdir -p ~/.local/state/ssh
-  ln -s $SSH_AUTH_SOCK $HOME/.local/state/ssh/ssh_auth_sock_ssh
+  ln -s $SSH_AUTH_SOCK $HOME/.local/state/ssh/ssh-agent.sock
   set -e SSH_AUTH_SOCK
 end
 
