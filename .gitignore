@@ -13,3 +13,4 @@ my-gitconfig
 *.bak
 ssh/sasha_linenisgreat_com.pub
 ssh/my-secret-config
+config/git/config-user
