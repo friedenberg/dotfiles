@@ -1,0 +1,4 @@
+# vim: ft=sh
+
+export SSH_AUTH_SOCK="$HOME/.local/state/ssh/gpg-agent.sock"
+export GIT_CONFIG_GLOBAL="$HOME/.config/git/config"
