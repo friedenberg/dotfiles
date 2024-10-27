@@ -114,7 +114,7 @@
                   yubico-piv-tool
                   zstd
                   # kmonad.packages.${system}.default
-                  zit.packages.${system}.default
+                  # zit.packages.${system}.default
                 ];
             };
 
