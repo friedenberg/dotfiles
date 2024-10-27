@@ -1,0 +1,14 @@
+#! /bin/bash -e
+
+if [[ -z "$SSH_CONFIG" ]]; then
+  echo 'No $SSH_CONFIG set. Please add one to `.envrc` and try again.' >&2
+  exit 1
+fi
+
+if [[ ! -f "$SSH_CONFIG" ]]; then
+  echo "\$SSH_CONFIG is set to '$SSH_CONFIG', which does not exist." >&2 
+  echo "Please add '$SSH_CONFIG', or change it in \`.envrc\` and try again." >&2
+  exit 1
+fi
+
+/usr/bin/ssh -F "$SSH_CONFIG" "$@"

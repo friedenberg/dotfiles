@@ -3,6 +3,7 @@
 [core]
   whitespace = nowarn
   excludesfile = ~/.gitignore_global
+  sshCommand = ~/.local/bin/ssh
 [alias]
   aa = add --all --intent-to-add
   ap = add --patch
