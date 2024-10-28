@@ -2,7 +2,7 @@
 
 [core]
   whitespace = nowarn
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.config/git/ignore
   sshCommand = ~/.local/bin/ssh
 [alias]
   aa = add --all --intent-to-add
@@ -76,9 +76,5 @@
 [advice]
   detachedHead = false
   skippedCherryPicks = false
-[includeIf "hasconfig:remote.*.url:git@codeberg.org:*/**"]
-  path = ~/.my-gitconfig
-[includeIf "hasconfig:remote.*.url:git@my-github:*/**"]
-  path = ~/.my-gitconfig
 [init]
   defaultBranch = master
