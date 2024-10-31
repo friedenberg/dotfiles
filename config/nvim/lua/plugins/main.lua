@@ -4,6 +4,10 @@ return {
   { "fladson/vim-kitty", },
   { "NoahTheDuke/vim-just", },
   {
+    "lifepillar/vim-solarized8",
+    lazy = false,
+  },
+  {
     "direnv/direnv",
   },
   {
@@ -13,10 +17,10 @@ return {
     "https://github.com/neovim/nvim-lspconfig/",
     lazy = false,
   },
-  {
-    "altercation/vim-colors-solarized",
-    lazy = false,
-  },
+  -- {
+  --   "altercation/vim-colors-solarized",
+  --   lazy = false,
+  -- },
   {
     "tpope/vim-commentary",
     lazy = false,

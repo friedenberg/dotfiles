@@ -1,4 +1,7 @@
 
+" https://github.com/vim-pandoc/vim-pandoc-syntax/issues/185
+set termguicolors
+
 " Mouse support
 " set mouse=a
 " set ttymouse=sgr
