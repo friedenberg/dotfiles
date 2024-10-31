@@ -81,6 +81,7 @@
                   jq
                   just
                   # kmonad
+                  keyd
                   lftp
                   libcdio
                   moreutils
