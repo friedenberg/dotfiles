@@ -1,4 +1,8 @@
 function git-lazy-commit-and-push
+  if test (count $argv) -gt 0
+    git add $argv
+  end
+
   set -l diff_status (git diff --cached 2>&1)
 
   if test -n "$diff_status"
