@@ -1,6 +1,7 @@
 {
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/fe370c252d033f31e138582a8c5d4d8d2e3d8897";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-24.05";
     utils.url = "github:numtide/flake-utils";
 
     zit = {
@@ -28,7 +29,7 @@
     #     };
   };
 
-  outputs = { self, nixpkgs, utils, zit }:
+  outputs = { self, nixpkgs, nixpkgs-stable, utils, zit }:
     (utils.lib.eachDefaultSystem
       (system:
         let
@@ -81,7 +82,7 @@
                   jq
                   just
                   # kmonad
-                  keyd
+                  # keyd
                   lftp
                   libcdio
                   moreutils

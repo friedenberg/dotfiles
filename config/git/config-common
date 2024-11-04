@@ -61,6 +61,7 @@
 [rebase]
   autosquash = true
   autoStash = true
+  updateRefs = true
 [log]
   mailmap = true
 [mergetool]
