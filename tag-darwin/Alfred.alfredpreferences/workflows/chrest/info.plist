@@ -4,13 +4,15 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.linenisgreat.code.chrest</string>
+	<key>category</key>
+	<string>Internet</string>
 	<key>connections</key>
 	<dict>
-		<key>2BC520D8-CC8D-4165-8A0B-81FF9D7CA9B1</key>
+		<key>6B8C7DB7-DD63-4A86-ACBF-A1777B698922</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>75C9B737-73DE-47DF-8DF4-4923202887B0</string>
+				<string>F1ECD7C3-7098-4A58-A876-45D6A725F68A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -46,7 +48,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>ct</string>
+				<string>c tab</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -58,8 +60,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>PATH="$HOME/.local/bin:$PATH"
-chrest client GET tabs | ./tabs_to_alfred_items.jq</string>
+				<string>../run.bash chrest items-get | jq '[.[] | select(.id.type == "tab")]' | ./tabs_to_alfred_items.jq</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -76,7 +77,7 @@ chrest client GET tabs | ./tabs_to_alfred_items.jq</string>
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>2BC520D8-CC8D-4165-8A0B-81FF9D7CA9B1</string>
+			<string>6B8C7DB7-DD63-4A86-ACBF-A1777B698922</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -88,9 +89,9 @@ chrest client GET tabs | ./tabs_to_alfred_items.jq</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>PATH="$HOME/.local/bin:$PATH"
-tab_id=$1
-chrest client POST tabs/$tab_id/open</string>
+				<string>set -x
+item="$1"
+echo "$item" | jq '{focused: [.]}' | ../run.bash chrest items-put</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -101,7 +102,7 @@ chrest client POST tabs/$tab_id/open</string>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>75C9B737-73DE-47DF-8DF4-4923202887B0</string>
+			<string>F1ECD7C3-7098-4A58-A876-45D6A725F68A</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -110,23 +111,30 @@ chrest client POST tabs/$tab_id/open</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>2BC520D8-CC8D-4165-8A0B-81FF9D7CA9B1</key>
+		<key>6B8C7DB7-DD63-4A86-ACBF-A1777B698922</key>
 		<dict>
 			<key>xpos</key>
-			<real>205</real>
+			<real>70</real>
 			<key>ypos</key>
-			<real>215</real>
+			<real>65</real>
 		</dict>
-		<key>75C9B737-73DE-47DF-8DF4-4923202887B0</key>
+		<key>F1ECD7C3-7098-4A58-A876-45D6A725F68A</key>
 		<dict>
 			<key>xpos</key>
-			<real>420</real>
+			<real>285</real>
 			<key>ypos</key>
-			<real>215</real>
+			<real>65</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array/>
+	<key>variables</key>
+	<dict>
+		<key>dry_run</key>
+		<string>-dry-run</string>
+	</dict>
+	<key>version</key>
+	<string></string>
 	<key>webaddress</key>
 	<string>code.linenisgreat.com/chrest</string>
 </dict>

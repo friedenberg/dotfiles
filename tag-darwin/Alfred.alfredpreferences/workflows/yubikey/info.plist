@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>com.linenisgreat.com.alfred-yubikey</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
@@ -131,13 +131,13 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string></string>
+	<string>Sasha F</string>
 	<key>description</key>
 	<string></string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>yubikey</string>
+	<string>Yubikey</string>
 	<key>objects</key>
 	<array>
 		<dict>

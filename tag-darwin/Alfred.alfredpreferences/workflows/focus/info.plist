@@ -180,7 +180,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Sasha Friedenberg</string>
+	<string>Sasha F</string>
 	<key>description</key>
 	<string></string>
 	<key>disabled</key>
@@ -872,6 +872,8 @@ fi</string>
 			<integer>1275</integer>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>webaddress</key>
 	<string></string>
 </dict>
