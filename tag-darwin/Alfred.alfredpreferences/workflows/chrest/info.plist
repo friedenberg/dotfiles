@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>70169570-916F-41E7-B1EF-0B3D141C01C3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>F7254E91-EE47-4A76-A208-994FB4931F02</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Sasha F</string>
@@ -106,6 +119,80 @@ echo "$item" | jq '{focused: [.]}' | ../run.bash chrest items-put</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>set -x
+item="$1"
+echo "$item" | jq '(if (.id.type == "tab") then "focused" else "added" end) as $key | {$key: [(.id.type |= "tab")]}' | ../run.bash chrest items-put</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>F7254E91-EE47-4A76-A208-994FB4931F02</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>c all</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>../run.bash chrest items-get | ./tabs_to_alfred_items.jq</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>focus a chrome tab, or open a bookmark or history item</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>70169570-916F-41E7-B1EF-0B3D141C01C3</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -118,12 +205,26 @@ echo "$item" | jq '{focused: [.]}' | ../run.bash chrest items-put</string>
 			<key>ypos</key>
 			<real>65</real>
 		</dict>
+		<key>70169570-916F-41E7-B1EF-0B3D141C01C3</key>
+		<dict>
+			<key>xpos</key>
+			<real>70</real>
+			<key>ypos</key>
+			<real>210</real>
+		</dict>
 		<key>F1ECD7C3-7098-4A58-A876-45D6A725F68A</key>
 		<dict>
 			<key>xpos</key>
 			<real>285</real>
 			<key>ypos</key>
 			<real>65</real>
+		</dict>
+		<key>F7254E91-EE47-4A76-A208-994FB4931F02</key>
+		<dict>
+			<key>xpos</key>
+			<real>285</real>
+			<key>ypos</key>
+			<real>210</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
