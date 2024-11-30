@@ -616,7 +616,8 @@ args+=($@)
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>../run.bash zit cat-alfred -genre tag !toml-bookmark</string>
+				<string>set -x
+../run.bash zit cat-alfred -genre tag !toml-bookmark</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

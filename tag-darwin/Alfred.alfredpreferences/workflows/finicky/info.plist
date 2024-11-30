@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string></string>
+	<string>com.linenisgreat.code.alfred-finicky</string>
+	<key>category</key>
+	<string>Internet</string>
 	<key>connections</key>
 	<dict>
 		<key>647207F9-F66B-4F96-B951-D18C804BF756</key>
@@ -27,7 +29,7 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Choosy</string>
+	<string>Finicky</string>
 	<key>objects</key>
 	<array>
 		<dict>
@@ -35,12 +37,14 @@
 			<dict>
 				<key>browser</key>
 				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
 				<key>spaces</key>
 				<string></string>
 				<key>url</key>
 				<string>x-choosy://{query}/</string>
-				<key>utf8</key>
-				<true/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.openurl</string>
@@ -62,6 +66,8 @@
 				<string>[{"title":"Chrome Profile: Sasha","arg":"sasha"},{"title":"Chrome Profile: SBS","arg":"sbs"},{"title":"Chrome: Incognito","arg":"incognito"},{"imagefile":"871c96d2292c5e13abee675bd1428338232de37a.png","title":"Safari","arg":"safari"}]</string>
 				<key>keyword</key>
 				<string>c</string>
+				<key>matchmode</key>
+				<integer>0</integer>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -98,6 +104,8 @@
 			<integer>40</integer>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>webaddress</key>
 	<string></string>
 </dict>
