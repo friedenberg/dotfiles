@@ -104,6 +104,7 @@
                   shfmt
                   silver-searcher
                   socat
+                  sshpass
                   sshfs-fuse
                   thefuck
                   timidity
