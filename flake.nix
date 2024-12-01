@@ -113,6 +113,7 @@
                   tmux
                   tree
                   vim
+                  watchexec
                   wget
                   yubico-piv-tool
                   zstd
