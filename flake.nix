@@ -112,8 +112,10 @@
                   tldr
                   tmux
                   tree
+                  uv
                   vim
                   watchexec
+                  websocat
                   wget
                   yubico-piv-tool
                   zstd

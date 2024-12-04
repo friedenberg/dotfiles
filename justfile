@@ -12,15 +12,22 @@ mr-build-and-watch method target *ARGS:
 CMD_CHROME := '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
 
 chrome-html-to-pdf target:
-  #! /bin/bash -e
+  #! /usr/bin/env bash -xe
   pushd "{{invocation_directory()}}" >/dev/null 2>&1
-  {{CMD_CHROME}} \
+  coproc chrome ({{CMD_CHROME}} \
     --headless \
-    --disable-gpu \
-    '--print-to-pdf={{target}}.pdf' \
-    --no-pdf-header-footer \
-    --print-to-pdf-no-header \
-    {{target}} 2>&1
+    --remote-debugging-port=9222 \
+    --remote-allow-origins=http://127.0.0.1:9222 \
+    --remote-allow-origins=http://localhost:9222 \
+    "$(realpath {{target}})" 2>&1)
+
+  trap 'kill $chrome_PID' EXIT
+  read -r output <&"${chrome[0]}"
+
+  url="$(http GET localhost:9222/json/list | jq -r '.[] | select(.type == "page") | .webSocketDebuggerUrl')"
+  echo 'Page.printToPDF {"paperWidth": 2.2409, "marginLeft": 0, "marginRight": 0}' |
+    websocat -n1 --jsonrpc --jsonrpc-omit-jsonrpc "$url" |
+    jq -r '.result.data' | base64 -d -i - > "{{target}}.pdf"
 
 markdown-to-peri-a6-html target:
   #! /bin/bash -e
