@@ -19,25 +19,29 @@ def make_id:
   ;
 
 {
+  cache: {
+    seconds: 3600,
+    loosereload: true
+  },
   items: [
     .[]
     | {
       title: .title,
       subtitle: (
-        (. | make_id) + ": " + .url.string
+        (. | make_id) + ": " + .url
       ),
+      quicklook: .url,
       arg: (. | @json),
       uid: (. | make_id),
       match: (
-        (.url.parts.Host | split(".")) +
-        (.url.parts.Path | split("/")) + [
+        [
           .id.browser.browser,
           .id.browser.id,
           .id.type,
           .id.id,
           .title,
-          .url.string
-        ] | join(" ")
+          .url
+        ] | join(" ") | gsub("/"; " ")
       )
     }
   ]
