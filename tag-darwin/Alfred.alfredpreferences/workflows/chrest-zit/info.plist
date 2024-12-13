@@ -1095,6 +1095,8 @@ args+=($@)
 	<array/>
 	<key>variables</key>
 	<dict>
+		<key>ZIT_DIR</key>
+		<string>~/zit</string>
 		<key>dry_run</key>
 		<string>-dry-run</string>
 	</dict>
