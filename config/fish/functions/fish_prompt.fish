@@ -15,13 +15,24 @@ function fish_prompt --description 'Write out the prompt'
   set -g __fish_git_prompt_showcolorhints true
   set -g __fish_git_prompt_showdirtystate true
   printf '%s ' (fish_git_prompt)
+  set -l parens
 
   if git rev-parse --is-inside-work-tree >/dev/null 2>&1
     set -l stash_count (git stash list | count)
 
     if test $stash_count -gt 0
-      printf '(%s) ' $stash_count
+      set -a parens "stashed: $stash_count"
     end
+  end
+
+  set -l job_count (jobs | wc -l)
+
+  if test $job_count -gt 0
+    set -a parens "jobs: $job_count"
+  end
+
+  if test (count $parens) -gt 0
+    printf '(%s) ' (string join ", " $parens)
   end
 
   if set -q bell_on_exit
