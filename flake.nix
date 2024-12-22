@@ -118,9 +118,10 @@
                   websocat
                   wget
                   yubico-piv-tool
+                  yt-dlp
                   zstd
                   # kmonad.packages.${system}.default
-                  # zit.packages.${system}.default
+                  zit.packages.${system}.default
                 ];
             };
 
