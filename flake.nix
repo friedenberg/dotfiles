@@ -12,6 +12,14 @@
       };
     };
 
+    chrest = {
+      url = "github:friedenberg/chrest?dir=go";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
+      };
+    };
+
     # kmonad = {
     #   url = "git+https://github.com/kmonad/kmonad?submodules=1&dir=nix";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -29,7 +37,14 @@
     #     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, utils, zit }:
+  outputs = {
+    self,
+    nixpkgs,
+    nixpkgs-stable,
+    utils,
+    zit,
+    chrest,
+  }:
     (utils.lib.eachDefaultSystem
       (system:
         let
@@ -52,6 +67,7 @@
                   asdf-vm
                   bashInteractive
                   bats
+                  chrest.packages.${system}.default
                   # cdparanoia
                   coreutils
                   # csvkit

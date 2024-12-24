@@ -1,8 +1,50 @@
 {
   "nodes": {
+    "chrest": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "gomod2nix": "gomod2nix",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "dir": "go",
+        "lastModified": 1734882315,
+        "narHash": "sha256-KBLNh/qfvHYl5QIDVny6W6ba31FCrEvHc3ezorTb8Uo=",
+        "owner": "friedenberg",
+        "repo": "chrest",
+        "rev": "6a8b8c325ee0c94920b7883d9cfe3e657780695f",
+        "type": "github"
+      },
+      "original": {
+        "dir": "go",
+        "owner": "friedenberg",
+        "repo": "chrest",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
-        "systems": "systems_2"
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1731533236,
+        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "flake-utils_2": {
+      "inputs": {
+        "systems": "systems_3"
       },
       "locked": {
         "lastModified": 1694529238,
@@ -20,7 +62,7 @@
     },
     "go": {
       "inputs": {
-        "gomod2nix": "gomod2nix",
+        "gomod2nix": "gomod2nix_2",
         "nixpkgs": [
           "zit",
           "nixpkgs"
@@ -46,7 +88,32 @@
     },
     "gomod2nix": {
       "inputs": {
-        "flake-utils": "flake-utils",
+        "flake-utils": [
+          "chrest",
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "chrest",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1732540042,
+        "narHash": "sha256-i3FpT1w4x1hNZSKj20Rt2qHQvp1xp3Dz9rCPeSIQp0s=",
+        "owner": "nix-community",
+        "repo": "gomod2nix",
+        "rev": "f11423d1a082d83710275913f05b2a0b606f5aed",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "gomod2nix",
+        "type": "github"
+      }
+    },
+    "gomod2nix_2": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
         "nixpkgs": [
           "zit",
           "go",
@@ -133,6 +200,7 @@
     },
     "root": {
       "inputs": {
+        "chrest": "chrest",
         "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable",
         "utils": "utils",
@@ -184,9 +252,24 @@
         "type": "github"
       }
     },
+    "systems_4": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "utils": {
       "inputs": {
-        "systems": "systems"
+        "systems": "systems_2"
       },
       "locked": {
         "lastModified": 1731533236,
@@ -204,7 +287,7 @@
     },
     "utils_2": {
       "inputs": {
-        "systems": "systems_3"
+        "systems": "systems_4"
       },
       "locked": {
         "lastModified": 1731533236,

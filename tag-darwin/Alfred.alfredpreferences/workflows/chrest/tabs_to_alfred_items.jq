@@ -20,7 +20,7 @@ def make_id:
 
 {
   cache: {
-    seconds: 3600,
+    seconds: 10,
     loosereload: true
   },
   items: [
