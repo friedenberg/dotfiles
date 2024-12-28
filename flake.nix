@@ -1,7 +1,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs-stable.url = "nixpkgs/release-24.11";
     utils.url = "github:numtide/flake-utils";
 
     zit = {
@@ -14,6 +14,14 @@
 
     chrest = {
       url = "github:friedenberg/chrest?dir=go";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
+      };
+    };
+
+    chromium-html-to-pdf = {
+      url = "github:friedenberg/chromium-html-to-pdf";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         utils.follows = "utils";
@@ -44,6 +52,7 @@
     utils,
     zit,
     chrest,
+    chromium-html-to-pdf,
   }:
     (utils.lib.eachDefaultSystem
       (system:
@@ -58,16 +67,14 @@
           packages = {
             all = pkgs.symlinkJoin {
               name = "all";
-              paths =
-                with
-                pkgs;
-                [
+              paths = with pkgs; [
                   age
                   asdf
                   asdf-vm
                   bashInteractive
                   bats
-                  chrest.packages.${system}.default
+                  # chrest.packages.${system}.default
+                  chromium-html-to-pdf.packages.${system}.html-to-pdf
                   # cdparanoia
                   coreutils
                   # csvkit
@@ -137,7 +144,7 @@
                   yt-dlp
                   zstd
                   # kmonad.packages.${system}.default
-                  zit.packages.${system}.default
+                  # zit.packages.${system}.default
                 ];
             };
 
