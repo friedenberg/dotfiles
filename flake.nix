@@ -73,7 +73,7 @@
                   asdf-vm
                   bashInteractive
                   bats
-                  # chrest.packages.${system}.default
+                  chrest.packages.${system}.default
                   chromium-html-to-pdf.packages.${system}.html-to-pdf
                   # cdparanoia
                   coreutils
