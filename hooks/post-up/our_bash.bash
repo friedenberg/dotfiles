@@ -1,4 +1,4 @@
-#! /bin/bash -xe
+#! /usr/bin/env -S bash -e
 
 our_bash="$(readlink ~/.dotfiles/result/bin/bash)"
 mkdir -p ~/.config/direnv/

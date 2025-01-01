@@ -1,3 +1,5 @@
+all: clean update build
+
 preview-zit-object target format:
   #! /bin/bash -e
   pushd "{{invocation_directory()}}" >/dev/null 2>&1
@@ -30,3 +32,21 @@ git-add-and-commit *PATHS:
 
   echo "pushing..." >&2
   git push
+
+clean-nix:
+  nix-store --gc
+
+clean: clean-nix
+
+update-nix:
+  nix flake update
+
+update: update-nix
+
+build-nix:
+  nix build
+
+build-rcm:
+  rcup
+
+build: build-nix build-rcm

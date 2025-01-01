@@ -37,6 +37,14 @@
       };
     };
 
+    pa6e = {
+      url = "github:friedenberg/peripage-A6-bluetooth";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        utils.follows = "utils";
+      };
+    };
+
     # kmonad = {
     #   url = "git+https://github.com/kmonad/kmonad?submodules=1&dir=nix";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -64,6 +72,7 @@
     , chromium-html-to-pdf
     , fh
     , nix
+    , pa6e
     }:
     (utils.lib.eachDefaultSystem
       (system:
@@ -122,7 +131,6 @@
               libcdio
               moreutils
               neovim
-              nix.packages.${system}.default
               nix-direnv
               nixpkgs-fmt
               ocrmypdf
@@ -131,6 +139,7 @@
               paperkey
               # pinentry
               # pinentry-mac
+              pa6e.packages.${system}.pa6e-markdown-to-html
               parallel
               plantuml
               rcm
@@ -157,7 +166,7 @@
               yt-dlp
               zstd
               # kmonad.packages.${system}.default
-              # zit.packages.${system}.default
+              zit.packages.${system}.default
             ];
           };
 
