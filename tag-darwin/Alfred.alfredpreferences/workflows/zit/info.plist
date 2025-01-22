@@ -1696,11 +1696,6 @@ nohup z add -kind "$kind" -actions "$actions" "$@"</string>
 	</dict>
 	<key>userconfigurationconfig</key>
 	<array/>
-	<key>variables</key>
-	<dict>
-		<key>ZIT_DIR</key>
-		<string>~/zit</string>
-	</dict>
 	<key>version</key>
 	<string></string>
 	<key>webaddress</key>
