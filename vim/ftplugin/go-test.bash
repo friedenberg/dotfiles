@@ -1,4 +1,4 @@
-#! /usr/bin/env bash -e
+#! /usr/bin/env -S bash -e
 
 PATH="$PATH:$(realpath "$(dirname "$0")/result/bin")"
 
