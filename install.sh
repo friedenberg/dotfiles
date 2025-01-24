@@ -10,13 +10,7 @@ export PATH="$bin_result:$PATH"
 
 cp rcrc ~/.rcrc
 printf "DOTFILES_DIRS=\"%s\"" "$(pwd)" >> ~/.rcrc
-"$bin_result/rcup" -f
-
-our_bash="$(readlink ~/.result/bin/bash)"
-mkdir -p ~/.config/direnv/
-cat - > ~/.config/direnv/direnv.toml <<-EOM
-bash_path = "$our_bash"
-EOM
+"rcup" -f
 
 sudo bash -c "echo '$bin_fish' >> /etc/shells"
 sudo chsh -s "$bin_fish"
