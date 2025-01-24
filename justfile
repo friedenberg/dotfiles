@@ -1,5 +1,13 @@
 all: clean update build
 
+reset-gpg:
+  gpgconf --kill all
+  gpgconf --reload gpg-agent
+  gpg-connect-agent updatestartuptty /bye
+  gpg-connect-agent "learn --force" /bye
+  gpg-connect-agent "scd serialno" /bye
+  gpg --card-status >/dev/null 2>&1
+
 preview-zit-object target format:
   #! /bin/bash -e
   pushd "{{invocation_directory()}}" >/dev/null 2>&1
