@@ -8,10 +8,15 @@ reset-gpg:
   gpg-connect-agent "scd serialno" /bye
   gpg --card-status >/dev/null 2>&1
 
-preview-zit-object target format:
+preview-zit-object-timg target format:
   #! /bin/bash -e
   pushd "{{invocation_directory()}}" >/dev/null 2>&1
   zit format-blob {{target}} {{format}} | timg -pk -I -U --center --clear -W -
+
+preview-zit-object target format:
+  #! /bin/bash -e
+  pushd "{{invocation_directory()}}" >/dev/null 2>&1
+  zit format-blob {{target}} {{format}}
 
 mr-build-and-watch method target *ARGS:
   #! /bin/bash -e

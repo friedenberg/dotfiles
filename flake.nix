@@ -93,16 +93,17 @@
               asdf-vm
               bashInteractive
               bats
-              chrest.packages.${system}.default
+              # chrest.packages.${system}.default
               chromium-html-to-pdf.packages.${system}.html-to-pdf
               # cdparanoia
               coreutils
-              # csvkit
+              csvkit
               curl
               curlftpfs
               dash
               ddrescue
               direnv
+              espanso-wayland
               ffmpeg
               fh.packages.${system}.default
               figlet
@@ -129,7 +130,7 @@
               # keyd
               lftp
               libcdio
-              moreutils
+              # moreutils
               neovim
               nix-direnv
               nixpkgs-fmt
@@ -164,9 +165,10 @@
               wget
               yubico-piv-tool
               yt-dlp
+              # yubikey-manager
               zstd
               # kmonad.packages.${system}.default
-              zit.packages.${system}.default
+              # zit.packages.${system}.default
             ];
           };
 

@@ -6,7 +6,7 @@ function reset-gpg --description "Reloads GPG Agent"
 
   ln -sf (gpgconf --list-dirs agent-ssh-socket) $HOME/.local/state/ssh/gpg-agent.sock
 
-  just reset-gpg
+  just --global-justfile reset-gpg
 
   return $status
 end

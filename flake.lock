@@ -14,11 +14,11 @@
       },
       "locked": {
         "dir": "go",
-        "lastModified": 1737122440,
-        "narHash": "sha256-8Bm1p5relJ4lQGmYamQPR245mDPtNQ2s5HeoTuwza5k=",
+        "lastModified": 1737754307,
+        "narHash": "sha256-G42XYcS7uv3SABbEavuQ/1EZfU2jmNK8MOGrznoph6Y=",
         "owner": "friedenberg",
         "repo": "chrest",
-        "rev": "496c2595e03ceeb93aa1529bc75a553c6cdae9c7",
+        "rev": "950e0e72fc96df5002615dd817f24aaa77166006",
         "type": "github"
       },
       "original": {
@@ -341,11 +341,11 @@
       },
       "locked": {
         "dir": "nix",
-        "lastModified": 1735428467,
-        "narHash": "sha256-/XFhYjNTEMQzWybdnLTVKGmwVSfkWf/9N/MsWuPhVMA=",
+        "lastModified": 1737756069,
+        "narHash": "sha256-dXqqKrRodzlnuvcP6DtCTMu6qw6gXzlMffdS9v+EZOE=",
         "owner": "friedenberg",
         "repo": "dev-flake-templates",
-        "rev": "b48f11415a1ab2078d4463476954ca51c54614c8",
+        "rev": "4626dae347b2864b06da33be8a19b687bee45773",
         "type": "github"
       },
       "original": {
@@ -432,11 +432,11 @@
     },
     "nixpkgs-stable_5": {
       "locked": {
-        "lastModified": 1737545261,
-        "narHash": "sha256-Oa91e3B0/T1E4iL3HRO2ZOIxBxZGkCjHYY8VpFHOrwQ=",
+        "lastModified": 1739110468,
+        "narHash": "sha256-DGaMGdtjhROdo1eWFFtPsIgXjpBsVfp3naV7Gp4CobA=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9b6cdf829fdef63efed466cf537c838dc685da41",
+        "rev": "2260e0a9ff5fc6e2f260566ec09e51a802b19441",
         "type": "github"
       },
       "original": {
@@ -523,12 +523,12 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1737404927,
-        "narHash": "sha256-e1WgPJpIYbOuokjgylcsuoEUCB4Jl2rQXa2LUD6XAG8=",
-        "rev": "ae584d90cbd0396a422289ee3efb1f1c9d141dc3",
-        "revCount": 713477,
+        "lastModified": 1738843498,
+        "narHash": "sha256-7x+Q4xgFj9UxZZO9aUDCR8h4vyYut4zPUvfj3i+jBHE=",
+        "rev": "f5a32fa27df91dfc4b762671a0e0a859a8a0058f",
+        "revCount": 714127,
         "type": "tarball",
-        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.2411.713477%2Brev-ae584d90cbd0396a422289ee3efb1f1c9d141dc3/01948db2-195e-7950-a428-9b0f77eccf99/source.tar.gz"
+        "url": "https://api.flakehub.com/f/pinned/NixOS/nixpkgs/0.2411.714127%2Brev-f5a32fa27df91dfc4b762671a0e0a859a8a0058f/0194df5d-2dc2-7975-9cf5-e7da2b1eaffe/source.tar.gz"
       },
       "original": {
         "type": "tarball",
@@ -563,11 +563,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1737322121,
-        "narHash": "sha256-9IxQp/kNikpVDUg8rIaCFuKhpQQP+F23gr8kgW6lt/Q=",
+        "lastModified": 1737658611,
+        "narHash": "sha256-msb7Kvc1RHWnpgQFLZajG1ObNSmWrkYjUvEfKGI/mGI=",
         "owner": "friedenberg",
         "repo": "peripage-A6-bluetooth",
-        "rev": "3e88dbed46f49a2b110c24a7032b3ab20509a74c",
+        "rev": "de49e977ea6269afe958c877f9dc653e8bf1812a",
         "type": "github"
       },
       "original": {
@@ -913,11 +913,11 @@
       },
       "locked": {
         "dir": "go/zit",
-        "lastModified": 1737467353,
-        "narHash": "sha256-iIiF+q9SHfy3yiPNBywmJDnd4VoTt1utLObz8+xvYRg=",
+        "lastModified": 1739110556,
+        "narHash": "sha256-gKwmF5yiMM63hOG2slfpfJD6VV3X0y7NbtILij5+TSg=",
         "owner": "friedenberg",
         "repo": "zit",
-        "rev": "bf88f1899497d7217328b385d976fcd59264acb0",
+        "rev": "65d4b07707d6adf3ec439af5ad3bf34f1238ca6f",
         "type": "github"
       },
       "original": {
