@@ -211,6 +211,21 @@ function! FormatViaEqualsPrg()
     w
     ccl
   endif
+  " let save_pos = getpos(".")
+  " let cmd = $":1,$!{&l:equalprg} {shellescape(expand("%"))}"
+  " echom cmd
+  " exe cmd
+  " " winrestview(win_view)
+
+  " if v:shell_error != 0
+  "   " silent! undo
+  "   echom "format failed bad"
+  " else
+  "   " w
+  "   echom "wowhello"
+  " endif
+
+  " call setpos(".", save_pos)
 endfunction
 
 " TODO move to init.lua

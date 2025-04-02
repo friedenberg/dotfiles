@@ -33,5 +33,5 @@ test_one() (
 echo "1..$#" >&2
 
 export -f test_one
-n_prc="$(sysctl -n hw.logicalcpu)"
+n_prc="$(nproc --all)"
 parallel "-j$n_prc" test_one "{#}" "{}" ::: "$@"

@@ -1,5 +1,7 @@
 return {
   { dir = "~/eng/zit/zz-vim/", },
+  { "hashivim/vim-terraform" },
+  { "mustache/vim-mustache-handlebars" },
   { "direnv/direnv.vim" },
   { "fladson/vim-kitty", },
   { "NoahTheDuke/vim-just", },
