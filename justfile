@@ -8,6 +8,9 @@ reset-gpg:
   gpg-connect-agent "scd serialno" /bye
   gpg --card-status >/dev/null 2>&1
 
+timg-preview:
+  timg -pk -I -U --center --clear -W -
+
 preview-zit-object-timg target format:
   #! /bin/bash -e
   pushd "{{invocation_directory()}}" >/dev/null 2>&1
@@ -18,11 +21,10 @@ preview-zit-object target format:
   pushd "{{invocation_directory()}}" >/dev/null 2>&1
   zit format-blob {{target}} {{format}}
 
-mr-build-and-watch method target *ARGS:
+mr-build-and-watch target script:
   #! /bin/bash -e
   pushd "{{invocation_directory()}}" >/dev/null 2>&1
-  just "{{method}}" "{{target}}" {{ARGS}}
-  fswatch "{{target}}" -o | xargs -L1 -I{} just {{method}} {{target}} {{ARGS}}
+  fswatch --event Updated -o {{target}} | xargs -I {} bash -c '{{script}}'
 
 git-add-and-commit *PATHS:
   #! /usr/bin/fish
