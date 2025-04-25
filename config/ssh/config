@@ -1,7 +1,0 @@
-# vim: ft=sshconfig
-
-# Host *
-  # LocalForward $HOME/.local/state/ssh/ddog-agent.sock
-  # IdentityAgent ~/.local/state/ssh/gpg-agent.sock
-
-Include ~/.ssh/my-config

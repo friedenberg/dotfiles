@@ -29,14 +29,6 @@
       };
     };
 
-    nix = {
-      url = "github:friedenberg/dev-flake-templates?dir=nix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-      };
-    };
-
     pa6e = {
       url = "github:friedenberg/peripage-A6-bluetooth";
       inputs = {
@@ -55,30 +47,35 @@
     , chrest
     , chromium-html-to-pdf
     , fh
-    , nix
     , pa6e
     }:
     (utils.lib.eachDefaultSystem
       (system:
       let
 
-        pkgs = import nixpkgs {
-          inherit system;
+        pkgs = import nixpkgs
+          {
+            inherit system;
+          } // {
+          chrest = chrest.packages.${system}.default;
+          fh = fh.packages.${system}.default;
+          html-to-pdf = chromium-html-to-pdf.packages.${system}.html-to-pdf;
+          pa6e-markdown-to-html = pa6e.packages.${system}.pa6e-markdown-to-html;
+          # kmonad = kmonad.packages.${system}.default;
+          zit = zit.packages.${system}.default;
         };
 
       in
-      rec {
+      {
         packages = {
-          all = pkgs.symlinkJoin {
-            name = "all";
-            paths = with pkgs; [
+          default = with pkgs; buildEnv {
+            name = "system-packages";
+            paths = [
               age
               asdf
               asdf-vm
               bashInteractive
               bats
-              # chrest.packages.${system}.default
-              chromium-html-to-pdf.packages.${system}.html-to-pdf
               # cdparanoia
               coreutils
               csvkit
@@ -87,13 +84,12 @@
               dash
               ddrescue
               direnv
-              espanso-wayland
               ffmpeg
-              fh.packages.${system}.default
               figlet
               fish
               fontconfig
               fswatch
+              fh
               gawk
               gftp
               git
@@ -110,8 +106,6 @@
               isolyzer
               jq
               just
-              # kmonad
-              # keyd
               lftp
               libcdio
               # moreutils
@@ -122,13 +116,12 @@
               openssh
               pandoc
               paperkey
+              # pa6e-markdown-to-html
               # pinentry
-              # pinentry-mac
-              pa6e.packages.${system}.pa6e-markdown-to-html
               parallel
               plantuml
               rcm
-              # reattach-to-user-namespace
+              html-to-pdf
               rsync
               shellcheck
               shfmt
@@ -151,18 +144,8 @@
               yt-dlp
               # yubikey-manager
               zstd
-              # kmonad.packages.${system}.default
-              # zit.packages.${system}.default
             ];
           };
-
-          default = packages.all;
-        };
-
-        devShells.default = pkgs.mkShell {
-          inputsFrom = [
-            nix.devShells.${system}.default
-          ];
         };
       })
     );
