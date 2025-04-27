@@ -1,9 +1,8 @@
 {
   inputs = {
-    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.21.tar.gz";
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.712007.tar.gz";
-    nixpkgs-stable.url = "nixpkgs/release-24.11";
-    utils.url = "github:numtide/flake-utils";
+    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.22.tar.gz";
+    nixpkgs-stable.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.717296.tar.gz";
+    utils.url = "https://flakehub.com/f/numtide/flake-utils/0.1.102.tar.gz";
 
     zit = {
       url = "github:friedenberg/zit?dir=go/zit";
@@ -56,19 +55,18 @@
         pkgs = import nixpkgs
           {
             inherit system;
-          } // {
-          chrest = chrest.packages.${system}.default;
-          fh = fh.packages.${system}.default;
-          html-to-pdf = chromium-html-to-pdf.packages.${system}.html-to-pdf;
-          pa6e-markdown-to-html = pa6e.packages.${system}.pa6e-markdown-to-html;
-          # kmonad = kmonad.packages.${system}.default;
-          zit = zit.packages.${system}.default;
-        };
+          };
+
+        pkgs-stable = import nixpkgs-stable
+          {
+            inherit system;
+          };
 
       in
       {
         packages = {
-          default = with pkgs; buildEnv {
+          default = with pkgs; symlinkJoin {
+            failOnMissing = true;
             name = "system-packages";
             paths = [
               age
@@ -91,9 +89,10 @@
               fswatch
               fh
               gawk
-              gftp
+              pkgs-stable.gftp
               git
               git-secret
+              glibcLocales
               gnumake
               gnuplot
               gnupg
@@ -116,12 +115,10 @@
               openssh
               pandoc
               paperkey
-              # pa6e-markdown-to-html
               # pinentry
               parallel
               plantuml
               rcm
-              html-to-pdf
               rsync
               shellcheck
               shfmt
@@ -144,6 +141,14 @@
               yt-dlp
               # yubikey-manager
               zstd
+            ] ++ [
+              # pa6e-markdown-to-html
+              # html-to-pdf
+              chrest.packages.${system}.default
+              fh.packages.${system}.default
+              chromium-html-to-pdf.packages.${system}.html-to-pdf
+              pa6e.packages.${system}.pa6e-markdown-to-html
+              zit.packages.${system}.default
             ];
           };
         };

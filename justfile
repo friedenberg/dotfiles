@@ -5,12 +5,18 @@ clean-nix:
 
 clean: clean-nix
 
+update-nix-local:
+  nix flake update \
+    system-packages-common \
+    system-packages-linux \
+    system-packages-darwin
+
 update-nix:
   nix flake update
 
 update: update-nix
 
-build-nix:
+build-nix: update-nix-local
   nix build
 
 [working-directory: "rcm"]

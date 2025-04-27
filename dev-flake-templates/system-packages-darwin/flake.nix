@@ -1,18 +1,17 @@
 {
   inputs = {
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.712007.tar.gz";
     nixpkgs-stable.url = "nixpkgs/release-24.11";
     utils.url = "github:numtide/flake-utils";
 
-    #     brew-api = {
-    #       url = "github:BatteredBunny/brew-api";
-    #       flake = false;
-    #     };
+    brew-api = {
+      url = "github:BatteredBunny/brew-api";
+      flake = false;
+    };
 
-    #     brew = {
-    #       url = "github:BatteredBunny/brew-nix";
-    #       inputs.brew-api.follows = "brew-api";
-    #     };
+    brew = {
+      url = "github:BatteredBunny/brew-nix";
+      inputs.brew-api.follows = "brew-api";
+    };
   };
 
   outputs =
@@ -20,27 +19,27 @@
     , nixpkgs
     , nixpkgs-stable
     , utils
+    , brew-api
+    , brew
     }:
-    (utils.lib.eachDefaultSystem
-      (system:
-      let
+    let
+      system = "x86_64-darwin";
 
-        pkgs = import nixpkgs
-          {
-            inherit system;
-          };
-
-      in
-      {
-        packages = {
-          default = with pkgs; buildEnv {
-            name = "system-packages";
-            paths = [
-              # pinentry-mac
-              reattach-to-user-namespace
-            ];
-          };
+      pkgs = import nixpkgs
+        {
+          inherit system;
         };
-      })
-    );
+
+    in
+    {
+      packages.${system} = {
+        default = with pkgs; symlinkJoin {
+          name = "system-packages";
+          paths = [
+            pinentry-mac
+            reattach-to-user-namespace
+          ];
+        };
+      };
+    };
 }

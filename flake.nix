@@ -1,49 +1,19 @@
 {
   inputs = {
-    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/0.1.21.tar.gz";
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.712007.tar.gz";
-    nixpkgs-stable.url = "nixpkgs/release-24.11";
-    utils.url = "github:numtide/flake-utils";
+    nixpkgs-stable.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.717296.tar.gz";
+    utils.url = "https://flakehub.com/f/numtide/flake-utils/0.1.102.tar.gz";
 
-    zit = {
-      url = "github:friedenberg/zit?dir=go/zit";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-      };
-    };
+    system-packages-common.url =
+      "path:./dev-flake-templates/system-packages-common";
 
-    chrest = {
-      url = "github:friedenberg/chrest?dir=go";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-      };
-    };
+    system-packages-darwin.url =
+      "path:./dev-flake-templates/system-packages-darwin";
 
-    chromium-html-to-pdf = {
-      url = "github:friedenberg/chromium-html-to-pdf";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-      };
-    };
+    system-packages-linux.url =
+      "path:./dev-flake-templates/system-packages-linux";
 
-    nix = {
-      url = "github:friedenberg/dev-flake-templates?dir=nix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-      };
-    };
-
-    pa6e = {
-      url = "github:friedenberg/peripage-A6-bluetooth";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        utils.follows = "utils";
-      };
-    };
+    nix.url =
+      "path:./dev-flake-templates/nix";
   };
 
   outputs =
@@ -51,12 +21,10 @@
     , nixpkgs
     , nixpkgs-stable
     , utils
-    , zit
-    , chrest
-    , chromium-html-to-pdf
-    , fh
     , nix
-    , pa6e
+    , system-packages-common
+    , system-packages-darwin
+    , system-packages-linux
     }:
     (utils.lib.eachDefaultSystem
       (system:
@@ -66,97 +34,19 @@
           inherit system;
         };
 
-      in
-      rec {
-        packages = {
-          all = pkgs.symlinkJoin {
-            name = "all";
-            paths = with pkgs; [
-              age
-              asdf
-              asdf-vm
-              bashInteractive
-              bats
-              # chrest.packages.${system}.default
-              chromium-html-to-pdf.packages.${system}.html-to-pdf
-              # cdparanoia
-              coreutils
-              csvkit
-              curl
-              curlftpfs
-              dash
-              ddrescue
-              direnv
-              espanso-wayland
-              ffmpeg
-              fh.packages.${system}.default
-              figlet
-              fish
-              fontconfig
-              fswatch
-              gawk
-              gftp
-              git
-              git-secret
-              gnumake
-              gnuplot
-              gnupg
-              gpgme
-              graphviz
-              hostess
-              httpie
-              hub
-              imagemagick
-              isolyzer
-              jq
-              just
-              # kmonad
-              # keyd
-              lftp
-              libcdio
-              # moreutils
-              neovim
-              nix-direnv
-              nixpkgs-fmt
-              ocrmypdf
-              openssh
-              pandoc
-              paperkey
-              # pinentry
-              # pinentry-mac
-              pa6e.packages.${system}.pa6e-markdown-to-html
-              parallel
-              plantuml
-              rcm
-              # reattach-to-user-namespace
-              rsync
-              shellcheck
-              shfmt
-              silver-searcher
-              socat
-              sshpass
-              sshfs-fuse
-              thefuck
-              timidity
-              timg
-              tldr
-              tmux
-              tree
-              uv
-              vim
-              watchexec
-              websocat
-              wget
-              yubico-piv-tool
-              yt-dlp
-              # yubikey-manager
-              zstd
-              # kmonad.packages.${system}.default
-              # zit.packages.${system}.default
-            ];
-          };
 
-          default = packages.all;
+      in
+      {
+        packages.default = pkgs.symlinkJoin {
+          failOnMissing = true;
+          name = "system-packages";
+          paths = [
+            system-packages-common.packages.${system}.default
+            {
+              x86_64-linux = system-packages-linux;
+              x86_64-darwin = system-packages-darwin;
+            }.${system}.packages.${system}.default
+          ];
         };
 
         devShells.default = pkgs.mkShell {

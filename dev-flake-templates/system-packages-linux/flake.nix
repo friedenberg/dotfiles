@@ -1,6 +1,5 @@
 {
   inputs = {
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.712007.tar.gz";
     nixpkgs-stable.url = "nixpkgs/release-24.11";
     utils.url = "github:numtide/flake-utils";
 
@@ -17,29 +16,25 @@
     , utils
     , kmonad
     }:
-    (utils.lib.eachDefaultSystem
-      (system:
-      let
+    let
+      system = "x86_64-linux";
 
-        pkgs = import nixpkgs
-          {
-            inherit system;
-          } // {
-          kmonad = kmonad.packages.${system}.default;
+      pkgs = import nixpkgs
+        {
+          inherit system;
         };
 
-      in
-      {
-        packages = {
-          default = with pkgs; buildEnv {
-            name = "system-packages";
-            paths = [
-              espanso-wayland
-              kmonad
-              # keyd
-            ];
-          };
+    in
+    {
+      packages.${system} = {
+        default = with pkgs; symlinkJoin {
+          name = "system-packages";
+          paths = [
+            espanso-wayland
+            kmonad.packages.${system}.default
+            keyd
+          ];
         };
-      })
-    );
+      };
+    };
 }
