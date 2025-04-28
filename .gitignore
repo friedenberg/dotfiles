@@ -11,6 +11,8 @@ host-*/
 !*.secret
 my-gitconfig
 *.bak
-ssh/sasha_linenisgreat_com.pub
-ssh/my-secret-config
-config/git/config-user
+rcm/ssh/sasha_linenisgreat_com.pub
+rcm/ssh/my-secret-config
+rcm/config/git/config-user
+rcm/config/ssh/my-secret-config
+rcm/config/ssh/sasha_linenisgreat_com.pub

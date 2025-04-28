@@ -20,12 +20,20 @@ build-nix: update-nix-local
   nix build
 
 [working-directory: "rcm"]
-build-rcm:
+build-rcm: build-rcm-hooks-pre-up build-rcm-hooks-post-up
   rcup
 
 [working-directory: "rcm"]
 build-rcm-rcrc:
   # TODO
   cp rcrc ~/.rcrc
+
+[working-directory: "rcm/hooks/pre-up"]
+build-rcm-hooks-pre-up:
+  chmod +x *
+
+[working-directory: "rcm/hooks/post-up"]
+build-rcm-hooks-post-up:
+  chmod +x *
 
 build: build-nix build-rcm
