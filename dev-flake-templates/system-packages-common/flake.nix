@@ -116,7 +116,6 @@
               nix-direnv
               nixpkgs-fmt
               ocrmypdf
-              openssh
               pandoc
               paperkey
               # pinentry

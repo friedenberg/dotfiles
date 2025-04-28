@@ -1639,7 +1639,7 @@
       },
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-rsJNxj4H1oaRNR+TCs51CjPeTsJs9Eyxi7RJnFi8mh4=",
+        "narHash": "sha256-E31krtsWVgSEAs9jejWpNPfR+USIsJ0RwIJHDvt2P9I=",
         "path": "./dev-flake-templates/system-packages-common",
         "type": "path"
       },
