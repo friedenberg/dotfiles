@@ -12,6 +12,9 @@
     system-packages-linux.url =
       "path:./dev-flake-templates/system-packages-linux";
 
+    linenisgreat-pkgs.url =
+      "path:./linenisgreat-pkgs";
+
     nix.url =
       "path:./dev-flake-templates/nix";
   };
@@ -25,6 +28,7 @@
     , system-packages-common
     , system-packages-darwin
     , system-packages-linux
+    , linenisgreat-pkgs
     }:
     (utils.lib.eachDefaultSystem
       (system:
@@ -46,6 +50,7 @@
               x86_64-linux = system-packages-linux;
               x86_64-darwin = system-packages-darwin;
             }.${system}.packages.${system}.default
+            linenisgreat-pkgs.packages.${system}.default
           ];
         };
 

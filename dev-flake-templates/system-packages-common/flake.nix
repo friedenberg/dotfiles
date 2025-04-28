@@ -4,6 +4,9 @@
     nixpkgs-stable.url = "https://flakehub.com/f/NixOS/nixpkgs/0.2411.717296.tar.gz";
     utils.url = "https://flakehub.com/f/numtide/flake-utils/0.1.102.tar.gz";
 
+    ssh.url = "path:./ssh";
+    bash.url = "path:./bash";
+
     zit = {
       url = "github:friedenberg/zit?dir=go/zit";
       inputs = {
@@ -47,6 +50,8 @@
     , chromium-html-to-pdf
     , fh
     , pa6e
+    , ssh
+    , bash
     }:
     (utils.lib.eachDefaultSystem
       (system:
@@ -72,7 +77,6 @@
               age
               asdf
               asdf-vm
-              bashInteractive
               bats
               # cdparanoia
               coreutils
@@ -149,6 +153,8 @@
               chromium-html-to-pdf.packages.${system}.html-to-pdf
               pa6e.packages.${system}.pa6e-markdown-to-html
               zit.packages.${system}.default
+              ssh.packages.${system}.default
+              bash.packages.${system}.default
             ];
           };
         };

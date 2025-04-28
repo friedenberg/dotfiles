@@ -9,7 +9,8 @@ update-nix-local:
   nix flake update \
     system-packages-common \
     system-packages-linux \
-    system-packages-darwin
+    system-packages-darwin \
+    linenisgreat-pkgs
 
 update-nix:
   nix flake update
